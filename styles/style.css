@@ -1,0 +1,171 @@
+html, body {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color:#2f2923;
+    background-color: #fceada;
+    text-rendering: optimizeLegibility;
+  }
+
+* {
+    margin: 0;
+}
+ 
+h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-top: 2em;
+    padding-bottom: .7em;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding-top: 1em;
+    padding-bottom: .8em;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1em;
+    padding-bottom: 1em;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.5em;
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    line-height: 2em;
+    margin: 3em 3.5em 3.5em 4em;
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.nav a:link {
+    padding: 2em 3.5em 1em 0;
+}
+
+a:link {
+    color: #eb0e50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #eb0e50;
+    text-decoration: none;
+}
+
+.main {
+    margin: 4.8em 3.5em 3.5em 4em;
+    max-width: 800px;
+}
+
+.feed h2 {
+    padding-top: .9em;
+    line-height: 1.3em;
+}
+
+h2 {
+    padding-top: 20px;
+    line-height: 42px;
+}
+
+.feed {
+    padding-bottom: 15px;
+}
+
+.main ul {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.testimonials h2 {
+    padding-top: 20px;
+    line-height: 42px;
+}
+
+.testimonials {
+    padding-bottom: 15px;
+}
+
+.resume h2 {
+    padding-top: 20px;
+    line-height: 42px;
+}
+
+.resume {
+    padding-bottom: 15px;
+}
+
+.resources h2 {
+    padding-top: 20px;
+    line-height: 42px;
+}
+
+.resources {
+    padding-bottom: 15px;
+}
+
+.quote {
+    font-size: 20px;
+    background-color: #f8a9be7e;
+    padding: .8em .8em .8em 1em;
+    margin-top: .3em;
+    margin-bottom: .9em;
+    line-height: 1.4em;
+}
+
+@media (max-width: 900px) {
+    .home {
+        margin-top: 3.5em;
+    }
+    html, body {
+        font-size: 18px;    
+    }
+    .header {
+        margin: 2em 2em 2em 2.5em;
+    }
+    .nav a:link {
+        padding: 1.4em 1.4em 1.4em 0;
+    }
+    .main {
+        margin: 3.6em 2em 2em 2.5em;
+        max-width: 900px;
+    }
+  }

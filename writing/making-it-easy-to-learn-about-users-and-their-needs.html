@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <a href="/">Tyler Gindraux</a>
+        </div>
+        <div class="header-nav">
+            <nav class="nav">
+                <ul>
+                    <li><a href=/projects>Projects</a></li>
+                    <li><a href=/writing>Writing</a></li>
+                    <li><a href=/speaking>Speaking</a></li>
+                    <li><a href=/contact>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+     <div class="main">
+        <h1>Making it easy to learn about users and their needs</h1>
+        <h4>9 May 2022</h4>
+        <br>
+        <p>As our user research practice grows, more people across and outside of the <a href="https://rnid.org.uk/">Royal National Institue for Deaf People (RNID)</a> ask about our findings. In this blog, I’ll share how we’ve made it easier for people to learn about users and their needs.</p>
+        <h2>How it used to work</h2>
+            <p>I’ve maintained a user research repository (basically, a really big spreadsheet) since I started at RNID. It’s where I store findings and includes things like, insights, observations and quotes.</p>
+            <p>Let’s say a content designer asked what we know about British Sign Language (BSL) translations. I’d search in the repository, find relevant information and share links to items in Airtable. </p>
+            <p>So, why weren’t other people looking in the repository?</p>
+            <p>I noticed that people were still coming to me instead of looking in the repository. I started to ask why, and found that:</p>
+                <ul>
+                    <li>some people couldn’t access Airtable</li>
+                    <li>some people didn’t know how to use Airtable</li>
+                    <li>some people couldn’t find what they were looking for</li>
+                    <li>most people found the amount of information overwhelming</li>
+                </ul>
+            <br>
+            <p>There were a few exceptions. Those who found the repository helpful explained why and how they used it, which showed how we might make it easier for others to use too.</p>
+            <div class="quote"><q>I search, ‘assistive technology’ or ‘hearing aids’ and I see if I can find something. Otherwise, I search by a type of user, for example, ‘deaf person’ or ‘hearing loss.'</q></div>
+        <h2>Building a simpler frontend</h2>
+            <p>After learning about the problems with our current setup, I recommended creating a frontend, or a simple interface, for the repository. The frontend would:</p>
+                <ul>
+                    <li>be open and easy to access (without a login)</li>
+                    <li>let people search for insights or user needs</li>
+                    <li>let people share a link to a specific finding</li>
+                    <li>let people find high-level information, not all the detail</li>
+                </ul>
+            <br>
+            <p>Our freelance developer, <a href="https://dogwonder.co.uk/">Rich</a>, started building a proof of concept. He suggested creating a static site, using a static site generator, which connects to the Airtable API and generates a website.</p>
+        <h2>How we structured the library</h2>
+            <p>While Rich worked out Airtable’s API, we needed to learn how we should structure the library.</p>
+            <p>I planned a two-part study to learn:</p>
+            <ul>
+                <li>which words people use when they search for research</li>
+                <li>the relationship between different topics</li>
+            </ul>
+            <br>
+            <p>This would help us understand how to structure the library so it makes sense for the people using it.</p>
+            <p>First, what do people search?</p>
+            <p>To learn how people search for research, I asked colleagues to read one interview transcript and one insight and, using sticky notes, write down which word(s) they would use to search for that snippet of data.</p>
+            <p>I found that people from the same discipline tend to use similar words to describe a topic, but this can differ across disciplines. I recommended updating tags to make them more descriptive or something that a user would say.</p>
+            <p>Next, how do people categorise different tags?</p>
+            <p>Using a sample of the tags we created, I ran a card sort where I asked colleagues to organise tags into categories.</p>
+            <p>The card sort showed that most people, across different disciplines, put tags into similar groups and use similar names to describe them. I used these findings to recommend which fields we use to describe each user need and insight in the library.</p>
+            <p>These exercises also helped us recommend a structure for the library overall. Alex, our Design Lead, mocked up how the library might work based on this.</p>
+            <p>He proposed we have a single main page where people can search for both insights and needs through a basic text search, as opposed to having separate pages and searches for each.</p>
+            <p>We shared recommendations with Rich who pulled it all together in a working prototype.</p>
+        <h2>What's next</h2>
+            <p>We’re launching a prototype of the library soon, which we’ll share to gather live feedback.</p>
+            <p>If we find that we’re solving the right problem then we’ll continue to increase awareness of the library and improve over time.</p>
+        <h2>Thanks</h2>
+            <p>Thanks for reading. This was originally published on <a href="https://medium.com/rnid/making-it-easy-to-learn-about-users-and-their-needs-6a7d505aed9b">Medium</a>.</p>
+    </div>
+</body>
+</html>
