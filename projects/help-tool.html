@@ -1,56 +1,126 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Testing a tool that helps people find the right help - Tyler Gindraux</title>
 </head>
-
 <body>
-    <div class="header">
-        <div class="header-logo">
-            <a href="/">Tyler Gindraux</a>
-        </div>
-        <div class="header-nav">
+    <div class="container">
+        <!-- Header with Logo and Navigation -->
+        <header class="header">
+            <!-- Logo -->
+            <a href="/" class="logo"></a>
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
-                    <li><a href=/projects>Projects</a></li>
-                    <li><a href=/writing>Writing</a></li>
-                    <li><a href=/speaking>Speaking</a></li>
-                    <li><a href=/contact>Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">About</a></li>
                 </ul>
             </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1 class="project-title">
+                    Testing a tool that helps people find the right help
+                </h1>
+            </div>
+
+            <!-- Right Column - Project Details -->
+            <div class="project-details">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">My role</div>
+                        <div class="meta-value">User Researcher</div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-label">Organization</div>
+                        <div class="meta-value">Royal National Institute for Deaf People (RNID)</div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-label">Dates</div>
+                        <div class="meta-value">March - May 2021</div>
+                    </div>
+                </div>
+
+                <div class="project-overview">
+                    <h2 class="overview-title">Project Overview</h2>
+                    <p class="overview-text">
+                        The goal of this work was to help Deaf people, people with hearing loss or tinnitus, and their family and friends, find the information they need. I tested the usability and content of an online tool through multiple rounds of moderated interviews, uncovering critical pain points that could prevent users from completing their journeys.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Context</h2>
+                    <p class="section-text">
+                        When I joined RNID, a charity that supports deaf people and people with hearing loss and tinnitus, the team was starting to build an <a href="https://rnid.org.uk/information-and-support/get-support-online/">online tool</a> that lets people find the right information or support for their situation. I was asked to test the tool's usability and content with users. There were a few different journeys in the tool, so, to begin I mapped each journey and identified an approach to the product research.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Plan</h2>
+                    <p class="section-text">I met with designers to learn about the different journeys, potential risks and their questions. Then, I planned rounds for different journeys, sequenced based on what was ready, who to recruit, or other dependencies. I wrote objectives specific to each round, and overall for the study:</p>
+                    <ul class="section-text">
+                        <li>review if people know why they are answering questions</li>
+                        <li>review whether people can go through a journey without support</li>
+                        <li>review content to see if it's clear, useful and offers a next step</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Collect</h2>
+                    <p class="section-text">
+                        I planned rounds of moderated interviews with people who are deaf, have hearing loss and tinnitus, and the people who support them. I chose to do moderated testing because some of the prototypes still had limited capabilities or journeys that didn't end. Because user research was new to RNID, moderated testing also gave designers and other collaborators the chance to interact with participants and learn from them in real-time.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Make sense</h2>
+                    <p class="section-text">
+                        My research highlighted a number of moments where people were missing a call to action or didn't understand which option to choose. In other cases, I noticed that people felt unsupported by the tone of voice or untrustworthy of the organisation, particularly when we asked them to sign up for emails at the end of their journey. I also uncovered a larger design question when I learned that people may expect to choose multiple options, something the tool couldn't currently support.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Share</h2>
+                    <p class="section-text">
+                        Because I was new to the organisation, this was the first time many content designers and subject experts at RNID had tested their content with our users. So, I brought people along the research process showing them how we can do research across our products and services. This engagement also helped when it was time to share findings, which I did by mapping insights across the journeys and then suggesting changes, because people understood the process we went through to learn them.
+                    </p>
+                </div>
+
+                <div class="project-impact">
+                    <h2 class="impact-title">Impact</h2>
+                    <p class="impact-text">
+                        Testing early helped us uncover pain points that would have stopped people from getting through their journeys, and abandoning the tool altogether. If we hadn't found the problems early on, we wouldn't have been able to learn as much when the tool was live. We continued to monitor live feedback and make iterations to address important pain points over time. From Google Analytics, we saw that the majority of people could get through to their results and 56% of people found out they have or may have hearing loss.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-     <div class="main">
-        <h1>Testing a tool that helps people find the right help</h1>
-        <p>The goal of this work was to help Deaf people, people with hearing loss or tinnitus, and their family and friends, find the information they need. On this project, I was a User Researcher at the <a href="https://www.rnid.org.uk/">Royal National Institute for Deaf People (RNID)</a>.</p>
-        <h3>Context</h3>
-        <p>When I joined RNID, a charity that supports deaf people and people with hearing loss and tinnitus, the team was starting to build an <a href="https://rnid.org.uk/information-and-support/get-support-online/">online tool</a> that lets people find the right information or support for their situation.<br><br>I was asked to test the tool’s usability and content with users. There were a few different journeys in the tool, so, to begin I mapped each journey and identified an approach to the product research.
-            </p>
-        <h3>Plan</h3>
-        <p>I met with designers to learn about the different journeys, potential risks and their questions. Then, I planned rounds for different journeys, sequenced based on what was ready, who to recruit, or other dependencies.<br><br>I wrote objectives specific to each round, and overall for the study:
-            <ul>
-                <li>review if people know why they are answering questions</li>
-                <li>review whether people can go through a journey without support</li>
-                <li>review content to see if it’s clear, useful and offers a next step</li>
-            </ul>
-        </p>
-        <h3>Collect</h3>
-        <p>I planned rounds of moderated interviews with people who are deaf, have hearing loss and tinnitus, and the people who support them.<br><br>I chose to do moderated testing because some of the prototypes still had limited capabilities or journeys that didn’t end.<br><br>Because user research was new to RNID, moderated testing also gave designers and other collaborators the chance to interact with participants and learn from them in real-time.</p>
-        <h3>Make sense</h3>
-        <p>My research highlighted a number of moments where people were missing a call to action or didn’t understand which option to choose.<br><br>In other cases, I noticed that people felt unsupported by the tone of voice or untrustworthy of the organisation, particularly when we asked them to sign up for emails at the end of their journey.<br><br>I also uncovered a larger design question when I learned that people may expect to choose multiple options, something the tool couldn't currently support.</p>
-        <h3>Share</h3>
-        <p>Because I was new to the organisation, this was the first time many content designers and subject experts at RNID had tested their content with our users. So, I brought people along the research process showing them how we can do research across our products and services.<br><br>This engagement also helped when it was time to share findings, which I did by mapping insights across the journeys and then suggesting changes, because people understood the process we went through to learn them.</p>
-        <h3>Impact</h3>
-        <p>Testing early helped us uncover pain points that would have stopped people from getting through their journeys, and abandoning the tool altogether. If we hadn’t found the problems early on, we wouldn’t have been able to learn as much when the tool was live.<br><br>We continued to monitor live feedback and make iterations to address important pain points over time. From Google Analytics, we saw that the majority of people could get through to their results and 56% of people found out they have or may have hearing loss.</p>
-    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
+                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

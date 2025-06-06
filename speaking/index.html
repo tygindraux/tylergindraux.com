@@ -1,46 +1,93 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Speaking - Tyler Gindraux</title>
 </head>
-
 <body>
-    <div class="header">
-        <div class="header-logo">
-            <a href="/">Tyler Gindraux</a>
-        </div>
-        <div class="header-nav">
+    <div class="container">
+        <!-- Header with Logo and Navigation -->
+        <header class="header">
+            <!-- Logo -->
+            <a href="/" class="logo"></a>
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
-                    <li><a href=/projects>Projects</a></li>
-                    <li><a href=/writing>Writing</a></li>
-                    <li><a href=/speaking>Speaking</a></li>
-                    <li><a href=/contact>Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">About</a></li>
                 </ul>
             </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1 class="intro-text">
+                    Speaking
+                </h1>
+            </div>
+
+            <!-- Right Column - Testimonials Stack -->
+            <div class="recommendation-stack">
+                <div class="recommendation-item">
+                        <a href="https://docs.google.com/presentation/d/12O3Vxz8VqunrnpfAFtYxN0dHl5RCP6cwLPMuoVo_bCY/edit?usp=sharing" class="recommendation-title">Magnify Inclusive Design and Research Conference</a>
+                        <h3 class="recommendation-quote">Designing how people take part in research</h3>
+                        <span class="recommendation-tag">October 2021</span>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"When it comes to leadership, that's where Tyler shines the most"</h3>
+                        <p class="recommendation-text">Tyler's research skills are some of the most honed and effective I've come across in my 20+ years in tech. She led a group of researchers and designers through user interviews, research initiatives, and anything else that was asked of her.</p>
+                        <p class="recommendation-attribution">JESSE JAMES, STAFF ENGINEER</p>
+                    </div>
+                </div>
+
+                <br>
+
+            </div>
         </div>
     </div>
-     <div class="main">
-        <h1>Speaking</h1>
-        <p>I give talks about service design, research and inclusion. I enjoy sharing my work and thoughts at conferences, meetups or internal company events. This is a sample of my work. Please <a href="/contact">contact me</a> if you think I could be a good fit.</p> 
-        <div class="feed">
-            <!--top of feed-->
-            <h2><a href="https://docs.google.com/presentation/d/12O3Vxz8VqunrnpfAFtYxN0dHl5RCP6cwLPMuoVo_bCY/edit?usp=sharing">Designing how people take part in research</a></h2>
-            <h4>Magnify Conference, October 2021</h4>
-            <!--next item-->
-            <h2><a href="https://docs.google.com/presentation/d/1Baequ9i7wC5SzcNNLWfNAuSN8enH-1WmoyeNVL81ldM/edit?usp=sharing">An inclusive participant experience</a></h2>
-            <h4>Radical Research Summit, September 2021</h4>
-            <!--bottom of feed-->
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
+                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
         </div>
     </div>
+    </footer>
 </body>
 </html>
+
+                <div class="portfolio-showcase">
+
+                        <div class="portfolio-showcase-item">
+                            <a href="https://docs.google.com/presentation/d/12O3Vxz8VqunrnpfAFtYxN0dHl5RCP6cwLPMuoVo_bCY/edit?usp=sharing" class="portfolio-showcase-title">Magnify Inclusive Design and Research Conference</a>
+                            <div class="portfolio-showcase-role">Designing how people take part in research</div>
+                            <div class="portfolio-showcase-meta">
+                                <div class="portfolio-showcase-tags">
+                                    <span class="portfolio-showcase-tag">October 2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-showcase-item">
+                            <a href="https://docs.google.com/presentation/d/1Baequ9i7wC5SzcNNLWfNAuSN8enH-1WmoyeNVL81ldM/edit?usp=sharing" class="portfolio-showcase-title">Radical Research Summit</a>
+                            <div class="portfolio-showcase-role">An inclusive participant experience</div>
+                            <div class="portfolio-showcase-meta">
+                                <div class="portfolio-showcase-tags">
+                                    <span class="portfolio-showcase-tag">September 2021</span>
+                                </div>
