@@ -1,49 +1,123 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Creating a research library to share insights - Tyler Gindraux</title>
 </head>
-
 <body>
-    <div class="header">
-        <div class="header-logo">
-            <a href="/">Tyler Gindraux</a>
-        </div>
-        <div class="header-nav">
+    <div class="container">
+        <!-- Header with Logo and Navigation -->
+        <header class="header">
+            <!-- Logo -->
+            <a href="/" class="logo"></a>
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
-                    <li><a href=/projects>Projects</a></li>
-                    <li><a href=/writing>Writing</a></li>
-                    <li><a href=/speaking>Speaking</a></li>
-                    <li><a href=/contact>Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">About</a></li>
                 </ul>
             </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1 class="project-title">
+                    Creating a research library to share insights
+                </h1>
+            </div>
+
+            <!-- Right Column - Project Details -->
+            <div class="project-details">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">My role</div>
+                        <div class="meta-value">User Researcher</div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-label">Organization</div>
+                        <div class="meta-value">Royal National Institute for Deaf People (RNID)</div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-label">Dates</div>
+                        <div class="meta-value">August 2021 - June 2022</div>
+                    </div>
+                </div>
+
+                <div class="project-overview">
+                    <h2 class="overview-title">Project Overview</h2>
+                    <p class="overview-text">
+                        The goal of this work was for people across and outside our organization to easily learn about our users' needs. I researched how to structure a user-friendly research library frontend, conducting studies on search behavior and information categorization to make insights more accessible to stakeholders.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Context</h2>
+                    <p class="section-text">
+                        RNID is an over 100 year old organization with a new digital focus. This new focus helped us begin to do user research with the people the charity supports. And as our user research practice has grown, more people outside and across the organisation were asking for access to our insights. I had already created a research repository when I joined RNID, but through discovery research I learned that others found the repository overwhelming. This stopped some people from looking at past research.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Plan</h2>
+                    <p class="section-text">
+                        Previous interviews highlighted why people find it difficult to look for research in our existing repository. After coming up with and visualising ways to solve the problem, I started to work with our developer to build a simpler frontend to the library. We needed to know how information should be structured within the frontend so it was less overwhelming for people who search. I planned a study to learn which words people use to search for research data and how people categorize insights.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Collect</h2>
+                    <p class="section-text">
+                        To learn how people search for research, I asked 10 people across product, design and engineering to read a transcript from a research interview and write down which terms they would use to search for the data. I analyzed the tags people used and consolidated them into a refined set. After that, I ran a card sort using the refined set of tags, and asked people them to organise the tags into categories.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Make sense</h2>
+                    <p class="section-text">
+                        My research showed how people look for and categorize data. It found that people from similar disciplines tend to use the same words to describe similar topics, while people across disciplines categorized things into similar groups. I used the user-generated tags and categories to help define a structure for the data that would make sense for the people searching for it.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Share</h2>
+                    <p class="section-text">
+                        Doing research with people who will use the library helped define how it could be set up based on the way they search and look for things. I recommended a structure for each insight and user need and shared it with the team. Then, I met with our developer to scope how he would create a working prototype. I shared these next steps with our Associate Director for Digital and Design Lead and received approval to move forward with developing a prototype.
+                    </p>
+                </div>
+
+                <div class="project-impact">
+                    <h2 class="impact-title">Impact</h2>
+                    <p class="impact-text">
+                        The research library is currently in Beta. I shared the library across the organization and it was added to our Intranet. I also wrote about my experiences researching and building a library on <a href="https://medium.com/rnid/making-it-easy-to-learn-about-users-and-their-needs-6a7d505aed9b">Medium</a>, so that people across our industry can learn from this approach. Finally, I defined success metrics so that over time, we could identify whether we solved the right problems in the right way.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-     <div class="main">
-        <h1>Creating a research library to share insights</h1>
-        <p>The goal of this work was for people across and outside our organization to easily learn about our users' needs. On this project, I was a User Researcher at the <a href="https://www.rnid.org.uk/">Royal National Institute for Deaf People (RNID)</a>.</p>
-        <h3>Context</h3>
-        <p>RNID is an over 100 year old organization with a new digital focus. This new focus helped us begin to do user research with the people the charity supports.<br><br>And as our user research practice has grown, more people outside and across the organisation were asking for access to our insights.<br><br>I had already created a research repository when I joined RNID, but through discovery research I learned that others found the repository overwhelming. This stopped some people from looking at past research.</p>
-        <h3>Plan</h3>
-        <p>Previous interviews highlighted why people find it difficult to look for research in our existing repository. After coming up with and visualising ways to solve the problem, I started to work with our developer to build a simpler frontend to the library.<br><br>We needed to know how information should be structured within the frontend so it was less overwhelming for people who search. I planned a study to learn which words people use to search for research data and how people categorize insights.</p>
-        <h3>Collect</h3>
-        <p>To learn how people search for research, I asked 10 people across product, design and engineering to read a transcript from a research interview and write down which terms they would use to search for the data. I analyzed the tags people used and consolidated them into a refined set.<br><br>After that, I ran a card sort using the refined set of tags, and asked people them to organise the tags into categories. </p>
-        <h3>Make sense</h3>
-        <p>My research showed how people look for and categorize data.<br><br>It found that people from similar disciplines tend to use the same words to describe similar topics, while people across disciplines categorized things into similar groups.<br><br>I used the user-generated tags and categories to help define a structure for the data that would make sense for the people searching for it.</p>
-        <h3>Share</h3>
-        <p>Doing research with people who will use the library helped define how it could be set up based on the way they search and look for things. I recommended a structure for each insight and user need and shared it with the team.<br><br>Then, I met with our developer to scope how he would create a working prototype.<br><br>I shared these next steps with our Associate Director for Digital and Design Lead and received approval to move forward with developing a prototype.</p>
-        <h3>Impact</h3>
-        <p>The research library is currently in Beta. I shared the library across the organization and it was added to our Intranet.<br><br>I also wrote about my experiences researching and building a library on <a href="https://medium.com/rnid/making-it-easy-to-learn-about-users-and-their-needs-6a7d505aed9b">Medium</a>, so that people across our industry can learn from this approach.<br><br>Finally, I defined success metrics so that over time, we could identify whether we solved the right problems in the right way.</p>
-    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
+                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

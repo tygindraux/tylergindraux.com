@@ -1,56 +1,115 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Learning how to support Veterans with sign in - Tyler Gindraux</title>
 </head>
-
 <body>
-    <div class="header">
-        <div class="header-logo">
-            <a href="/">Tyler Gindraux</a>
-        </div>
-        <div class="header-nav">
+    <div class="container">
+        <!-- Header with Logo and Navigation -->
+        <header class="header">
+            <!-- Logo -->
+            <a href="/" class="logo"></a>
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
-                    <li><a href=/projects>Projects</a></li>
-                    <li><a href=/writing>Writing</a></li>
-                    <li><a href=/speaking>Speaking</a></li>
-                    <li><a href=/contact>Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">About</a></li>
                 </ul>
             </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1 class="project-title">
+                    Learning how to support Veterans with sign in
+                </h1>
+            </div>
+
+            <!-- Right Column - Project Details -->
+            <div class="project-details">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">My role</div>
+                        <div class="meta-value">Senior User Researcher</div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-label">Organization</div>
+                        <div class="meta-value">U.S. Department of Veterans Affairs with Blue Tiger</div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-label">Dates</div>
+                        <div class="meta-value">October 2023 to May 2024</div>
+                    </div>
+                </div>
+
+                <div class="project-overview">
+                    <h2 class="overview-title">Project Overview</h2>
+                    <p class="overview-text">
+                        I led user research with Veterans to understand how to successfully migrate over 4 million Veterans from legacy credentials to safer sign-in options, discovering that in-person support and ease-of-use drive adoption more than security concerns.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Context</h2>
+                    <p class="section-text">
+                        Veterans need to sign in to VA.gov so they can schedule doctor’s appointments, refill prescriptions and file for disability compensation. There are currently multiple ways to sign in to VA.gov and some don’t meet the changing security standards. Importantly, having multiple options causes confusion and can make it impossible for Veterans to access critical services. To improve this situation, VA needs to migrate more than four million Veterans from legacy credentials to safer sign-in options.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Plan</h2>
+                    <p class="section-text">I met with various subject matter experts across VA who warned that mandatory, unsupported migration will leave Veterans behind. We used these conversations to shape our research goals:</p>
+                        <ul class="section-text">
+                            <li>understand what in-person support will enable Veterans to create and use safe sign in options</li>
+                            <li>understand which multi-factor authentication (MFA) option can be used by the greatest number of Veterans</li>
+                        </ul>
+                    <p class="section-text">We came up with various scenarios for how Veterans could migrate to a new credential and developed materials to test these scenarios in-person at VA medical centers. For example, one scenario involved setting up a new credential with help from a member of staff at a VA hospital, before or after an existing medical appointment.</p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Collect</h2>
+                    <p class="section-text">I traveled to Tampa, Florida to conduct this research in-person at a VA medical center. I facilitated interviews with Veterans and, in total, we spoke to 37 Veterans over 1 week. I learned that Veterans are motivated to set up a new sign in method if there's dedicated support available, particularly in-person.</p>
+                    <p class="section-quote">"I would set up Login.gov at the end of my doctor's appointment, while I'm here. I'd rather get more done in a single period."</p>
+                    <p class="section-text">When considering security, Veterans are motivated to keep fellow Veterans' data safe, more than they worry about their own data. And even if Veterans say security is a priority, their MFA choices are driven by ease of use.</p>
+                </div>
+
+                <div class="project-section">
+                    <h2 class="section-title">Share</h2>
+                    <p class="section-text">I traveled to the Department of Veterans Affairs Headquarters in D.C. to present this research to key stakeholders in governnment. We also presented a future state service blueprint, created based on our research findings, which describes recommended pathways to support Veterans in migrating to a new sign in option.<br><br>These workshops not only helped share learning widely, but also informed my understanding of dependencies and priorities from VA leadership.</p>
+                </div>
+
+                <div class="project-impact">
+                    <h2 class="impact-title">Impact</h2>
+                    <p class="impact-text">My leadership during discovery elevated me to a key strategic partner in developing a comprehensive product roadmap. I became Design Lead on our team, driving design, content and user research with the goal of migrating 4 million Veterans to safer sign in options.</p>
+                </div>
+            </div>
         </div>
     </div>
-     <div class="main">
-        <h1>Understanding how to support Veterans with sign in </h1>
-        <p>The goal of this work was for Veterans to be able to set up an account and sign in so they can access benefits and services from the United States Department of Veterans Affairs (VA). On this project, I was a Senior User Researcher with <a href="https://www.bluetiger.digital/">Blue Tiger</a>.</p>
-        <h3>Context</h3>
-        <p>Veterans need to sign in to <a href="https://www.va.gov/">VA.gov</a> so they can schedule doctor’s appointments, refill prescriptions and file for disability compensation, to give a few examples.<br><br>There are currently multiple ways to sign in to VA.gov and some don’t meet the changing security standards. Importantly, having multiple options causes confusion and, in some cases, can make it impossible for Veterans to access critical services.<br><br>To improve this situation, VA needs to migrate more than four million Veterans from legacy credentials to safer sign-in options.</p>
-        <h3>Plan</h3>
-        <p>I met with various subject matter experts across VA who warned that mandatory, unsupported migration will leave Veterans behind. We used these conversations to shape our research goals:
-            <ul>
-                <li>understand what in-person support will enable Veterans to create and use safe sign in options</li>
-                <li>understand which multi-factor authentication (MFA) option can be used by the greatest number of Veterans</li>
-            </ul>
-        </p>
-        <p>We came up with various scenarios for how Veterans could migrate to a new credential and developed materials to test these scenarios in-person at VA medical centers. For example, one scenario involved setting up a new credential with help from a member of staff at a VA hospital, before or after an existing medical appointment.</p>
-        <h3>Collect</h3>
-        <p>I traveled to Tampa, Florida to conduct this research in-person at a VA medical center. I facilitated interviews with Veterans and, in total, we spoke to 37 Veterans over 1 week.</p>
-        <p>I learned that Veterans are motivated to set up a new sign in method if there's dedicated support available, particularly in-person.</p>
-        <div class="quote"><q>I would set up Login.gov at the end of my doctor's appointment, while I'm here. I'd rather get more done in a single period.</q></div>
-        <p>When considering security, Veterans are motivated to keep fellow Veterans' data safe, more than they worry about their own data. And even if Veterans say security is a priority, their MFA choices are driven by ease of use.</p>
-        <h3>Share</h3>
-        <p>I traveled to the Department of Veterans Affairs Headquarters in D.C. to present this research to key stakeholders in governnment.<br><br>We also presented a future state service blueprint, created based on our research findings, which describes recommended pathways to support Veterans in migrating to a new sign in option.<br><br>These workshops not only helped share learning widely, but also informed my understanding of dependencies and priorities from VA leadership.</p>
-        <h3>Impact</h3>
-        <p>After my leadership during discovery, I became a key strategic partner in developing a roadmap to tackle the opportunity areas discovery uncovered. I became Design Lead on the team, leading various follow on research and design work with the goal of migrating 4 million Veterans to safer sign in options.</p>
-    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
+                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

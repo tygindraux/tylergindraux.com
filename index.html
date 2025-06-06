@@ -1,38 +1,113 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Tyler Gindraux - Strategic Service Designer</title>
 </head>
 
 <body>
-    <div class="header">
-        <div class="header-logo">
-            <a href="/">Tyler Gindraux</a>
-        </div>
-        <div class="header-nav">
+    <div class="container">
+        <!-- Header with Logo and Navigation -->
+        <header class="header">
+            <!-- Logo -->
+            <a href="/" class="logo"></a>
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
-                    <li><a href=/projects>Projects</a></li>
-                    <li><a href=/writing>Writing</a></li>
-                    <li><a href=/speaking>Speaking</a></li>
-                    <li><a href=/contact>Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">About</a></li>
                 </ul>
             </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1 class="intro-text">
+                    I'm Tyler, a strategic service designer who helps organizations cut through complexity to create
+                    meaningful change for the people we serve.
+                </h1>
+            </div>
+
+            <!-- Right Column - Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div>
+                        <h3 class="portfolio-title">U.S. DEPARTMENT OF VETERANS AFFAIRS</h3>
+                        <a href="#" class="portfolio-description">Making it easier to ask questions about VA benefits and services</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div>
+                        <h3 class="portfolio-title">WITH YOU</h3>
+                        <p class="portfolio-description">Discovering the needs of people who inject drugs during Covid-19</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div>
+                        <h3 class="portfolio-title">U.S. DEPARTMENT OF VETERANS AFFAIRS</h3>
+                        <p class="portfolio-description">Learning how to support Veterans with sign in</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div>
+                        <h3 class="portfolio-title">ROYAL NATIONAL INSTITUTE FOR DEAF PEOPLE</h3>
+                        <p class="portfolio-description">Deciding the purpose of an online community</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div>
+                        <h3 class="portfolio-title">ROYAL NATIONAL INSTITUTE FOR DEAF PEOPLE</h3>
+                        <p class="portfolio-description">Creating a research library to share insights across an organization</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div>
+                        <h3 class="portfolio-title">ROYAL NATIONAL INSTITUTE FOR DEAF PEOPLE</h3>
+                        <p class="portfolio-description">Testing an online tool that helps people find the right help</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Testimonial Section -->
+        <div class="testimonial-section">
+            <div class="testimonial-container">
+                <blockquote>
+                    <p class="testimonial-quote">
+                        "Tyler has a gift for making users feel heard and teammates feel supported—and can untangle the
+                        knottiest user flows without breaking a sweat (or at least without letting the rest of us see her
+                        sweat). She is meticulous in her craft, insightful in her feedback, and somehow manages to keep even the
+                        toughest projects moving forward with good energy."
+                    </p>
+                </blockquote>
+            </div>
         </div>
     </div>
-     <div class="main">
-            <h1>Hello! I'm Tyler, a researcher and designer of public services.</h1>
-            <p>Lately, I've been making it easier for Veterans to access benefits and services from the <a href="https://www.va.gov/">United States Department of Veterans Affairs</a> with <a href="https://www.bluetiger.digital/">Blue Tiger</a>.<br><br>I used to work in the UK, at the <a href="https://rnid.org.uk/">Royal National Institute for Deaf People</a>, <a href="https://www.wearewithyou.org.uk/">With You</a>, <a href="https://www.stby.eu/">STBY</a> and <a href="https://designagainstcrime.com/">Design Against Crime Research Centre</a>.</p>
-            <p>I have over 7 years of experience in design strategy, user research, usability testing, prototyping, service design and workshop facilitation. I live in Brooklyn, NY with <a href="https://craigmulligan.com/">my husband</a>.</p>
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
+                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
+        </div>
     </div>
+    </footer>
 </body>
 </html>

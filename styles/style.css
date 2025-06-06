@@ -1,171 +1,775 @@
-html, body {
-    font-size: 20px;
-    font-family: 'Inter', sans-serif;
-    color:#2f2923;
-    background-color: #fceada;
-    text-rendering: optimizeLegibility;
-  }
-
+/* ===== MASTER STYLESHEET ===== */
+/* Global Reset */
 * {
     margin: 0;
-}
- 
-h1 {
-    font-family: 'Source Serif Pro', serif;
-    font-size: 2.4em;
-    font-weight: 700;
-    padding-bottom: 1em;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5em;
-    font-weight: 700;
-    padding-top: 2em;
-    padding-bottom: .7em;
+/* body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    padding: 2rem;
+} */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.2em;
-    font-weight: 700;
-    padding-top: 1em;
-    padding-bottom: .8em;
+/* Page wrapper for main content */
+.page-wrapper {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
-h4 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1em;
-    font-weight: 300;
-    line-height: 1em;
-    padding-bottom: 1em;
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    flex: 1; /* This makes the container take up available space */
 }
 
-p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.5em;
-    padding-top: .5em;
-    padding-bottom: 1em;
-}
-
+/* ===== HEADER SECTION ===== */
 .header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    line-height: 2em;
-    margin: 3em 3.5em 3.5em 4em;
+    margin-bottom: 4rem;
 }
 
-.header-nav {
-    display: flex;
-    flex-wrap: wrap;
+.logo {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #eb0e50;
+    border-radius: 50%;
+    text-decoration: none;
 }
 
 .nav ul {
-    list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-    color: white;
+    list-style: none;
+    gap: 2rem;
 }
 
-.nav a:link {
-    padding: 2em 3.5em 1em 0;
+.nav a {
+    color: #5d99ff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-a:link {
-    color: #eb0e50;
+.nav a:hover {
+    color: #0165FC;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* ===== MAIN CONTENT LAYOUT ===== */
+.main-content {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    gap: 4rem;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative; /* Added for homepage compatibility */
+}
+
+/* ===== HOMEPAGE SPECIFIC STYLES ===== */
+/* Intro text for homepage */
+.intro-text {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #2f2923;
+    line-height: 1.25;
+}
+
+/* ===== FULL WIDTH ===== */
+
+.recommendation-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.recommendation-item {
+    width: 100%;
+    border-left: 2px solid #eb0e50;
+    padding-left: 1.5rem;
+}
+
+.recommendation-quote {
+    color:#eb0e50;
+    font-family: "Crimson Pro", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.recommendation-quote-link {
+    color:#5d99ff;
+    font-family: "Crimson Pro", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
     text-decoration: none;
 }
 
-a:hover {
+.recommendation-quote-link:hover {
+    color:#0165FC;
     text-decoration: underline;
 }
 
-a:visited {
+
+.recommendation-text {
+    font-size: 1rem;
+    color: #796269;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.recommendation-front {
+    font-size: 1rem;
+    color: #796269;
+    line-height: 1.4;
+}
+
+.recommendation-front a {
+    font-size: 1rem;
+    color:#5d99ff;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.recommendation-front a:hover {
+    color:#0165FC;
+    line-height: 1.4;
+    text-decoration: underline;
+}
+
+.recommendation-attribution {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.recommendation-date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+}
+
+.recommendation-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.recommendation-title a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color:#5d99ff; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Portfolio Grid for homepage */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    border-left: 2px solid #eb0e50;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.portfolio-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-description {
+    font-size: 0.95rem;
+    color: #5d99ff;
+    line-height: 1.4;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-description:hover {
+    color: #0165FC;
+    text-decoration: underline;
+}
+
+.project-title {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #2f2923;
+    line-height: 1.25;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.meta-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.meta-value {
+    font-size: 1rem;
+    color: #796269;
+    line-height: 1.4;
+}
+
+.project-overview {
+    padding-top: 2rem;
+    border-top: 2px solid #eb0e50;
+}
+
+.overview-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.overview-text {
+    font-size: 1rem;
+    color: #796269;
+    line-height: 1.5;
+}
+
+.section-overview {
+    padding-top: 1rem;
+}
+
+.section-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.section-text {
+    font-size: 1rem;
+    color: #796269;
+    line-height: 1.5;
+}
+
+ul.section-text {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-text a {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color:#5d99ff;
+    transition: color 0.3s ease;
+}
+
+.section-text a:hover {
+    color: #0165FC;
+    text-decoration: underline;
+}
+
+.section-quote {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-left: 2px solid #eb0e50;
+    font-size: 1.3rem;
+    font-family: "Crimson Pro", serif;
     color: #eb0e50;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-impact {
+    padding-bottom: 5rem;
+}
+
+.impact-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.impact-text a {
+    font-size: 1rem;
+    color:#5d99ff;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.impact-text a:hover {
+    font-size: 1rem;
+    color:#0165FC;
+    line-height: 1.5;
+    text-decoration: underline;
+}
+
+.impact-text {
+    font-size: 1rem;
+    color: #796269;
+    line-height: 1.5;
+}
+
+/* ===== FULL-WIDTH PORTFOLIO COMPONENT ===== 
+
+.portfolio-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-showcase-item {
+    border-left: 2px solid #eb0e50;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.portfolio-showcase-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color:#5d99ff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block; /* Keep block-level behavior
+    transition: color 0.3s ease; /* Add smooth transition
     text-decoration: none;
 }
 
-.main {
-    margin: 4.8em 3.5em 3.5em 4em;
-    max-width: 800px;
+.portfolio-showcase-title:hover {
+    color: #0165FC; /* Change color on hover
+    text-decoration: underline;
 }
 
-.feed h2 {
-    padding-top: .9em;
-    line-height: 1.3em;
+.portfolio-showcase-role {
+    font-family: "Crimson Pro", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:#eb0e50;
 }
 
-h2 {
-    padding-top: 20px;
-    line-height: 42px;
+.portfolio-showcase-link {
+    font-family: "Crimson Pro", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:#5d99ff;
 }
 
-.feed {
-    padding-bottom: 15px;
+.portfolio-showcase-link:hover {
+    color: #0165FC; /* Change color on hover
+    text-decoration: underline;
 }
 
-.main ul {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 36px;
+.portfolio-showcase-testimonial {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color:#2f2923;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block; /* Keep block-level behavior
 }
 
-.testimonials h2 {
-    padding-top: 20px;
-    line-height: 42px;
+.portfolio-showcase-description {
+    font-size: 0.95rem;
+    color: #796269;
+    line-height: 1.4;
 }
 
-.testimonials {
-    padding-bottom: 15px;
+.portfolio-showcase-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.resume h2 {
-    padding-top: 20px;
-    line-height: 42px;
+.portfolio-showcase-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.resume {
-    padding-bottom: 15px;
+.portfolio-showcase-tag {
+    font-size: 0.75rem;
+    color: #796269;
+    background-color: #f5f5f5;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.resources h2 {
-    padding-top: 20px;
-    line-height: 42px;
+.portfolio-showcase-date {
+    font-size: 0.8rem;
+    color: #796269;
+    font-weight: 400;
+} 
+
+.project-front {
+    padding-bottom: 1rem;
 }
 
-.resources {
-    padding-bottom: 15px;
+.front-text {
+    font-size: 1rem;
+    color: #796269;
+    line-height: 1.5;
 }
 
-.quote {
-    font-size: 20px;
-    background-color: #f8a9be7e;
-    padding: .8em .8em .8em 1em;
-    margin-top: .3em;
-    margin-bottom: .9em;
-    line-height: 1.4em;
+.front-text a {
+    color: #5d99ff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-@media (max-width: 900px) {
-    .home {
-        margin-top: 3.5em;
+.front-text a:hover {
+    color: #0165FC;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+} */
+
+/* ===== TESTIMONIAL SECTION ===== */
+.testimonial-section {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+    .testimonial-section {
+        margin-top: 6rem;
     }
-    html, body {
-        font-size: 18px;    
+}
+
+.testimonial-container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .testimonial-container {
+        padding: 0 4rem;
     }
+}
+
+@media (min-width: 1024px) {
+    .testimonial-container {
+        padding: 0 6rem;
+    }
+}
+
+.testimonial-quote {
+    text-align: center;
+    font-family: "Crimson Pro", serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #eb0e50;
+}
+
+@media (min-width: 768px) {
+    .testimonial-quote {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonial-quote {
+        font-size: 1.7rem;
+    }
+}
+
+/* Footer - now extends to full edges */
+.footer {
+    background: linear-gradient(135deg, #0165FC 0%, #5d99ff 100%);
+    padding: 3rem 2rem 3rem 2rem;
+    margin-top: auto; /* This pushes footer to bottom */
+}
+
+.footer-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+/* .footer-logo {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    flex-shrink: 0;
+} */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 1.5rem;
+    }
+    
     .header {
-        margin: 2em 2em 2em 2.5em;
+        margin-bottom: 3rem;
     }
-    .nav a:link {
-        padding: 1.4em 1.4em 1.4em 0;
+    
+    .footer {
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
-    .main {
-        margin: 3.6em 2em 2em 2.5em;
-        max-width: 900px;
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
     }
-  }
+}
+
+@media (min-width: 768px) {
+    .page-wrapper {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-wrapper {
+        padding: 4rem;
+    }
+}
+
+/* ===== FOOTER SECTION ===== 
+.footer {
+    background-color: #0165FC;
+    margin-top: 6rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-bottom: -2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+    text-decoration: underline;
+} */
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .rotated-text {
+        display: none;
+    }
+
+    .intro-text,
+    .project-title {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
+    .nav ul {
+        gap: 1.5rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-text,
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        margin-top: 4rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        margin-bottom: -1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 3rem;
+    }
+
+    .intro-text,
+    .project-title {
+        font-size: 1.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 4rem;
+    }
+
+    .intro-text,
+    .project-title {
+        font-size: 2.25rem;
+    }
+
+    .rotated-text {
+        display: block;
+    }
+
+    .footer {
+        margin-left: -4rem;
+        margin-right: -4rem;
+        margin-bottom: -4rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .footer {
+        margin-left: -3rem;
+        margin-right: -3rem;
+        margin-bottom: -3rem;
+    }
+}

@@ -1,79 +1,216 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Recommendations - Tyler Gindraux</title>
 </head>
-
 <body>
-    <div class="header">
-        <div class="header-logo">
-            <a href="/">Tyler Gindraux</a>
-        </div>
-        <div class="header-nav">
+    <div class="container">
+        <!-- Header with Logo and Navigation -->
+        <header class="header">
+            <!-- Logo -->
+            <a href="/" class="logo"></a>
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
-                    <li><a href=/projects>Projects</a></li>
-                    <li><a href=/writing>Writing</a></li>
-                    <li><a href=/speaking>Speaking</a></li>
-                    <li><a href=/contact>Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">About</a></li>
                 </ul>
             </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1 class="intro-text">
+                    Really talented people have said lovely things about working with me
+                </h1>
+            </div>
+
+            <!-- Right Column - Testimonials Stack -->
+            <div class="recommendation-stack">
+                <div class="recommendation-item">
+                        <h3 class="recommendation-quote">"Creating the strategic clarity that keeps teams focused on impact"</h3>
+                        <p class="recommendation-text">I can confidently say Tyler is one of the most strategically minded researchers and service designers I've worked with. Her approach to research and design is refreshingly purposeful—she doesn't just conduct studies, she crafts research strategies that directly serve Veterans and move products forward in meaningful ways.</p>
+                        <p class="recommendation-attribution">CHARLYE TRAN, SENIOR PRODUCT STRATEGIST</p>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"When it comes to leadership, that's where Tyler shines the most"</h3>
+                        <p class="recommendation-text">Tyler's research skills are some of the most honed and effective I've come across in my 20+ years in tech. She led a group of researchers and designers through user interviews, research initiatives, and anything else that was asked of her.</p>
+                        <p class="recommendation-attribution">JESSE JAMES, STAFF ENGINEER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Always engaged, always prepared, and always willing to do what it takes"</h3>
+                        <p class="recommendation-text">Tyler is one of those teammates who consistently goes above and beyond her role. While her title was UX Designer, she brought so much more to the table - jumping into QA when the project hit a tough stretch, contributing product insights, and even speaking fluently about engineering decisions when it mattered most.</p>
+                        <p class="recommendation-attribution">DEV GOVINDJI, FRONT-END ENGINEER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Do everything in your power to keep her around"</h3>
+                        <p class="recommendation-text">If you ever get the chance to work with Tyler Gindraux, take it—and then do everything in your power to keep her around. Tyler is the kind of UX Designer and Researcher who doesn't just check all the boxes—empathy, rigor, creativity, attention to detail—but somehow finds a way to make new, better boxes you didn't even know you needed.</p>
+                        <p class="recommendation-attribution">MEGAN SIDDLE, PROGRAM MANAGER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Consistently helped bridge the gap between design and implementation with empathy and clarity"</h3>
+                        <p class="recommendation-text">I had the privilege of working closely with Tyler for two years at the Department of Veterans Affairs, and I can honestly say she's one of the most thoughtful and skilled collaborators I've worked with. She led user research sessions with clarity and purpose.</p>
+                        <p class="recommendation-attribution">KHOA NGUYEN, SENIOR FULL-STACK ENGINEER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"The glue that connected design, engineering, and leadership to our team"</h3>
+                        <p class="recommendation-text">Tyler has a gift for making people feel at ease, which enables them to provide honest and helpful feedback. She also has a knack for turning all that input into clear insights that everyone could act on.</p>
+                        <p class="recommendation-attribution">THOMAS MICHAUD, SENIOR USER EXPERIENCE DESIGNER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"A tremendous design partner"</h3>
+                        <p class="recommendation-text">Although she might disagree, Tyler could very well be a team unto herself! From writing manual QA scripts and testing to presenting highlights from a recent research study, there are few who can compete with Tyler's multitasking expertise.</p>
+                        <p class="recommendation-attribution">ARIEL MARTINEZ, PRODUCT MANAGER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Tyler helped me believe this was going to be a success"</h3>
+                        <p class="recommendation-text">I will be honest; I was skeptical about a lot of things when this project started. You really helped me believe this was going to be a success. You have a lot of passion for doing things right and I'm not sure that is always valued as much as it should be.</p>
+                        <p class="recommendation-attribution">FEDERAL GOVERNMENT PARTNER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Tyler exemplifies the idea of 'hitting the ground running'"</h3>
+                        <p class="recommendation-text">People talk about other people. That's normal. What I heard people say about Tyler though, now that was a surprise. "How is she so knowledgeable and contributing this much so early into her time on the project?" Tyler exemplifies the idea of "hitting the ground running" and is an individual who takes initiative & defaults to action.</p>
+                        <p class="recommendation-attribution">MIKE PRUSAITIS, ASSOCIATE DIRECTOR OF PROGRAM MANAGEMENT</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"A truly great leader who made sure we never lost sight of the user or the big picture"</h3>
+                        <p class="recommendation-text">I really enjoyed working with Tyler as our lead UX researcher on Ask VA. She brought so much clarity and cohesion to the team! Tyler has a rare ability to not only lead research but to connect the team through it.</p>
+                        <p class="recommendation-attribution">HEMESH PATEL, SENIOR FRONT-END ENGINEER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"A great force behind our team's learnings, successes, and visions"</h3>
+                        <p class="recommendation-text">Tyler is an incredible leader with a strong moral compass. After working with her for a few months, it became undeniable that she was a great force behind our team's learnings, successes, and visions.</p>
+                        <p class="recommendation-attribution">SOFIA KIRKMAN, USER EXPERIENCE DESIGNER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Unique set of leadership and hands-on research and design skills"</h3>
+                        <p class="recommendation-text">Tyler is an asset to any team she joins, bringing a unique set of leadership and hands-on user research and design skills. She was able to identify and prioritize the best areas for her to be involved, whilst coaching and mentoring other colleagues to carry out research.</p>
+                        <p class="recommendation-attribution">SARAH NORMAN, DELIVERY MANAGER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Even in stressful situations, she gets it done with a smile"</h3>
+                        <p class="recommendation-text">Tyler is the perfect (and rare) mix of creative and analytical. She has a good eye for detail, but doesn't get lost in it. She's efficient and methodical, yet also flexible and can go with the flow.</p>
+                        <p class="recommendation-attribution">MEGAN ANDERSON, SENIOR DESIGN RESEARCHER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Makes you feel comfortable and confident when working together"</h3>
+                        <p class="recommendation-text">I learnt so much from Tyler about user research, service design and people more generally. She has a way of making people feel comfortable and confident when working together or in interviews.</p>
+                        <p class="recommendation-attribution">FAY RYAN, CONTENT DESIGN LEAD</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Tyler went out her way to set me up for success"</h3>
+                        <p class="recommendation-text">I noticed Tyler's research integrity and amazing organization right away. As my team began working with Tyler's, I found a research partner who is easy to collaborate with and who offers a great perspective when giving feedback.</p>
+                        <p class="recommendation-attribution">CLAYTON ZOOK, USER EXPERIENCE RESEARCHER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Tyler is a best in class user researcher"</h3>
+                        <p class="recommendation-text">Tyler is a best in class user researcher and an asset to any project team. At our charity, Tyler established a new user research department, leaving a legacy of valuable insights and processes that we still use today.</p>
+                        <p class="recommendation-attribution">FRANKIE GARFORTH, STRATEGIST</p>
+                    </div>  
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Incredibly skilled at working with users during sessions"</h3>
+                        <p class="recommendation-text">I worked with Tyler on a variety of projects and found her to be an excellent, empathetic and thoughtful user researcher. She was incredibly skilled at working with users during sessions, delving into actions to uncover the core user needs.</p>
+                        <p class="recommendation-attribution">SIMON NEBESNUICK, PRODUCT MANAGER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Enabled the key messages to resonate with the right people"</h3>
+                        <p class="recommendation-text">Tyler spent time to really understand the audience at With You. She understood the complexity of the individuals accessing support and adapted her approach to make best use of the time. Due to this, the impact she had was massive.</p>
+                        <p class="recommendation-attribution">STEPH KEENAN, PRODUCT OWNER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"Kind, thoughtful, empathetic and insightful"</h3>
+                        <p class="recommendation-text">Tyler is kind, thoughtful, empathetic and insightful, and always seeks to gain a deep understanding of the challenges, motivations and needs of the people she designs with.</p>
+                        <p class="recommendation-attribution">JESS NEWELL, SERVICE DESIGNER</p>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div>
+                        <h3 class="recommendation-quote">"She was always there to help and motivate me"</h3>
+                        <p class="recommendation-text">It's unusual to come across such a brilliant talent like Tyler! I was constantly amazed not only by her creativity and set of skills, but also by her unique ability to open up and sustain positive relationships with others, either within the team or with the clients.</p>
+                        <p class="recommendation-attribution">HOSSAIN SAEB, DESIGNER</p>
+                    </div>
+                </div>
+                <br>
+
+            </div>
         </div>
     </div>
-     <div class="main">
-        <h1>How people find working with me</h1>
-        <p>I've worked with countless talented researchers, designers, product managers, strategists and more. Here’s how some of them describe working with me.</p><br>
-        <div class="testimonials">
-            <!--top of feed-->
-            <h2>"When it comes to leadership, that's where Tyler shines the most"</h2>
-            <p>Tyler's research skills are some of the most honed and effective I've come across in my 20+ years in tech. Whether it be conducting research, analyzing the data, or presenting to stakeholders of all technical skill levels, Tyler was incredibly professional, approachable, and results driven, all while remaining true to the overarching mission.<br><br>When it comes to leadership, I'd say that's where I noticed Tyler shining the most. She led a group of researchers and designers through user interviews, research initiatives, and anything else that was asked of her. She also routinely took the initiative to rally her team to support other internal projects and future ideas, going well above and beyond what had been asked of her.<br><br>- <a href="https://www.linkedin.com/in/jessejamespdx/">Jesse James</a>, Staff Engineer</p>
-            <!--next item-->
-            <h2>"Tyler helped me believe this was going to be a success"</h2>
-            <p>I will be honest; I was skeptical about a lot of things when this project started. You really helped me believe this was going to be a success.<br><br>You have a lot of passion for doing things right, I'm not sure that is always valued as much as it should be.<br><br>- Federal Government Partner</p>
-            <!--next item-->
-            <h2>"Tyler exemplifies the idea of 'hitting the ground running'"</h2>
-            <p>People talk about other people. That’s normal. What I heard people say about Tyler though, now that was a surprise. “How is she so knowledgeable and contributing this much so early into her time on the project?” I heard this statement or its sentiment multiple times from several folks about Tyler as she joined the project and what we saw from the outset was true throughout the life of the project we worked together.<br><br>Tyler exemplifies the idea of “hitting the ground running” and is an individual who takes initiative & defaults to action. Additionally, she will (respectfully) challenge the team, the work, and the client. She aims to execute work optimally with the best possible results. On one occasion, when we’d exceeded our target for interviews, she proposed adjusting questions & stimuli (that she had drafted while we were still in the field) so that we could get more out of the time we had with the users. It allowed us to learn even more acutely from Veterans and tell more compelling stories to our clients.<br><br>- <a href="https://www.linkedin.com/in/mikeprusaitis/">Mike Prusaitis</a>, Associate Director of Program Management</p>
-            <!--next item-->
-            <h2>"A great force behind our team’s learnings, successes, and visions"</h2>
-            <p>Tyler is an incredible leader with a strong moral compass. After working with her for a few months, it became undeniable that she was a great force behind our team’s learnings, successes, and visions.<br><br>She is extremely thoughtful, empathetic, and detail-oriented. No matter the situation, she asks thought provoking questions that lead to a clear rationale, logical next steps, and increased motivation.<br><br>- <a href="https://www.linkedin.com/in/sofiakirkman/">Sofia Kirkman</a>, User Experience Designer</p><br>
-            <!--next item-->
-            <h2>"Tyler went out her way to set me up for success"</h2>
-            <p>I noticed Tyler's research integrity and amazing organization right away. As my team began working with Tyler's, I found a research partner who is easy to collaborate with and who offers a great perspective when giving feedback.<br><br>At one point we had back-to-back, related research studies. In the two week's between Tyler's last session and my first, Tyler went out her way to set me up for success.<br><br>- <a href="">Clayton Zook</a>, User Experience Researcher</p><br>
-            <!--next item-->
-            <h2>“Unique set of leadership and hands-on research and design skills"</h2>
-            <p>Tyler is an asset to any team she joins, bringing a unique set of leadership and hands-on user research and design skills.<br><br>She was able to identify and prioritize the best areas for her to be involved, whilst coaching and mentoring other colleagues to carry out research. She also played a pivotal role in communicating with senior and executive level stakeholders, helping to set the strategic direction for the charity's focus on user-centred design and delivery.<br><br>Tyler was a fantastic colleague but has also earned great respect across the industry for her commitment to working in the open. In my previous role in the <a href="https://www.nhs.uk/">NHS</a>, we admired her work from afar, having learnt so much for our own practice from her blog posts.<br><br>- <a href="https://www.linkedin.com/in/sarah-norman-378aa387?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2FOl%2FAWUDSK21OCwMG2rqag%3D%3D">Sarah Norman</a>, Delivery Manager</p><br>
-            <!--next item-->
-            <h2>“Even in stressful situations, she gets it done with a smile"</h2>
-            <p>Tyler is the perfect (and rare) mix of creative and analytical. She has a good eye for detail, but doesn’t get lost in it. She’s efficient and methodical, yet also flexible and can go with the flow.<br><br>Her work always exceeded expectations and she was able to scope work with the “less is more” mindset, which I really appreciated.<br><br>Most of all, Tyler is super calm and chill. Even in stressful situations and with tight deadlines looming, she managed to stay calm, level headed, and get the job done with a smile.<br><br>- <a href="https://www.linkedin.com/in/megan-anderson-674b6251?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2FOl%2FAWUDSK21OCwMG2rqag%3D%3D">Megan Anderson</a>, Senior Design Researcher</p><br>
-            <!--next item-->
-            <h2>“Makes you feel comfortable and confident when working together"</h2>
-            <p>I learnt so much from Tyler about user research, service design and people more generally. She has a way of making people feel comfortable and confident when working together or in interviews.<br><br>I really appreciated Tyler’s constant work of putting our community first in everything we did. I was always amazed by the thoroughness of her work, I loved learning from her process.<br><br>One thing I’ll always remember is being supported to conduct interviews by Tyler. Not all people will put in the work to allow others to learn from them but Tyler took us along with all her work and allowed us to get stuck in.<br><br>- <a href="https://www.linkedin.com/in/fay-ryan-523431102?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BgTMKNvrmSNmjdGidRfXDBg%3D%3D">Fay Ryan</a>, Content Design Lead</p><br>
-            <!--next item-->
-            <h2>“Incredibly values driven"</h2>
-            <p>Tyler is a best in class user researcher and an asset to any project team. At our charity, Tyler established a new user research department, leaving a legacy of valuable insights and processes that we still use today.<br><br>She consistently went above and beyond to deliver research and recommendations in compelling and accessible ways that supported our strategy.<br><br>Tyler is also incredibly values driven, always looking for ways to make research and collaboration as inclusive as possible.<br><br>- <a href="https://www.linkedin.com/in/frankie-garforth-5313b662?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BgTMKNvrmSNmjdGidRfXDBg%3D%3D">Frankie Garforth</a>, Strategist</p><br>
-            <!--next item-->
-            <h2>“Skilled at working with users during sessions"</h2>
-            <p>I worked with Tyler on a variety of projects and found her to be an excellent, empathetic and thoughtful user researcher. She was incredibly skilled at working with users during sessions, delving into actions to uncover the core user needs.<br><br>Tyler presented her findings back to the team in detailed and coherent ways, providing honest and user-based reflections that we could take forward into the design and delivery of our products and services.<br><br>- <a href="https://www.linkedin.com/in/simon-neb?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BgTMKNvrmSNmjdGidRfXDBg%3D%3D">Simon Nebesnuick</a>, Product Manager</p><br>
-            <!--next item-->
-            <h2>“Enabled the key messages to resonate with the right people"</h2>
-            <p>Tyler spent time to really understand the audience at With You. She understood the complexity of the individuals accessing support and adapted her approach to make best use of the time. Due to this, the impact she had was massive. She organised and curated the project in an impeccable and professional way.<br><br>She worked with a small but mighty cross functional team and blended in immediately. Spending time to understand the stakeholders enabled her to give feedback that enabled the key messages to resonate with the right people. It was a pleasure working with Tyler.<br><br>- <a href="https://www.linkedin.com/in/steph-keenan-aa5550150?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BgTMKNvrmSNmjdGidRfXDBg%3D%3D">Steph Keenan</a>, Product Owner</p><br>
-            <!--next item-->
-            <h2>“Presents engaging and actionable insights"</h2>
-            <p>Tyler is kind, thoughtful, empathetic and insightful, and always seeks to gain a deep understanding of the challenges, motivations and needs of the people she designs with.<br><br>She's incredibly skilled at facilitating interviews and workshops. She ensures that participants feel comfortable and safe to express themselves and she knows the right time to delve deeper into things that seem a little unclear or ambiguous.<br><br>Tyler is also adept at communicating her research effectively back to stakeholders. She presents insights and recommendations in an engaging and actionable way so that people are clear about the problems and opportunities at hand.<br><br>- <a href="https://www.linkedin.com/in/jess-newell-a84650174?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BgTMKNvrmSNmjdGidRfXDBg%3D%3D">Jess Newell</a>, Service Designer</p><br>
-            <!--next item-->
-            <h2>“She was always there to help and motivate me"</h2>
-            <p>It's unusual to come across such a brilliant talent like Tyler! I was constantly amazed not only by her creativity and set of skills, but also by her unique ability to open up and sustain positive relationships with others, either within the team or with the clients.<br><br>Tyler is a fantastic teammate as she's an empathetic, supportive and energetic person. She was always there to help and motivate me and other team members. She has great leadership instincts which enable her to efficiently steer a team of more junior members throughout a project.<br><br>- <a href="https://www.linkedin.com/in/hossainsaeb?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BgTMKNvrmSNmjdGidRfXDBg%3D%3D">Hossain Saeb</a>, Designer</p><br>
-            <!--bottom of feed-->
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
+                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
         </div>
     </div>
+    </footer>
 </body>
 </html>
