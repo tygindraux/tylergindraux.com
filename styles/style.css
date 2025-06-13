@@ -97,6 +97,12 @@ body {
     line-height: 1.25;
 }
 
+.container img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
 /* ===== FULL WIDTH ===== */
 
 .recommendation-stack {
@@ -297,10 +303,10 @@ body {
 }
 
 .section-title {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    color: #2f2923;
-    text-transform: uppercase;
+    color: #eb0e50;
+    font-family: "Crimson Pro", serif;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
 }

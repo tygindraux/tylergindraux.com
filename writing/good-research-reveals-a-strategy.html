@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Good research reveals a strategy - Tyler Gindraux</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo and Navigation -->
+        <header class="header">
+            <!-- Logo -->
+            <a href="/" class="logo"></a>
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul>
+                    <li><a href=/projects>Projects</a></li>
+                    <li><a href=/writing>Writing</a></li>
+                    <li><a href=/resume>Resume</a></li>
+                    <li><a href=/about>About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h1 class="project-title">
+                    Good research reveals a strategy
+                </h1>
+            </div>
+
+            <!-- Right Column - Project Details -->
+            <div class="project-details">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-value">June 11, 2025</div>
+                    </div>
+                </div>
+
+                <div class="project-overview">
+                    <p class="section-text">
+                        User research is about more than just testing whether a design works well or not. Insights from research should help teams make strategic decisions, like, what we're building and why, our technical approach, product-market fit and even which order to sequence and prioritize tasks.
+                    </p>
+                </div>
+                
+                <div class="project-section">
+                    <p class="section-title">Technical capabilities don't guarantee we meet user needs</p>
+                    <p class="section-text">
+                        At the U.S. Department of Veterans Affairs, my team recently replatformed Ask VA to VA.gov. Ask VA lets Veterans and their support networks ask the VA a question online.
+                        <br><br>Currently, submitters have to choose a category, topic, and subtopic to determine which department should receive their question. Despite the usability and content improvements we made based on research, we know this categorization process is still difficult and time-consuming for Veterans and other submitters.
+                        <br><br>Last year, our VA Product Owner and data engineers started building a natural language processing (NLP) model to predict these categories based on someone's question. The hypothesis: by pre-filling these selections and letting submitters review the predictions, we could reduce burden and improve the experience.
+                        <br><br>It's an exciting idea with real potential. And there's an opportunity for research to help shape how the technology is implemented.
+                        <br><br>Technical capabilities alone don't guarantee we'll meet user needs.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <p class="section-title">Research insights drive strategic decisions</p>
+                    <p class="section-text">
+                        I proposed a research study to test early concepts with Veterans, so we could understand how an NLP model should surface predictions to submitters. We tested different prototypes, for example, surfacing a single prediction versus a list of options.
+                        <br><br>We learned that people prefer choosing from a list of narrow options rather than the tool jumping to a conclusion immediately. And while people are good at identifying when a suggestion is wrong, it's difficult to choose the correct option without further explanation.
+                        <br><br>These insights drove our strategic approach. Alongside data engineers and our UX designer, we developed a solution: show one or more options that the model is really confident about.
+                        <br><br>If the model is really confident in one option and not at all confident in the rest, we choose for the user. But, if the model is pretty confident in a few options, we let the user choose from this short-list. This balances providing choice (which people want) with reducing cognitive load (which is our goal) while avoiding suggestions the model isn't confident about.
+                        <br><br>Our team could have made assumptions and invested months into developing a complete solution with this technology. But we would have been building something based on technical capabilities and assumptions. Instead, we took a step back and asked how technology should interact with people to solve their problems.
+                        <br><br>This type of strategic research should be happening early and often, when teams are exploring what to build, why, and how it should work. By bringing in research as a strategic partner from the start, product teams can make informed decisions guided by user needs rather than assumptions, while saving development time and resources. When research insights about user needs inform early decisions, teams build better products that actually work for people.
+                    </p>
+                </div>
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
+                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
