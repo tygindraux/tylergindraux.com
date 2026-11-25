@@ -1,113 +1,1805 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <title>Tyler Gindraux - Strategic Service Designer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tyler Gindraux, service designer</title>
+<meta name="description" content="Tyler Gindraux is a service designer in Brooklyn who helps organizations cut through complexity and make change stick.">
+<link rel="canonical" href="https://tylergindraux.com/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tylergindraux.com/">
+<meta property="og:title" content="Tyler Gindraux, service designer">
+<meta property="og:description" content="Tyler Gindraux is a service designer in Brooklyn who helps organizations cut through complexity and make change stick.">
+<meta property="og:image" content="https://tylergindraux.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+/* VOICE  personal, calm, warm; a hiring manager should find role, work and proof in seconds
+   IDEA   an independent design journal (after Deem): hairline rules, a small label on the left, content on the right
+   PICTURE the opening statement itself, set large in a light serif with inline links (after Takachizu / I thought about that a lot)
+   COLOUR white ground, near-black ink, Tyler's raspberry dot as the one accent, a soft pink band for testimonials, an ink footer
+   TYPE   Newsreader light for display, Instrument Sans for text
+   LAYOUT 12-col editorial grid on a laptop (label 3 / content 9); one column on a phone */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#121211);
+--ink:light-dark(#141413,#f1eee9);
+--soft:light-dark(#5d5a55,#b3aea6);
+--rule:light-dark(#141413,#f1eee9);
+--hair:light-dark(#e3dfd9,#2c2a28);
+--dot:light-dark(#d4264a,#ff5a78);
+--pink:light-dark(#f8dde2,#3a1520);
+--foot:light-dark(#141413,#000000);
+--footink:#f1eee9;
+--ph:light-dark(#f3f0ec,#1d1c1a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "Instrument Sans",system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-color:var(--dot)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--dot);outline-offset:3px;border-radius:2px}
+img{max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:max(5vw,16px)}
+.serif{font-family:Newsreader,Georgia,serif}
+.dot{display:inline-block;width:.62em;height:.62em;border-radius:50%;background:var(--dot);vertical-align:.04em;flex:none}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;padding:6px 0}
+.brand .dot{width:18px;height:18px}
+.nav{display:flex;gap:4px 22px;flex-wrap:wrap}
+.nav a{text-decoration:none;padding:10px 0;display:inline-block;border-bottom:1px solid transparent}
+.nav a[aria-current=page]{border-bottom-color:var(--ink)}
+
+/* editorial sections */
+.sec{padding-block:clamp(40px,6vw,88px) 0}
+.lab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid var(--rule);padding-top:10px;margin-bottom:clamp(20px,3vw,36px);font-size:14px;font-weight:500}
+.lab a{font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px}
+.c3{grid-column:span 3}.c9{grid-column:span 9}.c8{grid-column:span 8}.c4{grid-column:span 4}.c6{grid-column:span 6}.c7{grid-column:4 / span 7}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:300;letter-spacing:-.015em;line-height:1.08;margin:0;text-wrap:balance}
+
+/* hero */
+.hero{padding-block:clamp(36px,7vw,110px) clamp(12px,2vw,24px)}
+.hero h1{font-size:clamp(34px,5.2vw,68px);line-height:1.06;max-width:17.5em}
+.hero h1 a{text-decoration-thickness:1px;text-underline-offset:.12em;text-decoration-color:color-mix(in srgb,var(--ink) 35%,transparent)}
+.hero h1 strong{font-weight:500;font-style:italic}
+.hero h1 a:hover{text-decoration-color:var(--dot)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px 32px;align-items:baseline;font-size:17px;margin-top:clamp(24px,3vw,40px)}
+.pill{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid var(--ink);border-radius:999px;text-decoration:none;font-size:15px;background:transparent;color:inherit;font:inherit}
+.pill:hover{background:var(--ink);color:var(--bg)}
+.pill.solid{background:var(--ink);color:var(--bg)}
+.pill.solid:hover{background:var(--dot);border-color:var(--dot);color:#fff}
+.note{color:var(--soft);font-size:15px}
+
+/* work list */
+.work{list-style:none;margin:0;padding:0}
+.work li{border-top:1px solid var(--hair)}
+.work li:first-child{border-top:0}
+.work a{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr) 7.5em;gap:6px 24px;align-items:baseline;padding:18px 0;text-decoration:none}
+.work .org{font-size:14px;color:var(--soft)}
+.work .t{font-family:Newsreader,Georgia,serif;font-size:clamp(22px,2.3vw,30px);font-weight:300;line-height:1.15}
+.work .y{font-size:14px;color:var(--soft);white-space:nowrap;text-align:right}
+.work a:hover .t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em;text-decoration-color:var(--dot)}
+
+/* testimonials band */
+.band{background:var(--pink);margin-top:clamp(48px,7vw,104px);padding-block:clamp(36px,5vw,72px)}
+.band .lab{margin-bottom:clamp(24px,3vw,44px)}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,56px) clamp(24px,4vw,64px)}
+.q blockquote{margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(24px,2.6vw,34px);line-height:1.18;letter-spacing:-.01em;text-wrap:pretty}
+.q figcaption{margin-top:14px;font-size:14.5px;display:flex;gap:8px;align-items:baseline}
+.q figcaption .dot{width:9px;height:9px}
+.q figcaption span{color:var(--soft)}
+
+/* writing list */
+.posts{list-style:none;margin:0;padding:0}
+.posts li{border-top:1px solid var(--hair)}
+.posts li:first-child{border-top:0}
+.posts a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;align-items:baseline;padding:16px 0;text-decoration:none}
+.posts .t{font-family:Newsreader,Georgia,serif;font-size:clamp(20px,2vw,26px);font-weight:300;line-height:1.2}
+.posts .d{font-size:14px;color:var(--soft);white-space:nowrap}
+.posts a:hover .t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em;text-decoration-color:var(--dot)}
+.year{font:500 14px/1.4 "Instrument Sans",system-ui,sans-serif;letter-spacing:0;color:var(--soft);padding:22px 0 4px;border-top:1px solid var(--hair);margin:0}
+
+/* contact */
+.contact h2:not(.lab-h){font-size:clamp(30px,4vw,52px)}
+.contact h2:not(.lab-h){max-width:22em;font-style:italic}
+[data-view=about] .contact h2:not(.lab-h){font-style:normal}
+.contact .reach{margin:clamp(20px,2.5vw,32px) 0 0;font-size:17px;max-width:none}
+.contact .reach a{overflow-wrap:anywhere}
+
+/* footer */
+footer{background:var(--foot);color:var(--footink);margin-top:clamp(56px,8vw,120px);padding-block:clamp(36px,5vw,64px) 28px}
+footer .grid{row-gap:28px}
+footer a{color:var(--footink)}
+footer .big{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(26px,3vw,40px);line-height:1.1}
+footer ul{list-style:none;margin:0;padding:0;line-height:2}
+footer .small{grid-column:1 / -1;border-top:1px solid #3a3835;padding-top:16px;font-size:13.5px;color:#b3aea6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* article / case study */
+.art-head{padding-block:clamp(32px,6vw,88px) clamp(20px,3vw,36px)}
+.back{font-size:14.5px;text-decoration:none;color:var(--soft);display:inline-block;margin-bottom:28px}
+.back:hover{color:var(--ink)}
+.art-head h1{font-size:clamp(34px,4.8vw,60px);max-width:16em}
+.dek{font-size:clamp(18px,1.6vw,21px);line-height:1.5;margin:22px 0 0;max-width:38em;color:var(--soft)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule);border-bottom:1px solid var(--hair);margin-top:clamp(28px,4vw,48px)}
+.facts div{padding:14px 18px 16px 0}
+.facts dt{font-size:13.5px;color:var(--soft);margin-bottom:4px}
+.facts dd{margin:0;font-size:15.5px;line-height:1.45}
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:clamp(36px,5vw,64px) 0 0}
+.figs div{border-top:1px solid var(--rule);padding-top:12px}
+.figs b{display:block;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.figs span{display:block;font-size:15px;margin-top:10px;max-width:16em}
+.body{padding-top:clamp(36px,5vw,64px)}
+.body section{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;border-top:1px solid var(--hair);padding:22px 0 18px}
+.body h2{grid-column:span 3;font-size:22px;line-height:1.2;padding-right:12px;margin-bottom:10px}
+.body .txt{grid-column:4 / span 7}
+.body p{margin:0 0 1em;max-width:38em}
+.body ul{margin:0 0 1em;padding-left:1.1em;max-width:38em}
+.body li{margin-bottom:.4em}
+.body li::marker{color:var(--dot)}
+.ph{grid-column:4 / span 9;margin:8px 0 26px}
+.ph .box{aspect-ratio:16/8;background:var(--ph);border:1px solid var(--hair);display:grid;place-items:center;color:var(--soft);font-size:14px;background-image:repeating-linear-gradient(135deg,transparent 0 14px,color-mix(in srgb,var(--ink) 4%,transparent) 14px 15px)}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--hair);border-radius:4px}
+.ph figcaption{font-size:14px;color:var(--soft);margin-top:8px}
+.pull{grid-column:4 / span 8}
+.pull blockquote{margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1.15}
+.pull figcaption{margin-top:12px;font-size:14.5px}
+.pull figcaption span{color:var(--soft)}
+.related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.related a{display:block;border-top:1px solid var(--rule);padding:14px 0 6px;text-decoration:none}
+.related .org{font-size:14px;color:var(--soft)}
+.related .t{font-family:Newsreader,Georgia,serif;font-size:24px;font-weight:300;line-height:1.2;margin-top:6px}
+.related a:hover .t{text-decoration:underline;text-decoration-color:var(--dot);text-underline-offset:.15em;text-decoration-thickness:1px}
+
+/* post */
+.post{max-width:40em}
+.post p{font-size:18px;line-height:1.65;margin:0 0 1.1em}
+.post h2{font-size:28px;margin:1.6em 0 .55em}
+.post blockquote{margin:1.4em 0;padding-left:20px;border-left:2px solid var(--dot);font-family:Newsreader,Georgia,serif;font-size:24px;font-weight:300;line-height:1.3}
+
+/* testimonials page */
+.tlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,64px)}
+.tlist figure{margin:0;border-top:1px solid var(--hair);padding:22px 0 26px}
+.tlist blockquote{margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(21px,2vw,26px);line-height:1.25}
+.tlist figcaption{margin-top:10px;font-size:14.5px}
+.tlist figcaption span{color:var(--soft)}
+.tlist figcaption b{font-weight:500}
+.tlist{grid-auto-flow:dense}
+.tlist .short blockquote{font-size:clamp(24px,2.5vw,31px);line-height:1.18}
+.tlist .feat{grid-column:1 / -1;border-top:0;padding:clamp(36px,5vw,64px) 0}
+.tlist .feat blockquote{font-style:italic;font-weight:300;letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
+.tlist .feat figcaption{display:flex;align-items:center;gap:10px;margin-top:18px;font-size:15px}
+.tlist .feat figcaption .ast{width:16px;height:16px}
+.tlist .feat-a blockquote{font-size:clamp(40px,6.4vw,84px);max-width:13em}
+.tlist .feat-b{background:var(--pink);padding:clamp(32px,5vw,64px) clamp(20px,4vw,56px);margin:12px 0 18px;border-radius:4px}
+.tlist .feat-b blockquote{font-size:clamp(28px,3.6vw,46px);max-width:22em;line-height:1.14}
+.tlist .feat-c{text-align:right}
+.tlist .feat-c blockquote{font-size:clamp(36px,5.4vw,72px);max-width:14em;margin-left:auto}
+.tlist .feat-c figcaption{justify-content:flex-end}
+.tlist .feat-d{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 clamp(16px,3vw,36px);align-items:start}
+.tlist .feat-d::before{content:"";grid-row:1 / span 2;width:clamp(44px,6vw,76px);height:clamp(44px,6vw,76px);background:var(--dot);-webkit-mask:var(--ast) center/contain no-repeat;mask:var(--ast) center/contain no-repeat;margin-top:.2em}
+.tlist .feat-d blockquote{font-style:normal;font-size:clamp(30px,4.2vw,54px);max-width:17em;line-height:1.1}
+.tlist .feat-d figcaption .ast{display:none}
+.tlist .feat-e{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:8px 0 14px;text-align:center}
+.tlist .feat-e blockquote{font-size:clamp(32px,4.6vw,60px);max-width:15em;margin-inline:auto}
+.tlist .feat-e figcaption{justify-content:center}
+.tlist .feat+figure,.tlist .feat+figure+figure{border-top:0}
+
+/* resume */
+.roles{list-style:none;margin:0;padding:0}
+.roles li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px 24px;border-top:1px solid var(--hair);padding:20px 0}
+.roles .when{grid-column:span 3;font-size:14.5px;color:var(--soft)}
+.roles .what{grid-column:4 / span 7}
+.roles h3{font-size:24px;line-height:1.2}
+.roles .org{font-size:15px;font-weight:500;margin:4px 0 8px}
+.roles p{margin:0;max-width:38em}
+
+/* hand-drawn asterisk and arrow (after Nicole Fenton’s ink marks): masks, so they never render as emoji */
+:root{--ast:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12.6 2.4c-.5 4.6-.6 11.8-1.1 19.2'/%3E%3Cpath d='M4.2 6.6c4.6 2.6 9.8 6.6 16 10.6'/%3E%3Cpath d='M3.4 17.4c5.6-3.8 11-7.6 16.8-11.4'/%3E%3Cpath d='M2.6 12.4c6.4-.9 12.6-.2 18.8-.9'/%3E%3C/g%3E%3C/svg%3E");--arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cg fill='none' stroke='%23000' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.8 8.9c5.2-1.6 11.4-.4 19-.9'/%3E%3Cpath d='M15 2.8c2.4 1.9 4.2 3.6 6.1 5.2-2 1.7-3.8 3.4-5.6 5.6'/%3E%3C/g%3E%3C/svg%3E")}
+.ast{display:inline-block;width:.7em;height:.7em;background:var(--dot);-webkit-mask:var(--ast) center/contain no-repeat;mask:var(--ast) center/contain no-repeat;flex:none;transition:transform .5s ease}
+.fn{text-decoration:none;display:inline-block;width:.5em;height:.5em;margin-left:.06em;vertical-align:super;line-height:0}
+.fn .ast{width:100%;height:100%;display:block}
+.fn:hover .ast,.fnote a:hover~.ast,.fnote:hover .ast{transform:rotate(60deg)}
+.fnote{display:flex;align-items:baseline;gap:8px;margin:clamp(18px,2.4vw,28px) 0 0;font-size:15.5px;color:var(--soft)}
+.fnote .ast{width:13px;height:13px;transform:translateY(1px)}
+.fnote:hover .ast{transform:translateY(1px) rotate(60deg)}
+.lab>:first-child{display:inline-flex;align-items:baseline;gap:8px}
+.lab-h{font:inherit;font-weight:500;margin:0;letter-spacing:0;line-height:inherit}
+.lab>:first-child::before{content:"";width:12px;height:12px;background:var(--dot);-webkit-mask:var(--ast) center/contain no-repeat;mask:var(--ast) center/contain no-repeat;flex:none;transform:translateY(1px)}
+.work .t::after,.posts .t::after,.related .t::after{content:"";display:inline-block;width:.75em;height:.5em;margin-left:.3em;background:var(--dot);-webkit-mask:var(--arrow) center/contain no-repeat;mask:var(--arrow) center/contain no-repeat;opacity:0;transform:translateX(-6px);transition:opacity .2s ease,transform .2s ease}
+.work a:hover .t::after,.posts a:hover .t::after,.related a:hover .t::after,.work a:focus-visible .t::after,.posts a:focus-visible .t::after,.related a:focus-visible .t::after{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.ast,.work .t::after,.posts .t::after,.related .t::after{transition:none}}
+
+/* about page */
+.ab-hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(32px,6vw,88px) clamp(8px,2vw,24px)}
+.ab-title{font-size:15px;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:500;letter-spacing:0;margin:0 0 18px;display:flex;align-items:center;gap:8px}
+.ab-title::before{content:"";width:12px;height:12px;background:var(--dot);-webkit-mask:var(--ast) center/contain no-repeat;mask:var(--ast) center/contain no-repeat}
+.ab-lede{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(32px,4.4vw,58px);line-height:1.08;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.ab-lede strong{font-weight:500;font-style:italic}
+.ab-photo{position:relative;margin:0;justify-self:center;width:min(100%,420px);aspect-ratio:1}
+.ab-photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.ab-ring{position:absolute;inset:-5%;width:110%;height:110%;transform:rotate(-8deg);pointer-events:none;overflow:visible}
+.ab-ring path{fill:none;stroke:var(--dot);stroke-width:.8;stroke-linecap:round}
+.ab-ast{position:absolute;background:var(--dot);-webkit-mask:var(--ast) center/contain no-repeat;mask:var(--ast) center/contain no-repeat;transition:transform .6s ease}
+.ab-ast-1{width:22%;height:22%;top:-4%;right:-2%}
+.ab-ast-2{width:9%;height:9%;bottom:12%;left:-6%}
+.ab-photo:hover .ab-ast-1{transform:rotate(45deg)}
+.ab-note{position:absolute;left:-20%;bottom:-4%;display:flex;align-items:flex-end;gap:2px;flex-direction:row-reverse;font-family:Newsreader,Georgia,serif;font-style:italic;font-size:19px;color:var(--ink)}
+.ab-note svg{width:72px;height:46px;overflow:visible;margin-bottom:22px}
+.ab-note path{fill:none;stroke:var(--dot);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ab-note span{white-space:nowrap}
+.ab-body p,.ab-body{font-size:18px;line-height:1.65}
+.ab-big{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(28px,3.6vw,46px);line-height:1.14;letter-spacing:-.015em;margin:clamp(28px,4vw,48px) 0 0;max-width:22em;text-wrap:balance}
+.ab-big em{font-weight:500}
+.ab-pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.ab-pillars>div{padding-top:4px}
+.ab-pillars h2{font-size:clamp(30px,4vw,52px);display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
+.ab-pillars h2::before{content:"";width:.5em;height:.5em;flex:none;background:var(--dot);-webkit-mask:var(--ast) center/contain no-repeat;mask:var(--ast) center/contain no-repeat;transform:translateY(-.02em)}
+.ab-pillars a{font-size:15px;color:var(--soft)}
+.ab-pillars a:hover{color:var(--ink)}
+.ab-places{list-style:none;margin:0;padding:0}
+.ab-places li{display:grid;grid-template-columns:minmax(0,1fr) 3em 8em;gap:4px 24px;align-items:baseline;border-top:1px solid var(--hair);padding:14px 0}
+.ab-places .o{font-family:Newsreader,Georgia,serif;font-size:clamp(21px,2.2vw,28px);font-weight:300;line-height:1.2}
+.ab-places .w,.ab-places .y{font-size:14px;color:var(--soft);white-space:nowrap}
+.ab-places .y{text-align:right}
+@media (prefers-reduced-motion:reduce){.ab-ast{transition:none}}
+@media (max-width:900px){.ab-note{left:-14%}}
+@media (max-width:720px){.ab-hero{grid-template-columns:minmax(0,1fr)}.ab-photo{width:min(78%,340px);margin-top:12px}.ab-note{left:auto;right:-6%;bottom:-10%;flex-direction:row}.ab-note svg{transform:scaleX(-1)}.ab-pillars{grid-template-columns:minmax(0,1fr)}.ab-places li{grid-template-columns:minmax(0,1fr) 8em}.ab-places .w{display:none}}
+
+.ab-main{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.ab-main .ab-photo{margin-top:8px}
+.ab-body p{font-size:18px;line-height:1.65;margin:0 0 1.1em;max-width:36em}
+.ab-callout{margin:clamp(40px,6vw,80px) 0 0;background:var(--pink);padding:clamp(32px,5vw,64px) clamp(20px,4vw,56px);border-radius:4px}
+.ab-callout blockquote{margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(28px,3.6vw,46px);line-height:1.14;letter-spacing:-.02em;max-width:22em;text-wrap:balance}
+.ab-callout figcaption{display:flex;align-items:center;gap:10px;margin-top:18px;font-size:15px}
+.ab-callout figcaption .ast{width:16px;height:16px}
+.ab-callout figcaption b{font-weight:500}
+.ab-callout figcaption span:not(.ast){color:var(--soft)}
+@media (max-width:720px){.ab-main{grid-template-columns:minmax(0,1fr)}.ab-main .ab-photo{grid-row:1;width:min(70%,300px);justify-self:start;margin:4px 0 12px 4%}}
+
+/* case study components */
+.body .wide{grid-column:4 / span 9}
+.body h3{font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:16px;letter-spacing:0;line-height:1.35;margin:0 0 8px}
+.src{color:var(--soft);font-size:15px}
+.glance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:0 0 22px}
+.glance div{border-top:1px solid var(--hair);padding-top:10px}
+.glance dt{font-size:13.5px;color:var(--soft);margin-bottom:4px}
+.glance dd{margin:0;font-family:Newsreader,Georgia,serif;font-size:20px;font-weight:300;line-height:1.3}
+.methods{list-style:none;margin:6px 0 18px;padding:0;counter-reset:m}
+.methods li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr);gap:4px 24px;border-top:1px solid var(--hair);padding:12px 0;align-items:baseline}
+.methods .m{font-family:Newsreader,Georgia,serif;font-size:22px;font-weight:300;line-height:1.2;display:flex;gap:10px;align-items:baseline}
+.methods .m::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--dot);flex:none;transform:translateY(-2px)}
+.methods .why{color:var(--soft);font-size:15.5px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-bottom:8px}
+.two>div{border-top:1px solid var(--rule);padding-top:12px}
+.two .src{margin:-4px 0 10px}
+.aligned{display:flex;gap:10px;align-items:baseline;font-family:Newsreader,Georgia,serif;font-size:21px;font-weight:300;line-height:1.35;margin:14px 0 0 !important;max-width:none !important}
+.aligned .dot{width:10px;height:10px;transform:translateY(-2px)}
+.figs.tight{margin-top:4px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.figs.tight.three{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:22px}
+.figs.tight b{font-size:clamp(38px,4.2vw,56px)}
+.inq{margin:28px 0 6px;padding-left:20px;border-left:2px solid var(--dot)}
+.inq blockquote{margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(21px,2vw,26px);line-height:1.3;max-width:30em}
+.inq figcaption{margin-top:8px;font-size:14.5px;color:var(--soft)}
+.shift{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:18px;align-items:stretch}
+.shift>div{border:1px solid var(--hair);padding:16px 18px;border-radius:4px}
+.shift>div:last-child{border-color:var(--ink)}
+.shift .k{display:block;font-size:13.5px;color:var(--soft);margin-bottom:6px}
+.shift p{font-family:Newsreader,Georgia,serif;font-size:21px;font-weight:300;line-height:1.3;margin:0 0 8px !important}
+.shift p.src{font-family:"Instrument Sans",system-ui,sans-serif;font-size:14.5px;line-height:1.45;margin:0 !important}
+.shift .arr,.journey .arr{align-self:center;color:var(--dot);font-size:22px}
+.journey{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:8px 0 10px}
+.journey span:not(.arr){border:1px solid var(--ink);border-radius:999px;padding:8px 16px;font-size:15px}
+.cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:6px 0 4px}
+.cols4>div{border-top:1px solid var(--rule);padding-top:10px}
+.cols4 ul{padding-left:1em;font-size:15px}
+.cols4.names h3{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:22px;line-height:1.2}
+.reflect{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:24px;align-items:start}
+.reflect .aside{background:var(--pink);padding:18px 20px;border-radius:4px}
+.reflect .aside p{margin:0 0 .5em}
+.reflect .aside p:last-child{margin-bottom:0}
+@media (max-width:900px){.body .wide{grid-column:1 / -1}.cols4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.two,.reflect,.glance{grid-template-columns:minmax(0,1fr)}.methods li{grid-template-columns:minmax(0,1fr)}.shift{grid-template-columns:minmax(0,1fr)}.shift .arr{transform:rotate(90deg);justify-self:start;margin-left:18px}}
+@media (max-width:600px){.cols4,.figs.tight,.figs.tight.three{grid-template-columns:minmax(0,1fr)}}
+
+.roles .ladder{list-style:none;margin:0;padding:0 0 0 18px;position:relative}
+.roles .ladder::before{content:"";position:absolute;left:3px;top:.7em;bottom:.9em;width:1px;background:var(--hair)}
+.roles .ladder li{display:block;border:0;padding:0;margin:0 0 10px;position:relative}
+.roles .ladder li::before{content:"";position:absolute;left:-18px;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--dot)}
+.roles .ladder li+li::before{background:var(--bg);border:1px solid var(--soft);width:7px;height:7px;box-sizing:border-box}
+.roles .ladder li+li h3{font-size:20px;color:var(--soft)}
+.roles .ladder span{display:block;font-size:14.5px;color:var(--soft);margin-top:2px}
+.roles .pts{list-style:none;margin:12px 0 0;padding:0;max-width:38em}
+.roles .pts li{display:block;border:0;padding:0 0 0 18px;margin:0 0 6px;position:relative;font-size:15.5px}
+.roles .pts li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--dot)}
+.skip{position:absolute;left:12px;top:-60px;z-index:10;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:4px;text-decoration:none}
+.skip:focus{top:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+[tabindex="-1"]:focus:not(:focus-visible){outline:none}
+.post h3{font-size:22px;margin:1.4em 0 .4em;line-height:1.25}
+.post ul{font-size:18px;line-height:1.65;padding-left:1.2em;margin:0 0 1.1em}
+.post li{margin-bottom:.35em}
+.post li::marker{color:var(--dot)}
+.post blockquote p{margin:0;font-size:inherit;line-height:inherit}
+.inq blockquote p{margin:0}
+.art-head:not(:has(.figs)) + .body{padding-top:8px}
+.view{display:none}
+.view.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view.on{animation:none}}
+
+@media (max-width:900px){
+.facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.body h2{grid-column:1 / -1}
+.body .txt,.ph,.pull,.c7{grid-column:1 / -1}
+}
+@media (max-width:720px){
+.c3,.c9,.c8,.c4,.c6{grid-column:1 / -1}
+.work a{grid-template-columns:minmax(0,1fr) 7.5em}
+.work .org{grid-column:1 / -1}
+.quotes,.tlist,.related{grid-template-columns:minmax(0,1fr)}
+.roles .when,.roles .what{grid-column:1 / -1}
+}
+@media (max-width:600px){
+.figs{grid-template-columns:minmax(0,1fr)}
+.figs b{font-size:44px}
+.posts a{grid-template-columns:minmax(0,1fr)}
+.facts{grid-template-columns:minmax(0,1fr)}
+.facts div{border-bottom:1px solid var(--hair);padding-block:10px}
+.facts div:last-child{border-bottom:0}
+.nav{gap:2px 16px;font-size:15.5px}
+}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <!-- Header with Logo and Navigation -->
-        <header class="header">
-            <!-- Logo -->
-            <a href="/" class="logo"></a>
-            <!-- Navigation -->
-            <nav class="nav">
-                <ul>
-                    <li><a href=/projects>Projects</a></li>
-                    <li><a href=/writing>Writing</a></li>
-                    <li><a href=/resume>Resume</a></li>
-                    <li><a href=/about>About</a></li>
-                </ul>
-            </nav>
-        </header>
+<a class="skip" id="skip" href="#main">Skip to main content</a>
+<div id="route-status" class="sr-only" aria-live="polite"></div>
 
-        <div class="main-content">
-            <!-- Left Column -->
-            <div class="left-column">
-                <h1 class="intro-text">
-                    I'm Tyler, a strategic service designer who helps organizations cut through complexity to create
-                    meaningful change for the people we serve.
-                </h1>
-            </div>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#home"><span class="dot" aria-hidden="true"></span>Tyler Gindraux</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#writing" data-nav="writing">Writing</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#resume" data-nav="resume">Resume</a>
+    </nav>
+  </header>
+</div>
 
-            <!-- Right Column - Portfolio Grid -->
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div>
-                        <h3 class="portfolio-title">U.S. DEPARTMENT OF VETERANS AFFAIRS</h3>
-                        <a href="/projects/ask-va" class="portfolio-description">Making it easier to ask questions about VA benefits and services</a>
-                    </div>
-                </div>
+<main id="main">
 
-                <div class="portfolio-item">
-                    <div>
-                        <h3 class="portfolio-title">WITH YOU</h3>
-                        <a href="/projects/harm-reduction" class="portfolio-description">Discovering the needs of people who inject drugs during Covid-19</a>
-                    </div>
-                </div>
+<!-- HOME -->
+<div class="view" data-view="home">
+  <div class="wrap hero">
+    <h1>I’m Tyler, a <strong>service designer</strong> in Brooklyn. I help organizations cut through <strong>complexity</strong> and make <strong>change</strong> stick.<a class="fn" href="#testimonials" aria-label="Read what people say about working with me"><span class="ast" aria-hidden="true"></span></a></h1>  </div>
 
-                <div class="portfolio-item">
-                    <div>
-                        <h3 class="portfolio-title">U.S. DEPARTMENT OF VETERANS AFFAIRS</h3>
-                        <a href="/projects/veteran-signin" class="portfolio-description">Learning how to support Veterans with sign in</a>
-                    </div>
-                </div>
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">Past work</h2><a href="#work">All past work</a></div>
+    <ul class="work" id="homeWork"></ul>
+  </div>
 
-                <div class="portfolio-item">
-                    <div>
-                        <h3 class="portfolio-title">ROYAL NATIONAL INSTITUTE FOR DEAF PEOPLE</h3>
-                        <a href="/projects/online-community" class="portfolio-description">Deciding the purpose of an online community</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div>
-                        <h3 class="portfolio-title">ROYAL NATIONAL INSTITUTE FOR DEAF PEOPLE</h3>
-                        <a href="/projects/insights-library" class="portfolio-description">Creating a research library to share insights across an organization</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div>
-                        <h3 class="portfolio-title">ROYAL NATIONAL INSTITUTE FOR DEAF PEOPLE</h3>
-                        <a href="/projects/help-tool" class="portfolio-description">Testing an online tool that helps people find the right help</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <!-- Testimonial Section -->
-        <div class="testimonial-section">
-            <div class="testimonial-container">
-                <blockquote>
-                    <p class="testimonial-quote">
-                        "Tyler has a gift for making users feel heard and teammates feel supported—and can untangle the
-                        knottiest user flows without breaking a sweat (or at least without letting the rest of us see her
-                        sweat). She is meticulous in her craft, insightful in her feedback, and somehow manages to keep even the
-                        toughest projects moving forward with good energy."
-                    </p>
-                </blockquote>
-            </div>
-        </div>
+  <div class="band">
+    <div class="wrap">
+      <div class="lab"><h2 class="lab-h">What it’s like to work with me</h2><a href="#testimonials">All testimonials</a></div>
+      <div class="quotes" id="homeQuotes"></div>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-links">
-                <a href="https://www.linkedin.com/in/tylergindraux/" target="_blank" class="footer-link">LinkedIn</a>
-                <a href="https://github.com/tygindraux" target="_blank" class="footer-link">GitHub</a>
-                <a href="https://medium.com/@tylergindraux" target="_blank" class="footer-link">Medium</a>
-                <a href="https://bsky.app/profile/tylergindraux.bsky.social" target="_blank" class="footer-link">Bluesky</a>
-        </div>
+  </div>
+
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">Recent writing</h2><a href="#writing">All writing</a></div>
+    <ul class="posts" id="homePosts"></ul>
+  </div>
+
+  <div class="wrap sec contact">
+    <div class="lab"><h2 class="lab-h">Get in touch</h2></div>
+    <h2>I’d love to hear about your team, the services you’re working on and the outcomes you’re building towards.</h2>
+    <p class="reach">Email me at <a href="mailto:tylergindraux@gmail.com">tylergindraux@gmail.com</a> or find me on <a href="https://www.linkedin.com/in/tylergindraux/">LinkedIn</a>.</p>
+  </div>
+</div>
+
+<!-- WORK INDEX -->
+<div class="view" data-view="work">
+  <div class="wrap art-head">
+    <h1>Work</h1>
+    <p class="dek">Research and service design from discovery through implementation.</p>
+  </div>
+  <div class="wrap">
+    <div class="lab"><h2 class="lab-h">Projects</h2><span class="note">Newest first</span></div>
+    <ul class="work" id="allWork"></ul>
+  </div>
+</div>
+
+<!-- CASE STUDY: ASK VA -->
+<div class="view" data-view="ask-va">
+  <div class="wrap art-head">
+    <a class="back" href="#work"><span aria-hidden="true">← </span>All work</a>
+    <h1>Helping Veterans get the answers they need</h1>
+    <p class="dek">Veterans sent VA 500,000 questions last year through Ask VA, a contact form with up to 42 fields. My focus was working out which information we could remove, and building a compelling case for why.</p>
+    <dl class="facts">
+      <div><dt>Client</dt><dd>U.S. Department of Veterans Affairs, with Blue Tiger</dd></div>
+      <div><dt>My role</dt><dd>Lead researcher and designer</dd></div>
+      <div><dt>Dates</dt><dd>2023 to 2025</dd></div>
+      <div><dt>Methods</dt><dd>Competitor analysis, service mapping, usability testing, workshops, data analysis</dd></div>
+    </dl>
+    <div class="figs">
+      <div><b>500,000</b><span>questions sent to VA through Ask VA in a year</span></div>
+      <div><b>42</b><span>fields a Veteran might fill in to ask one question</span></div>
+      <div><b>50+</b><span>stakeholders, each with a vote on changes to the experience</span></div>
     </div>
-    </footer>
+  </div>
+
+  <div class="wrap body">
+    <section>
+      <h2>The problem</h2>
+      <div class="txt">
+        <dl class="glance">
+          <div><dt>Service</dt><dd>Ask VA, a contact experience that lets Veterans ask questions about their benefits and healthcare</dd></div>
+          <div><dt>Problem</dt><dd>The contact form asks for up to 42 fields of information</dd></div>
+          <div><dt>Goal</dt><dd>Make it simpler to contact VA</dd></div>
+        </dl>
+        <p>Something unusual about this contract: more than 50 VA stakeholders get to vote on any change to the user experience. Any simplification had to win them over.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>What we needed to learn</h2>
+      <div class="txt">
+        <p>Our starting assumption was that users are frustrated by the length of the process, which many stakeholders had added to over time. To test it, I set two questions:</p>
+        <ul>
+          <li>Which questions cause the most confusion for users?</li>
+          <li>What do staff actually need to answer a Veteran’s inquiry?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>How I approached it</h2>
+      <div class="txt wide">
+        <p>Based on our timeline, goals and resources, I chose five methods, each with a job to do.</p>
+        <ol class="methods">
+          <li><span class="m">Competitor analysis</span><span class="why">Set a North Star and vision</span></li>
+          <li><span class="m">Mapping the service</span><span class="why">Spot potential opportunities</span></li>
+          <li><span class="m">Usability testing with Veterans</span><span class="why">Find the pain points across journeys</span></li>
+          <li><span class="m">Workshops with business users</span><span class="why">Understand constraints</span></li>
+          <li><span class="m">Data analysis</span><span class="why">Verify at scale and build the case</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>Setting a North Star</h2>
+      <div class="txt">
+        <p>I reviewed eight similar contact forms from companies like Grammarly and Con Edison. They asked about 6 questions, against VA’s 42: 86% more questions to contact VA.</p>
+        <p>We worked this into a set of KPIs, which gave stakeholders a concrete benchmark and showed why simplification was necessary.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mapping the service</h2>
+      <div class="txt">
+        <p>I created journey and integration maps to understand the current service across three layers:</p>
+        <ul>
+          <li><b>User experience:</b> from starting the form to receiving help</li>
+          <li><b>Staff workflows:</b> how inquiries are routed across 18 departments</li>
+          <li><b>Backend systems:</b> which fields feed into which processes</li>
+        </ul>
+        <p>The maps let us assess how the service really works and what we could change.</p>
+      </div>
+      <figure class="ph shot"><img src="images/ask-va-user-flow-example.jpg" alt="Ask VA example user flows diagrammed in Mural" width="1600" height="739" loading="lazy"><figcaption>Example user flows for Ask VA, diagrammed in Mural</figcaption></figure>
+    </section>
+
+    <section>
+      <h2>What we learned from Veterans and staff</h2>
+      <div class="txt wide">
+        <div class="two">
+          <div>
+            <h3>Veterans</h3>
+            <p class="src">Usability testing with 30+ Veterans</p>
+            <ul>
+              <li>Frustrated by questions about pronouns and gender; most choose “prefer not to answer”</li>
+              <li>Strong concerns about who will see their sensitive information</li>
+              <li>Surprised by how much information was required; many would abandon the form early</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Business users</h3>
+            <p class="src">Workshops and observation across 18 business lines</p>
+            <ul>
+              <li>Fields like gender, military ID and employee status aren’t needed to reply</li>
+              <li>Too much information in the system slows response times</li>
+              <li>Business lines have voting power on the changes we make</li>
+            </ul>
+          </div>
+        </div>
+        <p class="aligned"><span class="dot" aria-hidden="true"></span>The pain points aligned: Veterans want to answer fewer questions, and staff waste time wading through information.</p>
+      </div>
+      <figure class="ph shot"><img src="images/ask-va-insights-ideas-workshop.jpg" alt="Whiteboard used to facilitate a workshop about insights, opportunities and ideas" width="1600" height="738" loading="lazy"><figcaption>Whiteboard from a workshop on insights, opportunities and ideas</figcaption></figure>
+    </section>
+
+    <section>
+      <h2>Testing our findings at scale</h2>
+      <div class="txt wide">
+        <p>With a data scientist on my team, I checked whether what we heard from small samples held true at large. One example: the gender field.</p>
+        <div class="figs tight">
+          <div><b>70%</b><span>of people selected “prefer not to answer”</span></div>
+          <div><b>1%</b><span>of the time, the answer told VA something it didn’t already have on record</span></div>
+        </div>
+        <p style="margin-top:22px">We were asking a question that frustrated users, wasn’t needed to reply, and gave us new information just 1% of the time. Qualitative insight plus behavioral data made a far stronger case for removing it.</p>
+        <figure class="inq"><blockquote>“Somebody’s gender identity shouldn’t have any bearing on VA benefits.”</blockquote><figcaption>Veteran, user research</figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Winning over 50+ stakeholders</h2>
+      <div class="txt">
+        <ul>
+          <li>I presented to more than 50 stakeholders, alongside our client, the Product Owner at VA.</li>
+          <li>I layered the evidence: competitor benchmark, user research, staff workshops and quantitative data.</li>
+          <li>Stakeholders voted in favor of the changes we proposed, despite their initial resistance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Impact</h2>
+      <div class="txt wide">
+        <div class="figs tight">
+          <div><b>20</b><span>fewer questions when the new form launched in 2025</span></div>
+          <div><b>18</b><span>VA departments we built stakeholder partnerships with</span></div>
+        </div>
+        <ul style="margin-top:22px">
+          <li>A simpler experience for Veterans, with up to 20 fields removed</li>
+          <li>Simpler staff workflows, by limiting the data VA collects</li>
+          <li>A North Star vision for future improvements, including AI-assisted answers that help people without submitting a question</li>
+        </ul>
+        <figure class="inq"><blockquote>“Tyler doesn’t just check all the boxes (empathy, rigor, creativity, attention to detail), she somehow finds a way to make new, better boxes you didn’t even know you needed.”</blockquote><figcaption>Program Manager</figcaption></figure>
+      </div>
+      <figure class="ph shot"><img src="images/ask-va-redesign.jpg" alt="The redesigned Ask VA interface on VA.gov" width="1600" height="737" loading="lazy"><figcaption>The new Ask VA experience on VA.gov</figcaption></figure>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <div class="txt wide">
+        <div class="reflect">
+          <ul>
+            <li>Quantitative data and triangulation were key to influencing 50+ stakeholders.</li>
+            <li>Understanding staff workflows was critical to improving the end user’s experience.</li>
+            <li>Building relationships is often key to gathering insights and moving work forward.</li>
+          </ul>
+          <div class="aside"><h3>Next time I would</h3><p>Bring stakeholders together even earlier. Seeing how large the service is, and how many needs sit on the staff side, helps people understand why compromise matters.</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">More work</h2><a href="#work">All work</a></div>
+    <div class="related">
+      <a href="#maryland"><div class="org">Maryland Economic Development Corporation</div><div class="t">Making it easier to do business with the State of Maryland</div></a>
+      <a href="#online-community"><div class="org">Royal National Institute for Deaf People</div><div class="t">Deciding the purpose of an online community</div></a>
+    </div>
+  </div>
+</div>
+
+<!-- CASE STUDY: MARYLAND -->
+<div class="view" data-view="maryland">
+  <div class="wrap art-head">
+    <a class="back" href="#work"><span aria-hidden="true">← </span>All work</a>
+    <h1>Making it easier to do business with the State of Maryland</h1>
+    <p class="dek">Small businesses in Maryland deal with each state agency separately, with different sign-ins, websites, tasks and requirements. I’m leading the work to map that landscape and recommend how to simplify it.</p>
+    <dl class="facts">
+      <div><dt>Client</dt><dd>Maryland Economic Development Corporation (MEDCO)</dd></div>
+      <div><dt>My role</dt><dd>Lead service designer, leading a small team and the client relationship</dd></div>
+      <div><dt>Dates</dt><dd>2026 to present</dd></div>
+      <div><dt>Methods</dt><dd>AI-assisted desk research, interviews, agency workshops, service blueprinting</dd></div>
+    </dl>
+    <div class="figs">
+      <div><b>697,000</b><span>small businesses in Maryland, each piecing together requirements across agencies</span></div>
+      <div><b>2%</b><span>of business records matched between two of the main agencies</span></div>
+      <div><b>26</b><span>recommendations, each with a first step and a long-term plan</span></div>
+    </div>
+  </div>
+
+  <div class="wrap body">
+    <section>
+      <h2>The problem</h2>
+      <div class="txt">
+        <dl class="glance">
+          <div><dt>Service</dt><dd>Registering and filing as a business in Maryland</dd></div>
+          <div><dt>Problem</dt><dd>Businesses deal with each agency separately, with different sign-ins, websites, tasks and requirements</dd></div>
+          <div><dt>Goal</dt><dd>Map the current landscape and recommend opportunities to improve the experience</dd></div>
+        </dl>
+        <p>MEDCO sits outside government and works to improve economic development in Maryland. We looked at how small businesses navigate registration, tax and employment filings across state agencies.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>What we needed to learn</h2>
+      <div class="txt">
+        <ul>
+          <li>What does a business have to do across agencies, and in what order?</li>
+          <li>Where do businesses get stuck, and where do they turn for help?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>How I approached it</h2>
+      <div class="txt wide">
+        <ol class="methods">
+          <li><span class="m">AI-assisted desk research</span><span class="why">AI helped triage hundreds of pages of statutes and agency instructions, and the team checked everything it produced</span></li>
+          <li><span class="m">Interviews with 5 businesses</span><span class="why">Including a winery director, a benefits broker and a brand new AI business, to hear from new and established businesses</span></li>
+          <li><span class="m">Workshops with agencies</span><span class="why">Including SDAT, the Comptroller, Labor and DoIT, to test and add to our desk research</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mapping the service across agencies</h2>
+      <div class="txt">
+        <p>I used our findings to map the service end to end and front to back:</p>
+        <ul>
+          <li><b>User experience:</b> from forming a business to maintaining ongoing filings and requirements</li>
+          <li><b>Agency processes:</b> how each agency handles the same business, and what it collects</li>
+          <li><b>Systems and data:</b> where information moves between agencies, and where it doesn’t</li>
+        </ul>
+        <p>Every agency told us it was the first time they’d seen their part of the service next to everyone else’s.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Bringing the research to life</h2>
+      <div class="txt wide">
+        <p>Requirements vary a lot depending on what a business does and how far along it is, so I created journey maps for two contrasting personas.</p>
+        <div class="two">
+          <div>
+            <h3>Arthur and Clara open a technology LLC</h3>
+            <p>Neither has started a business before. They’ll have no physical office, sell digital services in and outside Maryland, and employ 30 people who live in 5 different states.</p>
+          </div>
+          <div>
+            <h3>Devon maintains a beer and wine store</h3>
+            <p>A sole proprietor in Allegany County for 4 years, with 12 employees. He juggles state, county and city tax accounts, several licenses and permits, and files monthly, quarterly and annually.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What businesses and agencies told us</h2>
+      <div class="txt wide">
+        <div class="two">
+          <div>
+            <h3>Small businesses</h3>
+            <ul>
+              <li>Can’t tell whether they’ve found every requirement that applies, so they turn to AI</li>
+              <li>Keep their own notes to get through filings they’ve done many times</li>
+              <li>Accounts are built for individuals, so co-owners share passwords</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Agency staff</h3>
+            <ul>
+              <li>Each agency built its own “single front door,” so now there are several</li>
+              <li>Data isn’t shared: SDAT and the Comptroller match only about 2% of business records</li>
+              <li>Fixes stall without clear ownership</li>
+            </ul>
+          </div>
+        </div>
+        <p class="aligned"><span class="dot" aria-hidden="true"></span>Businesses do the work of piecing government together. When state websites contradict each other, AI tools blend them into one confident, incorrect answer. The problem isn’t only too many websites; there’s no reliable source underneath them.</p>
+        <figure class="inq"><blockquote>“Claude […] is faster. I could look at Maryland websites [myself] and I could miss or not see this one that might have additional information.”</blockquote><figcaption>Small business owner</figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recommendations changed as we tested</h2>
+      <div class="txt wide">
+        <div class="shift">
+          <div><span class="k">Draft idea</span><p>Make Maryland Business Express the single source of truth</p><p class="src">Agencies pushed back, and disagreed with each other on whether one website was the answer</p></div>
+          <span class="arr" aria-hidden="true">→</span>
+          <div><span class="k">Final recommendation</span><p>Each agency keeps its information accurate at the source; other sites and AI tools pull from it</p><p class="src">Solves the business’s problem without a new portal, and recognizes new ways people search for information</p></div>
+        </div>
+        <p style="margin-top:22px">Halfway through, we shared draft ideas so agencies could react to something concrete. To sharpen them, I:</p>
+        <ul>
+          <li>asked agencies what would get in the way of each idea we drafted</li>
+          <li>tested draft ideas with small businesses to check what mattered most</li>
+          <li>facilitated a workshop where agencies scored value and complexity</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>A pilot to carry ideas forward</h2>
+      <div class="txt wide">
+        <p>Agencies told us many of these problems aren’t new, and they feared nothing would change. So alongside our recommendations, we’re designing a pilot focused on the seams between agencies.</p>
+        <div class="figs tight three">
+          <div><b>26</b><span>recommendations, each with a first step and a long-term plan</span></div>
+          <div><b>12</b><span>month pilot on one journey, to test state capacity, staffing and improvements</span></div>
+          <div><b>5</b><span>fixes prioritized in the pilot, at high-impact moments that cross agency boundaries</span></div>
+        </div>
+        <div class="journey" role="list" aria-label="The pilot journey">
+          <span role="listitem">Forming an LLC</span><span class="arr" aria-hidden="true">→</span><span role="listitem">Registering for taxes</span><span class="arr" aria-hidden="true">→</span><span role="listitem">Hiring a first employee</span>
+        </div>
+        <p class="src">“I’ve started my business and hired my first employee. Am I set up correctly?”</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Reflection so far</h2>
+      <div class="txt wide">
+        <div class="reflect">
+          <ul>
+            <li>Look for who carries the hand-off burden: that’s often where the design opportunity is.</li>
+            <li>Build relationships early, and use that trust to bring ideas or concerns to the surface.</li>
+            <li>Rely on AI assistance for desk research and as a memory tool throughout discovery.</li>
+          </ul>
+          <div class="aside"><h3>From our client</h3><p>“A lot of people will just write a report and hand it over at the end, but the fact that we’re going through this process and getting feedback and making sure that folks are on board is huge. You’re getting buy-in from agencies.”</p><p class="src">Client at MEDCO</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">More work</h2><a href="#work">All work</a></div>
+    <div class="related">
+      <a href="#ask-va"><div class="org">U.S. Department of Veterans Affairs</div><div class="t">Helping Veterans get the answers they need</div></a>
+      <a href="#online-community"><div class="org">Royal National Institute for Deaf People</div><div class="t">Deciding the purpose of an online community</div></a>
+    </div>
+  </div>
+</div>
+
+<!-- CASE STUDY: ONLINE COMMUNITY -->
+<div class="view" data-view="online-community">
+  <div class="wrap art-head">
+    <a class="back" href="#work"><span aria-hidden="true">← </span>All work</a>
+    <h1>Deciding the purpose of an online community</h1>
+    <p class="dek">Leadership at a national charity had ideas for a new online community, but no user input or clear direction. I led research that turned many opinions into a product direction grounded in user needs.</p>
+    <dl class="facts">
+      <div><dt>Employer</dt><dd>Royal National Institute for Deaf People (RNID)</dd></div>
+      <div><dt>My role</dt><dd>User researcher and service designer</dd></div>
+      <div><dt>Dates</dt><dd>April to June 2022</dd></div>
+      <div><dt>Methods</dt><dd>Assumption mapping, interviews, concept testing, service blueprinting</dd></div>
+    </dl>
+    <div class="figs">
+      <div><b>18 million</b><span>people in the UK who are deaf or have hearing loss</span></div>
+      <div><b>10</b><span>participants across user segments, with sign language interpreters at every session</span></div>
+      <div><b>4</b><span>concepts tested to find which interactions resonated</span></div>
+    </div>
+  </div>
+
+  <div class="wrap body">
+    <section>
+      <h2>The problem</h2>
+      <div class="txt">
+        <dl class="glance">
+          <div><dt>Service</dt><dd>An online community platform for RNID</dd></div>
+          <div><dt>Problem</dt><dd>Leadership had product ideas, but without user input or clear direction</dd></div>
+          <div><dt>Goal</dt><dd>Define user needs to inform a product strategy</dd></div>
+        </dl>
+        <p>RNID’s new strategy included helping people connect with each other online. When leadership briefed our design team, there were many assumptions about what the product should be, and none had been checked with users.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Aligning the team before research</h2>
+      <div class="txt wide">
+        <p>With many stakeholders holding strong opinions, I ran an early activity to separate what we actually knew from what we didn’t.</p>
+        <div class="cols4">
+          <div><h3>We know</h3><ul><li>It should help deaf people and people with hearing loss</li><li>Solutions need to be accessible for people who use sign language</li></ul></div>
+          <div><h3>We think</h3><ul><li>It should help people connect to expert advice</li><li>People want to interact across user groups</li></ul></div>
+          <div><h3>We’re not sure</h3><ul><li>Whether people prefer groups or one-to-one</li><li>How people will feel interacting with people who are different to them</li><li>How accessible existing solutions are</li></ul></div>
+          <div><h3>We don’t think</h3><ul><li>People should have to pay for help</li></ul></div>
+        </div>
+        <p class="aligned"><span class="dot" aria-hidden="true"></span>It separated assumptions from validated insights and set the questions to answer. Stakeholders also agreed research was needed: there were too many open questions to build on assumptions.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How I approached it</h2>
+      <div class="txt wide">
+        <p>Key questions to answer:</p>
+        <ul>
+          <li>How do people currently connect with others online?</li>
+          <li>What types of interactions do people expect to have with other people online?</li>
+          <li>How do people expect to be kept safe on a community platform?</li>
+        </ul>
+        <ol class="methods">
+          <li><span class="m">User interviews</span><span class="why">To learn current behaviors, platforms and expectations</span></li>
+          <li><span class="m">Concept testing</span><span class="why">Leadership already had ideas, so this wasn’t pure discovery. Concepts let us test which types of interaction resonated and choose a direction</span></li>
+          <li><span class="m">10 participants</span><span class="why">Recruited across user segments, with sign language interpreters hired and prepped for every session</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>Four concepts to test</h2>
+      <div class="txt wide">
+        <p>With a product designer, I created four concepts, each based on a familiar model from social platforms or sites like WikiHow.</p>
+        <div class="cols4 names">
+          <div><h3>Share your story</h3></div>
+          <div><h3>How-to guides</h3></div>
+          <div><h3>Ask and learn</h3></div>
+          <div><h3>Find products, events or services</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What we learned</h2>
+      <div class="txt wide">
+        <ul>
+          <li>People want an informal space to share experiences, not expert advice.</li>
+          <li>They need ways to find others with similar experiences and backgrounds.</li>
+        </ul>
+        <p>This was about connection and empathy, not how-to guides, and it differed from most of RNID’s other products. It fundamentally shaped how we thought about the product.</p>
+        <figure class="inq"><blockquote>“If I can share my experiences with hearing loss, I’d probably find those experiences are actually a lot more common than I realize.”</blockquote><figcaption>Research participant</figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Making the direction tangible</h2>
+      <div class="txt wide">
+        <p>With our findings and a workshop with key stakeholders, I developed a future state service blueprint covering user and staff activities, capabilities, technology and data across four stages.</p>
+        <div class="journey" role="list" aria-label="Blueprint stages">
+          <span role="listitem">Discover</span><span class="arr" aria-hidden="true">→</span><span role="listitem">Join</span><span class="arr" aria-hidden="true">→</span><span role="listitem">Engage</span><span class="arr" aria-hidden="true">→</span><span role="listitem">Leave</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Impact</h2>
+      <div class="txt wide">
+        <div class="shift">
+          <div><span class="k">Initial assumption</span><p>Expert advice and how-to guides</p></div>
+          <span class="arr" aria-hidden="true">→</span>
+          <div><span class="k">Vision after research</span><p>Peer connection and shared experience</p></div>
+        </div>
+        <ul style="margin-top:22px">
+          <li>Shifted stakeholder assumptions from expert advice to peer support, and leadership approved the product direction.</li>
+          <li>Delivered a service blueprint and a platform evaluation framework.</li>
+          <li>Recommendations became product strategy: the insights became criteria for build or buy, feature priorities and how to measure success.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <div class="txt wide">
+        <div class="reflect">
+          <ul>
+            <li>Concept testing helps focus ambiguous discovery and defines a clear direction early.</li>
+            <li>Aligning on assumptions frames objectives, minimizes risk and shows whether research is needed to make strategic decisions.</li>
+          </ul>
+          <div class="aside"><h3>Next time I would</h3><p>Lead a diary study to follow real behavior on platforms people already use, like Facebook groups.</p></div>
+        </div>
+        <figure class="inq"><blockquote>“I learned so much from Tyler about user research, service design and people more generally. She has a way of making people feel confident when working together.”</blockquote><figcaption>Designer</figcaption></figure>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">More work</h2><a href="#work">All work</a></div>
+    <div class="related">
+      <a href="#ask-va"><div class="org">U.S. Department of Veterans Affairs</div><div class="t">Helping Veterans get the answers they need</div></a>
+      <a href="#maryland"><div class="org">Maryland Economic Development Corporation</div><div class="t">Making it easier to do business with the State of Maryland</div></a>
+    </div>
+  </div>
+</div>
+
+<!-- WRITING INDEX -->
+<div class="view" data-view="writing">
+  <div class="wrap art-head">
+    <h1>Writing</h1>
+    <p class="dek">I write about service design, user research, accessibility and participatory practice.</p>
+  </div>
+  <div class="wrap" id="allPosts"></div>
+</div>
+
+<!-- POST -->
+<div class="view" data-view="good-research-reveals-a-strategy">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Good research reveals a strategy</h1>
+    <p class="dek">June 11, 2025</p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p class="lede">User research is about more than testing whether a design works. Insights from research should help teams make strategic decisions, like what we’re building and why, our technical approach, product-market fit and even how we sequence and prioritize work.</p>
+
+      <h2>Technical capabilities don’t guarantee we meet user needs</h2>
+      <p>At the U.S. Department of Veterans Affairs, my team recently replatformed Ask VA to VA.gov. Ask VA lets Veterans and their support networks ask the VA a question online.</p>
+      <p>Currently, submitters have to choose a category, topic and subtopic to determine which department should receive their question. Despite the usability and content improvements we made based on research, we know this categorization is still difficult and time-consuming.</p>
+      <p>Last year, our VA Product Owner and data engineers started building a natural language processing (NLP) model to predict these categories from someone’s question. The hypothesis: by pre-filling these selections and letting submitters review the predictions, we could reduce burden and improve the experience.</p>
+      <p>It’s an exciting idea with real potential. And there’s an opportunity for research to help shape how the technology is implemented.</p>
+      <blockquote>Technical capabilities alone don’t guarantee we’ll meet user needs.</blockquote>
+
+      <h2>Research insights drive strategic decisions</h2>
+      <p>I proposed a study to test early concepts with Veterans, so we could understand how an NLP model should surface predictions. We tested different prototypes, for example a single prediction versus a list of options.</p>
+      <p>We learned that people prefer choosing from a list of narrow options rather than the tool jumping to a conclusion. And while people are good at spotting when a suggestion is wrong, it’s difficult to choose the correct option without further explanation.</p>
+      <p>These insights drove our approach. Alongside data engineers and our UX designer, we developed a solution: show one or more options that the model is really confident about.</p>
+      <p>If the model is very confident in one option and not at all confident in the rest, we choose for the user. If it’s fairly confident in a few options, we let the user choose from that short list. This balances choice (which people want) with reducing cognitive load (which is our goal), while avoiding suggestions the model isn’t confident about.</p>
+      <p>Our team could have made assumptions and invested months into a complete solution built on technical capabilities. Instead, we took a step back and asked how technology should interact with people to solve their problems.</p>
+      <p>This kind of strategic research should happen early and often, when teams are exploring what to build, why, and how it should work. When research is a strategic partner from the start, teams make decisions guided by user needs rather than assumptions, and build products that actually work for people.</p>
+    </article>
+  </div>
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">Related project</h2></div>
+    <ul class="work"><li><a href="#ask-va"><span class="org">U.S. Department of Veterans Affairs</span><span class="t">Helping Veterans get the answers they need</span><span class="y">2023–2025</span></a></li></ul>
+  </div>
+</div>
+
+<!-- POST: pressure-to-use-ai-for-everything -->
+<div class="view" data-view="pressure-to-use-ai-for-everything" data-title="The pressure to use AI for everything, everywhere, all at once">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>The pressure to use AI for everything, everywhere, all at once</h1>
+    <p class="dek"><time datetime="2025-09-24">September 24, 2025</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>Recent advances in AI have been dramatic, and AI adoption is more ubiquitous than ever. It’s undoubtedly a powerful technology and a tool worth having in our toolbox. But I’ve noticed a troubling trend towards, “find a reason to use AI and then go pilot.”</p>
+      <p>Rather than identifying a problem as the starting point, this approach centers a solution. There are times when this may work, but more often than not, solutions in search of a problem can be harmful. And without a focus on outcomes, we’re forcing AI solutions onto problems where AI may not be the best, or only, answer. As <a href="https://www.gov.uk/service-manual/technology/using-artificial-intelligence-ai-in-services">GOV.UK's Service manual</a> identifies, “More established technologies might solve the problem better than AI.”</p>
+      <p>Even when projects include a fair focus on discovery, the solution space is often now constrained by the required use of AI. Take the <a href="https://www.publicbenefitinnovationfund.org/summer-2025-open-call.html">Public Benefit Innovation Fund (PBIF)’s Summer 2025 open call</a>, which allocated funding specifically for “AI solutions that address pressing public benefit challenges.” While well-intentioned, this funding structure exemplifies this trend: it centers AI as the required solution rather than centering challenges themselves.</p>
+      <p>Between dedicated AI funding streams like PBIF’s, executive mandates to ‘innovate with AI,’ and the fear of being left behind, there’s pressure to deliver AI. While I appreciate the value AI can bring to plenty of service issues, I’m concerned that we’re taking 10 steps back when we structure our work around AI delivery rather than outcome delivery. “When you have a hammer, everything looks like a nail” has never been truer.</p>
+      <p>In addition to producing technical debt, this approach prevents teams from seeing the larger picture of solutions, of which AI might be one or some, but very likely is not all of them. AI that helps you fill out a long form could be helpful, but perhaps the better solution is to have a shorter form (which actually requires policy changes, stakeholder alignment, and content design). When we start with AI as the solution, we miss these deeper interventions that could solve the root problem.</p>
+      <p>And as <a href="https://mickinsahni.substack.com/p/a-framework-for-ai-adoption-in-government">Mickin Sahni, Director of Product &amp; AI Lab Lead at Ad Hoc</a> wrote recently, you have to be willing to “accept that you might discover AI didn’t solve the problem.” To me, this acceptance doesn’t show failure or poor foresight. It shows maturity, honesty and an understanding of how the technology actually works. It means that when you do find success with a solution that involves AI, you can trust that it does. Because, as Sahni emphasizes, you know you’re measuring the right things and you’re being honest in your assessments.</p>
+      <p>How do we actually do this? As a service designer, I start by asking good questions to understand services and the processes that support them, meeting users and staff who deliver services to help us identify specific problems. Then I facilitate conversations to hypothesize and test a variety of solutions. I can embrace a solution that involves AI when it’s the right fit. And I help others recognize when the solution is more focused on people or process than technology. Sometimes the best solutions are staff training, process changes, or a simpler form.</p>
+      <p>The pressure to use AI for <a href="https://www.imdb.com/title/tt6710474/">everything, everywhere, all at once</a> won’t last forever. What will remain is the need to solve real problems for real people. And true innovation begins when we commit to solving the right problems instead of deploying the trendiest solutions.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: comparing-services-to-inform-a-product-vision -->
+<div class="view" data-view="comparing-services-to-inform-a-product-vision" data-title="Comparing services to inform a product vision">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Comparing services to inform a product vision</h1>
+    <p class="dek"><time datetime="2025-04-11">April 11, 2025</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>A comparative analysis is a method of identifying similarities and differences between designs, products or services. It's often used to identify best practices and make decisions.</p>
+      <p>I'm not a big fan of this method. Let me explain why.</p>
+      <p>Similar to personas, comparative analyses are often completed so that teams can check off a required step in the design process. You do the exercise, share your findings, and then, very often, the artifact collects dust.</p>
+      <p>Like any research or design method, a comparative analysis is only helpful if you're clear about why you're doing it. And sharing findings might be a step, but it's not an outcome.</p>
+      <h2>Defining outcomes that matter</h2>
+      <p>At the right moment, a comparative analysis can be a useful artifact to provoke thought. It's easier to look at something and say what you like or don't like about it, than it is to come up with a product vision starting from scratch. This is particularly true when you bring together a group of people who have different ideas of what a service is, does or could do.</p>
+      <p>At the U.S. Department of Veterans Affairs, my team recently replatformed Ask VA to VA.gov. Ask VA lets Veterans and their support networks ask the VA a question online.</p>
+      <p>Since launching, we've been having conversations about the future direction of Ask VA. We want to create a product vision in collaboration with our partners. And to do this, we need to articulate the things we like or don't like about the current product and the direction we recommend.</p>
+      <p>I started by writing research goals. To understand how we could meet expectations and provide a more effective service, I planned to compare Ask VA to other contact services to learn:</p>
+      <ul><li>how other services provide help before asking someone to submit an inquiry</li><li>how many fields are included on other service's contact forms</li><li>how other services ask for information that lets them categorize or route an inquiry</li><li>how being signed in changes the experience of contacting an organization</li></ul>
+      <p>I shared these goals with product leadership at VA to align on objectives before I started comparing services.</p>
+      <h2>Visualizing different approaches to Ask VA</h2>
+      <p>I reviewed each website and took notes in Mural. This is the point where I often see people start to wrap up a comparative analysis. You analyze how a service does something the same or differently to your own service, but it's left to the reader to contextualize what this all means for your own service going forward.</p>
+      <p>To engage my team in discussions about these different approaches, I took it a step further. For each website, I illustrated how Ask VA would work if it was designed like that particular contact experience. For example, if Ask VA worked like National Grid's contact service, I described and visualized how it would work differently.</p>
+      <h2>Building alignment on our future direction</h2>
+      <p>Doing this exercise helped me better understand Ask VA and how these comparative services work. I found that these 8 services demonstrated 3 distinct types of contact experiences:</p>
+      <ul><li>Type 1: Submit a contact form for review</li><li>Type 2: Find a contact page for an individual service</li><li>Type 3: Answer questions and receive a recommendation</li></ul>
+      <p>I shared which contact experience Ask VA is most like (Type 1) and which it could be more similar to (Type 3). And in addition to articulating how Ask VA would work differently if this was the case, I also shared why I think this shift would positively impact Veterans and the VA, by streamlining services and reducing burden on staff.</p>
+      <p>In a separate exercise, I also compared Ask VA to other support channels on VA.gov. This allowed us to review tools that use the same design language as Ask VA and articulate how Ask VA should differentiate from other channels on VA.gov.</p>
+      <p>These exercises gave our team and partners the shared language and understanding to articulate the future direction of Ask VA. The artifacts have helped us visualize how Ask VA should evolve to become a service that guides a Veteran towards an answer. And we're more closely aligned on the next steps to get there.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: trauma-informed-research -->
+<div class="view" data-view="trauma-informed-research" data-title="The need for a trauma-informed approach to research">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>The need for a trauma-informed approach to research</h1>
+    <p class="dek"><time datetime="2023-09-08">September 8, 2023</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>A few years ago, I was hired to lead research on a new organizational initiative on how we can better support people who inject drugs [1] [2].</p>
+      <p>As I considered how to approach this, I was aware that participants could be in vulnerable situations and our conversations might touch on sensitive topics. For example, I was concerned with how to best handle conversations about needles with people who are currently injecting drugs — let alone those who were in recovery — without triggering someone. I also assumed that there would be a higher likelihood that folks I met with from these communities would have experienced trauma [3]. And I worried, too, about the impact of the conversations on me, personally. I knew I needed professional help.</p>
+      <p>Luckily, I was working with a product owner, Steph, who was also a trained social worker. Steph helped me understand what I might expect to observe or hear when I started research. She made hypothetical (which, in turn, can be very alarming) scenarios feel tangible. I learned techniques, like, how to identify triggers with a participant before research, so we could do our best to avoid them in the session. I understood what to do if something went wrong, like if someone appeared under the influence in a session, and how to support both the participant and myself. I practiced helping someone identify who they could lean on for support, so they wouldn't feel alone after we finished talking.</p>
+      <p>Steph taught me about trauma and trauma-informed care. And, together, we worked to figure out how these strategies could be applied to our research.</p>
+      <p>I've since learned that "trauma is a response to anything that's overwhelming and that happens too much, too fast, too soon, and/or for too long and is coupled with a lack of protection or support" [4]. Everyone can experience trauma, but some folks are more likely to, and it can present itself in different ways.</p>
+      <p>When we do design research, particularly with folks who have disproportionately experienced trauma, we have to adopt a more intentional, caring and flexible approach. Our goal is not to be a therapist, psychiatrist or social worker. Most of us aren't trained to do so. But we do need to ensure we avoid triggering existing or creating new trauma. [4]</p>
+      <blockquote><p>"Adopting a trauma-informed approach is not accomplished through any single particular technique or checklist. It requires constant attention, caring awareness, sensitivity, and possibly a cultural change at an organizational level." [5]</p></blockquote>
+      <p>It is difficult to measure the impact and outcomes of a trauma-informed research approach. But, I've seen how design research which centers care and safety leads to better outcomes. By creating a safer environment for participants, we're more likely to have grounded and productive conversations. A trauma-informed approach also considers the researchers, particularly researchers who are more likely to experience trauma themselves, ensuring the work we produce is more intentional and useful.</p>
+      <p>Doing research with people who inject drugs helped us better understand the shame and fear they might experience when considering where to go for new equipment or help. By taking the time to have safe, productive conversations, we learned how our in-person and online services could better meet people's needs.</p>
+      <p>The key to building a good service is to learn how to care for people as best as we can. After all, we're all human.</p>
+      <h2>Thanks</h2>
+      <p>When I joined a project at the Department of Veterans Affairs last year, I was delighted to cross paths with a group of researchers and designers who were starting a grassroots trauma-informed community, led by folks like Rachael Dietkus, Martha Wilkes and Josh Kim [6]. This post is inspired by their eagerness to define safer ways of doing research and draws on many of our conversations.</p>
+      <p>This was originally published on <a href="https://medium.com/blue-tiger/the-need-for-a-trauma-informed-approach-to-research-3945db83fbfa">Medium</a>.</p>
+      <h2>References</h2>
+      <p>[1] <a href="https://www.wearewithyou.org.uk/">With You</a> supports people who have issues with drugs, alcohol, or mental health.</p>
+      <p>[2] Steph Keenan wrote more about <a href="https://medium.com/we-are-with-you/creating-an-accessible-online-space-for-people-who-inject-drugs-975e74a5d61b">this project and its impact</a>.</p>
+      <p>[3] Studies show that many <a href="https://www.hazeldenbettyford.org/research-studies/addiction-research/trauma-responsive-care">people who have substance use disorders have experienced trauma as children or adults</a>.</p>
+      <p>[4] This <a href="https://docs.google.com/document/d/11W66cjxCgguF_ulVOxet-CszfJB3aTBl-OxJTEeloGg/edit">guide developed for Advancing Research 2022: Trauma Informed Panel</a> includes definitions of trauma, trauma-informed design and other helpful resources. This resource also specifically calls out how trauma is systemic and structural. Which means that people from marginalized groups, or people who face inequities based on race, class, or gender, disproportionately experience trauma.</p>
+      <p>[5] <a href="https://www.cdc.gov/orr/infographics/6_principles_trauma_info.htm">Infographic: SAMHSA's 6 Guiding Principles To A Trauma-Informed Approach | CDC</a></p>
+      <p>[6] <a href="https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/teams/shared-support/trauma#va-trauma-community">VA Trauma Community</a></p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: lets-meet-again-soon -->
+<div class="view" data-view="lets-meet-again-soon" data-title="Let&#x27;s meet again soon">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Let's meet again soon</h1>
+    <p class="dek"><time datetime="2023-01-05">January 5, 2023</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>You may have already heard the news that <a href="http://help.getrevue.co/en/articles/6819675-we-ve-made-the-difficult-decision-to-shut-down-revue">Twitter has decided to shut down Revue</a>, the platform I use to send this newsletter.</p>
+      <p>This isn't the only newsletter platform available, and I have considered moving to a new one. But, I'll be honest with you – as I have always tried to be – I'm ready to take a break from writing Design With.</p>
+      <p>It's an interesting thing, saying goodbye. After many moves, I've become accustomed to saying goodbye and I like to think of myself as being good at it.</p>
+      <p>But what does it mean to be good at saying goodbye? I don't think it's ever easy, and I've never enjoyed saying goodbye to a friend or a place.</p>
+      <p>I think, instead, it's when a goodbye is filled with hope. Feeling hopeful for the next time you'll return or meet again, or hopeful for what comes next in return. A goodbye can be an opportunity to sit with the connection you've made, to a place, a person, a moment or, maybe, to all 309 of you.</p>
+      <p>Writing this newsletter, through a global pandemic and while changing jobs and countries (twice), has been a constant across years of change.</p>
+      <p>In 2020, it provided an intentional, tangible and regular way of connecting with people all over the world. In 2021, it followed me through a new job, a new city, and new learnings about what it means to work in design. And in 2022, a year of traveling every couple of weeks, it was grounding.</p>
+      <p>By asking questions, you challenged me. By reading (however closely), you pushed me to find new opportunities and articulate meaningful connections. By writing your own issues of Design With, you inspired me.</p>
+      <p>I feel ready to take a break from writing this newsletter. Like most of you, I will welcome one less thing to do. But I will leave feeling thankful for what you've given me, by gathering on the other end of your screens.</p>
+      <p>As Alice Waters said:</p>
+      <blockquote><p>"This is the power of gathering: It inspires us, delightfully, to be more hopeful, more joyful, more thoughtful: In a word, more alive."</p></blockquote>
+      <p>Let's meet again soon.</p>
+      <h2>Your data</h2>
+      <p>According to Revue, from January 18, 2023, it will no longer be possible for me to access this Revue account and all data will be deleted.</p>
+      <p>I've archived all issues of Design With on <a href="#writing">my website</a>. Apart from one issue, guest written by Sheetal Mistry, which she posted on <a href="https://medium.com/@sheetalmist05/youve-just-got-to-get-with-the-lingo-design-language-inclusivity-bbf62e1d06f6">Medium</a>.</p>
+      <h2>Thanks</h2>
+      <p>This was originally published on my newsletter, <a href="https://web.archive.org/web/20230103142410/https://www.getrevue.co/profile/design-with">Design With</a>. It was the last issue I sent out before the newsletter was archived in 2023.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: how-we-remember -->
+<div class="view" data-view="how-we-remember" data-title="How we remember">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>How we remember</h1>
+    <p class="dek"><time datetime="2022-08-26">August 26, 2022</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>While I'm on a break from work, I open my computer a lot less – usually to do something mundane or overly meticulous, like, make a list, update a spreadsheet or organise photographs in my drive.</p>
+      <p>One of my lists tallies how many days of the month that I've surfed. A kindred spreadsheet includes all the books I've read since 2017. And photographs in my Google Drive are organised by month.</p>
+      <p>I've been drawn to this level of chronicling since I was young. I enjoy knowing that someday I can go back and relive a moment – finding a relevant playlist, photograph and my favourite book at that point in time.</p>
+      <p>After recently finishing Sarah M. Broom's <a href="https://books.google.com.mx/books/about/The_Yellow_House.html?id=Vm-DDwAAQBAJ">The Yellow House</a>, where she chronicles her and her families' histories and experiences of living in New Orleans East, I started to reflect on this act of archiving.</p>
+      <p>Broom finds her experience, and that of her neighbourhood, unmentioned in New Orleans' history books and news stories – an otherwise widely studied, celebrated and documented city. She writes to understand, to call out, to remember, and to archive.</p>
+      <p>And while The Yellow House is Broom's own account, she weaves in her mother's, siblings', aunt's and uncle's words, too.</p>
+      <p>Archivist and activist, <a href="https://en.everybodywiki.com/Allison_Boucher_Krebs">Allison Boucher Krebs</a>, said:</p>
+      <blockquote><p>"An archive needs to be a yarning, a conversation, with all the tacit protocols involved in a conversation between people, the respect in engagement that allows a conversation to continue over time, to be returned to, to grow and deepen, within a shared creative space. Yarning implicitly acknowledges the various contributors, embraces their contributions. It is by nature co-creative."</p></blockquote>
+      <p>Archives tell stories. While some might tell the (monotonous) story of how many surfs I've had this month – told from a singular perspective, mine alone – others may weave together identities, accounts and understandings.</p>
+      <p>I've stumbled upon various 'community archives' or 'community memory archives,' in my quest to understand my chronicles.</p>
+      <p>And, in their focus on engaging individuals in a collective act of storytelling, it feels there may be something we, as people who design, may learn from them.</p>
+      <h2>Resources</h2>
+      <h3><a href="http://takachizu.org/">Takachizu</a></h3>
+      <p>Takachizu is a community archive identifying and reflecting "on that which is most valuable, celebrated, and in need of protection in Little Tokyo." The "treasures," as they call them, were gathered in workshops with residents and visitors to Little Tokyo, and have since been documented and shared in an exhibition and online. The intent is to influence a planning initiative for the area.</p>
+      <h3><a href="https://digital.sonomalibrary.org/local-history-culture/sonoma-responds-community-collection">Sonoma Responds</a></h3>
+      <p>Sonoma Responds is a "community memory archive," launched in response to the pandemic. The artefacts are contributed by individuals in the community and range from a <a href="https://docs.google.com/spreadsheets/d/1hMZosjGfnYADWrrz5yYzUNmDJn9jdKZqVzv2bMGhsEU/htmlview">spreadsheet</a> listing local businesses owned by Black, Native, People of Color and People of Color immigrants, to a <a href="https://digital.sonomalibrary.org/Documents/Detail/hope-your-day-blooms/392297">drawing</a> of a rose in someone's backyard.</p>
+      <h3><a href="https://www.saada.org/">South Asian American Digital Archive (SAADA)</a></h3>
+      <p>SAADA "documents, preserves, and shares stories of South Asian Americans to ensure their inclusion in the American story." From their <a href="https://www.saada.org/browse/creators">creators page</a>, you can quickly see how many individuals have contributed to an archive currently holding 4,779 items.</p>
+      <h2>Thanks</h2>
+      <p>This was originally published on my newsletter, <a href="https://web.archive.org/web/20230103142410/https://www.getrevue.co/profile/design-with">Design With</a>. It was archived in 2023.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: considering-endings -->
+<div class="view" data-view="considering-endings" data-title="Considering endings">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Considering endings</h1>
+    <p class="dek"><time datetime="2022-06-16">June 16, 2022</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>Before you continue, I'd like to note that this post mentions death. If that isn't for you today, I'd encourage you to skip this one. Take care.</p>
+      <p>Tomorrow I'll finish my current job. I'll leave the United Kingdom soon, too. Amongst a number of recent (and pending) changes, I've faced a series of endings.</p>
+      <p>And, despite my recent notice of endings, I've realised how inevitable and common they really are.</p>
+      <p>We finish projects and jobs. We change cities and careers. We stop habits, good and bad. Weeks end. Relationships end. Lives, even.</p>
+      <p>Endings vary. Often based on circumstance, timing and choice. Sometimes an ending is our decision, but other times it's out of our control.</p>
+      <p>In Joan Didion's, <a href="https://en.wikipedia.org/wiki/The_Year_of_Magical_Thinking">The Year of Magical Thinking</a>, she recounts the year after her husband died. More than writing to understand the apparent suddenness of his death, she writes to understand her reaction to this significant ending.</p>
+      <blockquote><p>"Grief turns out to be a place none of us know until we reach it."</p></blockquote>
+      <p>Joan couldn't have understood what she would face, until she did.</p>
+      <p>And Joe MacLeod, author of <a href="https://www.andend.co/">Ends</a>, may help us understand endings in a different context. The design of services. In <a href="https://www.youtube.com/watch?v=GbXYhqCrD98">this talk</a>, Joe says:</p>
+      <blockquote><p>"Well designed and thoughtful endings help us reflect, take responsibility and move on coherently."</p></blockquote>
+      <p>Our "strained relationship to endings," Joe believes, is a reflection of our poor relationship to death.</p>
+      <p>It feels like there's a balance that, taken together, Joan and Joe encourage.</p>
+      <p>An ask for us to consider endings, while knowing we might not be prepared. At the very least, rather than ignoring endings, acknowledging their inevitability.</p>
+      <h2>Resources</h2>
+      <h3>Networks for Social Impact</h3>
+      <p>In this podcast, hosted by Kelly Ann McKercher, they speak about networks for social impact with Euan Black and Lauren Anseline. There's lots of interesting things in there about building networks and community, but of particular relevance is an <a href="https://www.tacsi.org.au/our-work/hero-initiative/end-of-life">End of Life Impact Network</a> which connects change makers and innovators in the end of life space.</p>
+      <h3><a href="https://www.thecarelab.org/designcaretogether">The Care Lab</a></h3>
+      <p>I met folks from the Care Lab at a conference a few years ago. They believe in designing care together and one of the areas of care they focus on is End of Life care.</p>
+      <h3><a href="https://farewill.com/blog/rebranding-death-how-farewill-is-using-design-to-change-the-way-the-world">Farewill</a></h3>
+      <blockquote><p>"Writing a will is something everyone assumes is going to be complicated. For many people, just hearing the words puts their guard up."</p></blockquote>
+      <p>I've been interested in Farewill's work for a bit. And while I couldn't find much writing about their process, this piece does scratch the surface on their 'why.' Anna Charity, who led the rebrand of Farewill, talks about creating a friendly and approachable brand to help change how we deal with death.</p>
+      <h2>Thanks</h2>
+      <p>This was originally published on my newsletter, <a href="https://web.archive.org/web/20230103142410/https://www.getrevue.co/profile/design-with">Design With</a>. It was archived in 2023.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: making-it-easy-to-learn-about-users-and-their-needs -->
+<div class="view" data-view="making-it-easy-to-learn-about-users-and-their-needs" data-title="Making it easy to learn about users and their needs">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Making it easy to learn about users and their needs</h1>
+    <p class="dek"><time datetime="2022-05-09">May 9, 2022</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>As our user research practice grows, more people across and outside of the <a href="https://rnid.org.uk/">Royal National Institute for Deaf People (RNID)</a> ask about our findings. In this blog, I'll share how we've made it easier for people to learn about users and their needs.</p>
+      <h2>How it used to work</h2>
+      <p>I've maintained a user research repository (basically, a really big spreadsheet) since I started at RNID. It's where I store findings and includes things like, insights, observations and quotes.</p>
+      <p>Let's say a content designer asked what we know about British Sign Language (BSL) translations. I'd search in the repository, find relevant information and share links to items in Airtable.</p>
+      <h3>So, why weren't other people looking in the repository?</h3>
+      <p>I noticed that people were still coming to me instead of looking in the repository. I started to ask why, and found that:</p>
+      <ul><li>some people couldn't access Airtable</li><li>some people didn't know how to use Airtable</li><li>some people couldn't find what they were looking for</li><li>most people found the amount of information overwhelming</li></ul>
+      <p>There were a few exceptions. Those who found the repository helpful explained why and how they used it, which showed how we might make it easier for others to use too.</p>
+      <blockquote><p>"I search, 'assistive technology' or 'hearing aids' and I see if I can find something. Otherwise, I search by a type of user, for example, 'deaf person' or 'hearing loss.'"</p></blockquote>
+      <h2>Building a simpler frontend</h2>
+      <p>After learning about the problems with our current setup, I recommended creating a frontend, or a simple interface, for the repository. The frontend would:</p>
+      <ul><li>be open and easy to access (without a login)</li><li>let people search for insights or user needs</li><li>let people share a link to a specific finding</li><li>let people find high-level information, not all the detail</li></ul>
+      <p>Our freelance developer, <a href="https://dogwonder.co.uk/">Rich</a>, started building a proof of concept. He suggested creating a static site, using a static site generator, which connects to the Airtable API and generates a website.</p>
+      <h2>How we structured the library</h2>
+      <p>While Rich worked out Airtable's API, we needed to learn how we should structure the library.</p>
+      <p>I planned a two-part study to learn:</p>
+      <ul><li>which words people use when they search for research</li><li>the relationship between different topics</li></ul>
+      <p>This would help us understand how to structure the library so it makes sense for the people using it.</p>
+      <h3>First, what do people search?</h3>
+      <p>To learn how people search for research, I asked colleagues to read one interview transcript and one insight and, using sticky notes, write down which word(s) they would use to search for that snippet of data.</p>
+      <p>I found that people from the same discipline tend to use similar words to describe a topic, but this can differ across disciplines. I recommended updating tags to make them more descriptive or something that a user would say.</p>
+      <h3>Next, how do people categorise different tags?</h3>
+      <p>Using a sample of the tags we created, I ran a card sort where I asked colleagues to organise tags into categories.</p>
+      <p>The card sort showed that most people, across different disciplines, put tags into similar groups and use similar names to describe them. I used these findings to recommend which fields we use to describe each user need and insight in the library.</p>
+      <p>These exercises also helped us recommend a structure for the library overall. Alex, our Design Lead, mocked up how the library might work based on this.</p>
+      <p>He proposed we have a single main page where people can search for both insights and needs through a basic text search, as opposed to having separate pages and searches for each.</p>
+      <p>We shared recommendations with Rich who pulled it all together in a working prototype.</p>
+      <h2>What's next</h2>
+      <p>We're launching a prototype of the library soon, which we'll share to gather live feedback.</p>
+      <p>If we find that we're solving the right problem then we'll continue to increase awareness of the library and improve over time.</p>
+      <h2>Thanks</h2>
+      <p>Thanks for reading. This was originally published on <a href="https://medium.com/rnid/making-it-easy-to-learn-about-users-and-their-needs-6a7d505aed9b">Medium</a>.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: what-it-means-to-take-part -->
+<div class="view" data-view="what-it-means-to-take-part" data-title="What it means to take part">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>What it means to take part</h1>
+    <p class="dek"><time datetime="2022-02-17">February 17, 2022</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>I think part of being interested in designing with people is trying to understand what this might look like.</p>
+      <p>There's more than one way that participation can show up or be defined. As <a href="https://www.sarahfathallah.com/">Sarah Fathallah</a> has said, "participatory design, in its definition, really depends on who is defining it."</p>
+      <p>Some people have helped define these terms, like, <a href="https://twitter.com/albanvillamil">Alba Villamil</a>, who said:</p>
+      <blockquote><p>"Co-design involves shared decision-making power over the creation process while participatory design only implies involvement. So all co-design is participatory but not all participatory design is co-design."</p></blockquote>
+      <p><a href="https://www.beyondstickynotes.com/">Kelly-Ann McKercher</a> shares their views on this often. Most recently, they created a <a href="https://g8mvf9i2x72.typeform.com/to/K6PpU2xZ">tool</a> for understanding if you're doing co-design.</p>
+      <blockquote><p>"[Some] frame co-design as the peak of a pyramid. Other forms of engagement are lower down, labelled 'less participatory.' In implication, less worthwhile. This framing is narrow. While co-design can be powerful, even the best tools aren't suitable for every task."</p></blockquote>
+      <p>Kelly-Ann McKercher, quoted above with their collaborator Georgia Gardner, sees participation as a spectrum. So did <a href="https://www.citizenshandbook.org/arnsteinsladder.html">Arnstein</a>.</p>
+      <p>In this post, I looked at interesting projects through the lens of what it means to take part. What is the person, who is participating, doing? How might their experience help us understand design?</p>
+      <h2>Resources</h2>
+      <h3><a href="https://codefor.ca/grit/">Being watched</a></h3>
+      <p>GRIT Toronto is a usability testing service led by Code for Canada. They test products or services with diverse residents of Toronto to help design things that work for them. At its core, people are 'being watched' as they use or do something – although, I trust that it's more comfortable than 'being watched' sounds.</p>
+      <h3><a href="https://digital.sonomalibrary.org/local-history-culture/sonoma-responds-community-collection">Being helped and listened to</a></h3>
+      <p>To understand the experiences of people applying for a new benefit in California, the CA Public Utilities Commission and ODI created a <a href="https://www.affordableconnectivity.gov/">page</a> on <a href="https://covid19.ca.gov/">covid19.ca.gov</a>. Visitors to the page could leave a question or comment with their contact information. When researchers followed up, they actually helped people apply – by assisting and answering questions – while capturing their experiences.</p>
+      <h3><a href="https://fragments.ff.studio/blending-the-formal-with-the-informal/">Discussed and being amplified</a></h3>
+      <p>Fragments was a research and design project led by ff.studio and Peopletoo, in collaboration with Essex County Council. They wanted to understand different ways to deal with 'risks in the community.' They held group workshops to discuss amongst people with differing perspectives. Their goal was to 'amplify the voices of practitioners and experts' and their hope was to 'reflect them fairly.'</p>
+      <h3><a href="https://equityhealthj.biomedcentral.com/articles/10.1186/1475-9276-11-40">Learning and leading</a></h3>
+      <p>In this project, Aboriginal and Torres Strait Islander community members were employed as community researchers to investigate the impact of the pandemic in rural and remote Indigenous communities in Australia. Here, there was a focus on meaningful participation and building research capacity, which might extend behind the limits of one project. Community members were trained and paid to lead.</p>
+      <h2>Thanks</h2>
+      <p>This was originally published on my newsletter, <a href="https://web.archive.org/web/20230103142410/https://www.getrevue.co/profile/design-with">Design With</a>. It was archived in 2023.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: user-research-with-deaf-people-or-people-with-hearing-loss -->
+<div class="view" data-view="user-research-with-deaf-people-or-people-with-hearing-loss" data-title="Doing user research with deaf people or people with hearing loss">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Doing user research with deaf people or people with hearing loss</h1>
+    <p class="dek"><time datetime="2021-10-31">October 31, 2021</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>Designing content, products and services starts with understanding the people who will use them. At the <a href="https://rnid.org.uk/">Royal National Institute for Deaf People (RNID)</a>, we do regular user research with deaf people and people with hearing loss.</p>
+      <p>We're not the only ones who need to do research with deaf people or people with hearing loss – and other organisations often ask how we approach this.</p>
+      <p>In this post, I'll share some tips and experiences.</p>
+      <h2>Learn more about the people who will take part</h2>
+      <p>People experience varying levels of hearing loss and in different ways. This can shape their identities, experiences and needs when taking part in research.</p>
+      <p>For example, a person who has grown up deaf might use British Sign Language (BSL) as a first language. Another person with age-related hearing loss may wear hearing aids and use English. Their needs and preferences for how they communicate with others will be different.</p>
+      <p>To approach this, I often ask, "What are your language and communication preferences? For example, would you prefer to communicate using British Sign Language, English, or another way."</p>
+      <p>This means we can use preference and need as a guide, instead of assuming one-size-fits-all.</p>
+      <p>We can also ensure that we learn from people who have different experiences by including or recruiting people of varying levels of hearing loss. As a general rule of thumb, we include at least 1 deaf BSL user in each study, with 5 participants in total.</p>
+      <h2>Consider how you provide materials</h2>
+      <h3>Consent isn't given unless it's informed</h3>
+      <p>For people to take part in research we need to ask for their consent. To do this, it's common to send or hand someone a form to complete.</p>
+      <p>But, for someone whose first language is BSL, reading and giving their consent in English – a language they don't prefer and may not feel comfortable with – isn't accessible.</p>
+      <p>I worked with our content and interaction designers to create a <a href="https://rnid.org.uk/terms-and-conditions/consent-to-take-part-in-research/">consent form</a> that is easy to read and access online. We also decided to ask for BSL users' consent using an interpreter, which we make clear in the <a href="https://rnid.org.uk/terms-and-conditions/information-about-this-research/">information sheet</a> we give everyone before they take part.</p>
+      <h3>Share prototypes or materials before you meet</h3>
+      <p>Depending on the type of research, you may need to share materials with someone during a session. For example, if we're testing a new digital product, we might share an early version with someone on a video call and observe them using it.</p>
+      <p>However, a deaf BSL user's interpreter becomes smaller or is hidden as they navigate a product on a video call. So, while researchers might be used to offering 'prompts' as someone uses a product, I can't communicate with a BSL user while they're occupied with testing.</p>
+      <p>To help with this, I share materials ahead of time and ask people to review them before we meet. If they have time to familiarise themselves, then during the session we can spend more time discussing. I also structure the session differently, offering things to consider before I share a prototype, then pausing while people have a look and coming back together to discuss.</p>
+      <h2>Work closely with support</h2>
+      <h3>Make room in your budget</h3>
+      <p>Hiring communication support professionals, such as BSL interpreters, is key to doing research with deaf people. Once you know someone's preferences and needs, you can plan ahead and book support. Booking in advance is important because interpreter services tend to be oversubscribed.</p>
+      <p>Of course, this comes with a cost. We plan our user research budget by factoring in the costs of communication support. This is tricky as budgets can be planned far in advance. But, if you can make a case for the need to do user research with deaf people, then you can probably make a case for the budget you will need to support it.</p>
+      <h3>You're not the only one facilitating</h3>
+      <p>Working with an interpreter adds another element to a research session. While researchers often ask indirect questions to uncover hidden insights or unspoken needs, how this happens will change when you're not the only one asking the questions. In addition to this, British Sign Language is a very direct language, so your questions need to be such that an interpreter can deliver them clearly.</p>
+      <p>I prepare a guide for interpreters ahead of each study which helps myself and the interpreters feel confident before we go into a session. In the guide, I share the objectives of the research, or what we'd like to learn in the session, and the questions I plan to ask. This helps interpreters prepare and they have time to give me feedback before we start.</p>
+      <h2>Set up and maintain the space</h2>
+      <p>Whether you're on a video call or meeting someone in person, everyone should be able to see each other before you start a research session. This is particularly important when you're doing research with deaf people and people with hearing loss.</p>
+      <p>People with hearing loss, for example, might rely on lipreading. If your space isn't well-lit or there's a light behind you, it makes it harder to lipread. On top of setting up the space, I also have to make a conscious effort to not cover my mouth or use hand gestures while I speak.</p>
+      <p>The same goes when you're meeting deaf BSL users. BSL is a visual language, which means that maintaining eye contact is respectful and it shows you're listening.</p>
+      <p>When I'm working with an interpreter, I start the call by making sure the deaf person can see their interpreter and that they are 'pinned.' Throughout the session, I check-in to make sure the person taking part can still see their interpreter.</p>
+      <h2>Thanks</h2>
+      <p>There are simple things you can do to make user research more accessible for deaf people and people with hearing loss.</p>
+      <p>I'm continuing to learn as I go and I know there's more we can do to make research accessible at RNID. One of the things I plan to look at next is how we share findings in a way that's accessible.</p>
+      <p>I hope these tips help you improve or get started.</p>
+      <p>Thanks for reading. This was originally published on <a href="https://medium.com/rnid/making-it-easy-to-learn-about-users-and-their-needs-6a7d505aed9b">Medium</a>.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: designing-with-care -->
+<div class="view" data-view="designing-with-care" data-title="Designing with care">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Designing with care</h1>
+    <p class="dek"><time datetime="2021-09-09">September 9, 2021</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>Where I am in the world, the end of winter is approaching slowly. Which takes a mental fortitude I only claim on rare days. It's not a harsh winter, but complaining helps me get through a lot of rain and a bit of darkness.</p>
+      <p>There are other things that help. Reminding myself that the rain's filling our previously empty dams. Going on walks, especially on the cold days. And more cups of tea than I'd like to admit.</p>
+      <p>If there's anything I do love about winter it's this. Winter reminds you of how to take care of yourself.</p>
+      <h2>Resources</h2>
+      <h3><a href="https://www.beyondstickynotes.com/model-of-care-for-codesign">Model of Care for Co-design</a></h3>
+      <p>The Model of Care for Co-design urges practitioners of co-design to be explicit about how people care for one other during co-design. KA's accompanying deck of cards helps groups and individuals learn how to run safe and respectful engagements.</p>
+      <h3><a href="https://medium.com/reach-network/https-medium-com-thecarelab-a-call-to-redesign-care-638d94ebe65">A Call to Redesign Care</a></h3>
+      <blockquote><p>"We see Care as an equitable, proactive and compassionate experience that must be accessible for all."</p></blockquote>
+      <p>In 2019, I attended a talk by The Care Lab. They described how they design end of life care with people and their families. It was something that every single person in the room could relate to, either worrying about this for ourselves or for others we love. In this call to action, The Care Lab makes a compelling case for fixing our broken "Systems of Care."</p>
+      <h3><a href="https://www.dartington.org.uk/ourblog/meaningfulconversations">Designing meaningful conversations with care experienced young people</a></h3>
+      <p>This project looked at how young people provide feedback to Children's Social Work services. Through engaging with young people from various care settings, they created the "Meaningful Conversations Framework" to guide high-quality, inclusive conversations with care experienced young folks.</p>
+      <h3><a href="https://www.researchgate.net/publication/343231516_Compassionate_Design_How_to_Design_for_Advanced_Dementia_-_a_toolkit_for_designers">How to design for advanced dementia</a></h3>
+      <p>The Compassionate Design toolkit provides examples and stories of designing with people who have advanced dementia and the people who care for them. They illustrate various design outputs, some of which are probably less designed with and more designed for. I found their framing of compassionate design to be really interesting in a context that's close to home for me.</p>
+      <h2>Thanks</h2>
+      <p>This was originally published on my newsletter, <a href="https://web.archive.org/web/20230103142410/https://www.getrevue.co/profile/design-with">Design With</a>. It was archived in 2023.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: exploring-how-we-support-deaf-people-who-use-bsl -->
+<div class="view" data-view="exploring-how-we-support-deaf-people-who-use-bsl" data-title="Exploring how we support deaf people who use British Sign Language">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Exploring how we support deaf people who use British Sign Language</h1>
+    <p class="dek"><time datetime="2021-08-19">August 19, 2021</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>There are an estimated <a href="https://rnid.org.uk/about-us/research-and-policy/facts-and-figures/">87,000 deaf people who use British Sign Language (BSL)</a> in the UK. Not all deaf people who use BSL consider themselves to be part of the Deaf community, but those who do, share a sense of identity. People in the Deaf community often <a href="https://www.deaflink.org.uk/services/deaf-awareness/deaf-awareness-facts">don't consider themselves disabled</a> and can have significantly different life experiences than people who are hearing, or those who become deaf later in life.</p>
+      <p>The <a href="https://rnid.org.uk/">Royal National Institute for Deaf People (RNID)</a> is on a mission to make life fully inclusive for deaf people and those with hearing loss or tinnitus. Last year, <a href="https://rnid.org.uk/2020/11/old-name-new-purpose-action-on-hearing-loss-becomes-rnid-again/">we returned to our previous name</a> as a way to make it clear who we exist for and our purpose. In many ways, it was about reconnecting with the Deaf community.</p>
+      <p>As we begin building our new digital service, we want to understand how we might support deaf people who use BSL as their first language.</p>
+      <h2>Learning through discovery</h2>
+      <p>We carried out a discovery to help us understand how deaf people currently access information, support and services. Through remote interviews with BSL users, we set out to learn:</p>
+      <ul><li>what it means to be culturally Deaf or to be part of the Deaf community</li><li>how deaf BSL users currently access information, support and services</li><li>the accessibility needs of deaf BSL users, particularly, online</li></ul>
+      <p>We also encouraged people to imagine ideal experiences, or services that are both useful and accessible.</p>
+      <h2>What we learned</h2>
+      <p>Our research showed that deaf people look to charities if they have information that's specific to the deaf experience.</p>
+      <p>Mainstream information that's not for deaf people is often irrelevant and makes deaf people feel forgotten. There are many organisations that offer support for deaf people, but it's difficult for people to choose which provider is right for them.</p>
+      <p>In seeking help, a deaf person will usually choose the service which offers communication support or the opportunity to use BSL.</p>
+      <p>But, accessing interpreters can often lead to delays, extending how long it takes for people to receive help.</p>
+      <p>Deaf people are often responsible for finding workarounds to services that are not accessible to them.</p>
+      <p>For example, many service providers only offer contact over the phone. This usually requires a deaf person to have awareness of other platforms or plug-ins and know how to use them.</p>
+      <blockquote><p>"You never know if someone working in the Police Office is going to actually listen to the message and wonder who it is before they can explain that it's a Text Relay service. Some people hear an automated voice and then they hang up because they're suspicious."</p></blockquote>
+      <p>Navigating information that's not accessible leads deaf people to mistrust institutions, receive the wrong information, or miss out on opportunities.</p>
+      <p>Because of this, deaf people will often turn to their peers for support. Not only do they value each other's experiences, but information that's shared amongst peers is usually accessible.</p>
+      <blockquote><p>"It would depend, can I access it? If it's a page, do I have to ask someone to translate it? Do I have to ask someone what it means? Do I have to ask someone to sign to me? That's the issue, really … the first important thing for me is it has to be accessible. It has to be signed."</p></blockquote>
+      <p>An accessible service provides options so that deaf people can make choices that are right for them. Services designed for BSL users show that an organisation supports and understands the Deaf community. There's an expectation that a charity like ours should provide services that work for people who use BSL.</p>
+      <h2>Turning insights into recommendations</h2>
+      <p>After the research, we shifted our focus towards recommending what to do next. RNID recently announced a move to permanent remote working, and this discovery was an opportunity to test new ways for our team to work together. To help us arrive at recommendations, we ran two asynchronous workshops using Miro, an online collaboration tool.</p>
+      <p>First, we ran a workshop to share our insights with the team. We asked people to consider the insights and propose a set of user needs. Then, we asked people to respond to a series of 'How might we' prompts so we could gather ideas on how to meet these needs.</p>
+      <p>In the second workshop, we shared back the synthesised user needs and ideas. Then, we proposed recommendations and encouraged others to ask questions and add comments. This helped us refine the descriptions, sense people's reactions, and learn where things might fit into our roadmap.</p>
+      <h2>Opportunities for our digital service and beyond</h2>
+      <p>This discovery uncovered many opportunities for how we might support deaf people who use BSL.</p>
+      <p>Some of the recommendations we plan to look at next, include:</p>
+      <ul><li>translating our existing online content to BSL</li><li>creating a journey within <a href="https://rnid.org.uk/information-and-support/get-support-online/">Get support online</a> for deaf people</li><li>re-designing how BSL users contact RNID</li><li>developing a directory of external, deaf aware services that people from the community can contribute to</li></ul>
+      <p>Along the way, we'll continue to value people's experiences, ask for feedback and stay willing to learn.</p>
+      <h2>Thanks</h2>
+      <p>This was originally published on <a href="https://medium.com/rnid/making-it-easy-to-learn-about-users-and-their-needs-6a7d505aed9b">Medium</a>.</p>
+    </article>
+  </div>
+</div>
+
+<!-- POST: moving-beyond-rapport -->
+<div class="view" data-view="moving-beyond-rapport" data-title="Moving beyond rapport">
+  <div class="wrap art-head">
+    <a class="back" href="#writing"><span aria-hidden="true">← </span>All writing</a>
+    <h1>Moving beyond rapport</h1>
+    <p class="dek"><time datetime="2020-10-08">October 8, 2020</time></p>
+  </div>
+  <div class="wrap">
+    <article class="post">
+      <p>Last Friday I had the chance to attend Greater Good's <a href="https://www.eventbrite.com/e/restorative-design-conference-tickets-119324206915">Restorative Design Conference</a>. In the before-world, I likely wouldn't have attended an event taking place on a different continent. And although I probably would have had a glass of wine, it wouldn't have been from the comfort of my couch. The introvert in me is thriving these days.</p>
+      <p>Couch-wine in hand, it also happened to be an incredible evening of talks. Today, I thought I'd talk about just one. <a href="http://sarahfathallah.com/">Sarah Fathallah</a>, a social designer and researcher, and <a href="https://www.socialworkerswho.design/">Rachael Dietkus</a>, a social worker and designer gave a talk about trauma-informed design; in which they unpacked how we define 'trauma,' how it might manifest in a research setting, and what it means to be 'trauma-informed.'</p>
+      <p>The title of this issue, in fact, comes from their talk. Both Sarah and Rachael challenged the default practice of "building rapport," urging us, as practitioners, to instead move towards cultivating relationships. At its core, participatory design is relational, it involves people. What might we learn from trauma-informed practices? How might this shape our practices moving forward?</p>
+      <p>Side note: I also appreciated <a href="https://twitter.com/HazeloneWhite/status/1312109959291662336">this graphic</a> that Hazel created from the talk.</p>
+      <h2>Resources</h2>
+      <h3><a href="https://onbeing.org/programs/resmaa-menakem-notice-the-rage-notice-the-silence/">Notice the Rage; Notice the Silence with Resmaa Menakem</a></h3>
+      <blockquote><p>"Trauma decontextualized in a person looks like personality. Trauma decontextualized in a family looks like family traits. Trauma in a people looks like culture."</p></blockquote>
+      <p>Resmaa Menakem was quoted during Sarah &amp; Rachael's talk, prompting someone in the audience to recommend this podcast. In this episode, Resmaa, a therapist and trauma specialist, illustrates the ways we carry histories and traumas with us, and across generations. Sharing stories of his grandmother's hands, he untangles how race intersects with trauma.</p>
+      <h3><a href="https://www.socialworkerswho.design/">Social Workers Who Design</a></h3>
+      <blockquote><p>"It is not enough to be empathic. Values, human interaction, and compassion are vital."</p></blockquote>
+      <p>If you're curious about the intersections of social work and design, Rachael Dietkus' work seems like a great place to start. I'm already looking forward to taking a deep-dive into her practice, in particular, to understand how social workers and designers can support one another, and the roles we might play in collaboration.</p>
+      <h3><a href="https://traumastewardship.com/inside-the-book/">Trauma Stewardship by Laura Van Dernoot Lipsky</a></h3>
+      <blockquote><p>"To keep from being overwhelmed, we need to respond to suffering in a thoughtful, intentional way-not by hardening our hearts or by internalizing others' struggles as our own but by developing a quality of compassionate presence."</p></blockquote>
+      <p>I'll close with a few of Rachael and Sarah's book recommendations. The first, quoted here, is <a href="https://traumastewardship.com/inside-the-book/">Trauma Stewardship</a>. Lipsky draws on modern psychology as well as spiritual traditions, to understand how trauma manifests. The second book, <a href="https://www.besselvanderkolk.com/resources/the-body-keeps-the-score">The Body Keeps the Score</a> by Dr. van der Kolk, is "essential reading for anyone interested in understanding and treating traumatic stress and the scope of its impact on society."</p>
+      <h2>Thanks</h2>
+      <p>As Sara Cantor Aye said:</p>
+      <blockquote><p>"As designers that build things and solve problems, we can aim for more than transactional, more than productive, even more than inspirational. We can aim for restorative."</p></blockquote>
+      <p>This was originally published on my newsletter, <a href="https://web.archive.org/web/20230103142410/https://www.getrevue.co/profile/design-with">Design With</a>. It was archived in 2023.</p>
+    </article>
+  </div>
+</div>
+
+<!-- CASE STUDY: veteran-signin -->
+<div class="view" data-view="veteran-signin" data-title="Learning how to support Veterans with sign in">
+  <div class="wrap art-head">
+    <a class="back" href="#work"><span aria-hidden="true">← </span>All work</a>
+    <h1>Learning how to support Veterans with sign in</h1>
+    <p class="dek">I led user research with Veterans to understand how to successfully migrate over 4 million Veterans from legacy credentials to safer sign-in options, discovering that in-person support and ease of use drive adoption more than security concerns.</p>
+    <dl class="facts">
+      <div><dt>Organization</dt><dd>U.S. Department of Veterans Affairs, with Blue Tiger</dd></div>
+      <div><dt>My role</dt><dd>Senior user researcher</dd></div>
+      <div><dt>Dates</dt><dd>October 2023 to May 2024</dd></div>
+      <div><dt>Methods</dt><dd>Stakeholder interviews, in-person research, service blueprinting</dd></div>
+    </dl>
+  </div>
+  <div class="wrap body">
+    <section>
+      <h2>Context</h2>
+      <div class="txt">
+        <p>Veterans need to sign in to VA.gov so they can schedule doctor’s appointments, refill prescriptions and file for disability compensation. There are currently multiple ways to sign in to VA.gov and some don’t meet the changing security standards. Importantly, having multiple options causes confusion and can make it impossible for Veterans to access critical services. To improve this situation, VA needs to migrate more than four million Veterans from legacy credentials to safer sign-in options.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Plan</h2>
+      <div class="txt">
+        <p>I met with various subject matter experts across VA who warned that mandatory, unsupported migration will leave Veterans behind. We used these conversations to shape our research goals:</p><ul><li>understand what in-person support will enable Veterans to create and use safe sign in options</li><li>understand which multi-factor authentication (MFA) option can be used by the greatest number of Veterans</li></ul><p>We came up with various scenarios for how Veterans could migrate to a new credential and developed materials to test these scenarios in-person at VA medical centers. For example, one scenario involved setting up a new credential with help from a member of staff at a VA hospital, before or after an existing medical appointment.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Collect</h2>
+      <div class="txt">
+        <p>I traveled to Tampa, Florida to conduct this research in-person at a VA medical center. I facilitated interviews with Veterans and, in total, we spoke to 37 Veterans over 1 week. I learned that Veterans are motivated to set up a new sign in method if there's dedicated support available, particularly in-person.</p><figure class="inq"><blockquote><p>"I would set up Login.gov at the end of my doctor's appointment, while I'm here. I'd rather get more done in a single period."</p></blockquote></figure><p>When considering security, Veterans are motivated to keep fellow Veterans' data safe, more than they worry about their own data. And even if Veterans say security is a priority, their MFA choices are driven by ease of use.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Share</h2>
+      <div class="txt">
+        <p>I traveled to the Department of Veterans Affairs Headquarters in D.C. to present this research to key stakeholders in government. We also presented a future state service blueprint, created based on our research findings, which describes recommended pathways to support Veterans in migrating to a new sign in option. These workshops not only helped share learning widely, but also informed my understanding of dependencies and priorities from VA leadership.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Impact</h2>
+      <div class="txt">
+        <p>My leadership during discovery elevated me to a key strategic partner in developing a comprehensive product roadmap. I became Design Lead on our team, driving design, content and user research with the goal of migrating 4 million Veterans to safer sign in options.</p>
+      </div>
+    </section>
+  </div>
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">More work</h2><a href="#work">All work</a></div>
+    <div class="related"><a href="#ask-va"><span class="org">U.S. Department of Veterans Affairs</span><span class="t">Helping Veterans get the answers they need</span></a><a href="#maryland"><span class="org">Maryland Economic Development Corporation</span><span class="t">Making it easier to do business with the State of Maryland</span></a></div>
+  </div>
+</div>
+
+<!-- CASE STUDY: insights-library -->
+<div class="view" data-view="insights-library" data-title="Creating a research library to share insights">
+  <div class="wrap art-head">
+    <a class="back" href="#work"><span aria-hidden="true">← </span>All work</a>
+    <h1>Creating a research library to share insights</h1>
+    <p class="dek">The goal of this work was for people across and outside our organization to easily learn about our users' needs. I researched how to structure a user-friendly research library, conducting studies on search behavior and information categorization to make insights more accessible to stakeholders.</p>
+    <dl class="facts">
+      <div><dt>Organization</dt><dd>Royal National Institute for Deaf People (RNID)</dd></div>
+      <div><dt>My role</dt><dd>User researcher</dd></div>
+      <div><dt>Dates</dt><dd>August 2021 to June 2022</dd></div>
+      <div><dt>Methods</dt><dd>Interviews, tagging study, card sorting, prototyping</dd></div>
+    </dl>
+  </div>
+  <div class="wrap body">
+    <section>
+      <h2>Context</h2>
+      <div class="txt">
+        <p>RNID is an over 100 year old organization with a new digital focus. This new focus helped us begin to do user research with the people the charity supports. And as our user research practice has grown, more people outside and across the organisation were asking for access to our insights. I had already created a research repository when I joined RNID, but through discovery research I learned that others found the repository overwhelming. This stopped some people from looking at past research.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Plan</h2>
+      <div class="txt">
+        <p>Previous interviews highlighted why people find it difficult to look for research in our existing repository. After coming up with and visualising ways to solve the problem, I started to work with our developer to build a simpler frontend to the library. We needed to know how information should be structured within the frontend so it was less overwhelming for people who search. I planned a study to learn which words people use to search for research data and how people categorize insights.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Collect</h2>
+      <div class="txt">
+        <p>To learn how people search for research, I asked 10 people across product, design and engineering to read a transcript from a research interview and write down which terms they would use to search for the data. I analyzed the tags people used and consolidated them into a refined set. After that, I ran a card sort using the refined set of tags, and asked people to organise the tags into categories.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Make sense</h2>
+      <div class="txt">
+        <p>My research showed how people look for and categorize data. It found that people from similar disciplines tend to use the same words to describe similar topics, while people across disciplines categorized things into similar groups. I used the user-generated tags and categories to help define a structure for the data that would make sense for the people searching for it.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Share</h2>
+      <div class="txt">
+        <p>Doing research with people who will use the library helped define how it could be set up based on the way they search and look for things. I recommended a structure for each insight and user need and shared it with the team. Then, I met with our developer to scope how he would create a working prototype. I shared these next steps with our Associate Director for Digital and Design Lead and received approval to move forward with developing a prototype.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Impact</h2>
+      <div class="txt">
+        <p>The research library is currently in Beta. I shared the library across the organization and it was added to our Intranet. I also wrote about my experiences researching and building a library in <a href="#making-it-easy-to-learn-about-users-and-their-needs">Making it easy to learn about users and their needs</a>, so that people across our industry can learn from this approach. Finally, I defined success metrics so that over time, we could identify whether we solved the right problems in the right way.</p>
+      </div>
+    </section>
+  </div>
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">More work</h2><a href="#work">All work</a></div>
+    <div class="related"><a href="#online-community"><span class="org">Royal National Institute for Deaf People</span><span class="t">Deciding the purpose of an online community</span></a><a href="#veteran-signin"><span class="org">U.S. Department of Veterans Affairs</span><span class="t">Learning how to support Veterans with sign in</span></a></div>
+  </div>
+</div>
+
+<!-- CASE STUDY: help-tool -->
+<div class="view" data-view="help-tool" data-title="Testing an online tool that helps people find the right help">
+  <div class="wrap art-head">
+    <a class="back" href="#work"><span aria-hidden="true">← </span>All work</a>
+    <h1>Testing an online tool that helps people find the right help</h1>
+    <p class="dek">The goal of this work was to help deaf people, people with hearing loss or tinnitus, and their family and friends, find the information they need. I tested the usability and content of an online tool through multiple rounds of moderated interviews, uncovering critical pain points that could prevent people from completing their journeys.</p>
+    <dl class="facts">
+      <div><dt>Organization</dt><dd>Royal National Institute for Deaf People (RNID)</dd></div>
+      <div><dt>My role</dt><dd>User researcher</dd></div>
+      <div><dt>Dates</dt><dd>March to May 2021</dd></div>
+      <div><dt>Methods</dt><dd>Moderated usability testing, content testing, journey mapping</dd></div>
+    </dl>
+  </div>
+  <div class="wrap body">
+    <section>
+      <h2>Context</h2>
+      <div class="txt">
+        <p>When I joined RNID, a charity that supports deaf people and people with hearing loss and tinnitus, the team was starting to build an <a href="https://rnid.org.uk/information-and-support/get-support-online/">online tool</a> that lets people find the right information or support for their situation. I was asked to test the tool's usability and content with users. There were a few different journeys in the tool, so, to begin I mapped each journey and identified an approach to the product research.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Plan</h2>
+      <div class="txt">
+        <p>I met with designers to learn about the different journeys, potential risks and their questions. Then, I planned rounds for different journeys, sequenced based on what was ready, who to recruit, or other dependencies. I wrote objectives specific to each round, and overall for the study:</p><ul><li>review if people know why they are answering questions</li><li>review whether people can go through a journey without support</li><li>review content to see if it's clear, useful and offers a next step</li></ul>
+      </div>
+    </section>
+    <section>
+      <h2>Collect</h2>
+      <div class="txt">
+        <p>I planned rounds of moderated interviews with people who are deaf, have hearing loss and tinnitus, and the people who support them. I chose to do moderated testing because some of the prototypes still had limited capabilities or journeys that didn't end. Because user research was new to RNID, moderated testing also gave designers and other collaborators the chance to interact with participants and learn from them in real-time.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Make sense</h2>
+      <div class="txt">
+        <p>My research highlighted a number of moments where people were missing a call to action or didn't understand which option to choose. In other cases, I noticed that people felt unsupported by the tone of voice or untrustworthy of the organisation, particularly when we asked them to sign up for emails at the end of their journey. I also uncovered a larger design question when I learned that people may expect to choose multiple options, something the tool couldn't currently support.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Share</h2>
+      <div class="txt">
+        <p>Because I was new to the organisation, this was the first time many content designers and subject experts at RNID had tested their content with our users. So, I brought people along the research process showing them how we can do research across our products and services. This engagement also helped when it was time to share findings, which I did by mapping insights across the journeys and then suggesting changes, because people understood the process we went through to learn them.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Impact</h2>
+      <div class="txt">
+        <p>Testing early helped us uncover pain points that would have stopped people from getting through their journeys, and abandoning the tool altogether. If we hadn't found the problems early on, we wouldn't have been able to learn as much when the tool was live. We continued to monitor live feedback and make iterations to address important pain points over time. From Google Analytics, we saw that the majority of people could get through to their results and 56% of people found out they have or may have hearing loss.</p>
+      </div>
+    </section>
+  </div>
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">More work</h2><a href="#work">All work</a></div>
+    <div class="related"><a href="#insights-library"><span class="org">Royal National Institute for Deaf People</span><span class="t">Creating a research library to share insights</span></a><a href="#harm-reduction"><span class="org">With You</span><span class="t">Discovering the needs of people who inject drugs during Covid-19</span></a></div>
+  </div>
+</div>
+
+<!-- CASE STUDY: harm-reduction -->
+<div class="view" data-view="harm-reduction" data-title="Discovering the needs of people who inject drugs during Covid-19">
+  <div class="wrap art-head">
+    <a class="back" href="#work"><span aria-hidden="true">← </span>All work</a>
+    <h1>Discovering the needs of people who inject drugs during Covid-19</h1>
+    <p class="dek">The goal of this work was to help people who inject drugs access new equipment and information so they reduce their harm when injecting. I led a discovery into the needs of people who inject drugs, a new focus for the Digital team, to understand barriers to accessing needle and syringe services during Covid-19.</p>
+    <dl class="facts">
+      <div><dt>Organization</dt><dd>With You</dd></div>
+      <div><dt>My role</dt><dd>User researcher</dd></div>
+      <div><dt>Dates</dt><dd>September 2020 to January 2021</dd></div>
+      <div><dt>Methods</dt><dd>Stakeholder interviews, one-to-one interviews, sharing sessions</dd></div>
+    </dl>
+  </div>
+  <div class="wrap body">
+    <section>
+      <h2>Context</h2>
+      <div class="txt">
+        <p>With You offers support with alcohol, drugs and mental health. In response to Covid-19, most services moved online or over the phone. But the number of people visiting needle and syringe services had dropped by 50% since the start of Covid-19, and no one was offering remote services for people who inject. I was asked to lead a discovery into the needs of people who inject drugs. This was a new focus for the Digital team, who had primarily learned about people who use alcohol or are in recovery.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Plan</h2>
+      <div class="txt">
+        <p>I met staff who deliver services to learn how delivery had changed during Covid-19. I also met clinical experts to learn more about the range of people who inject. This helped me create a plan for who to recruit and how. I used these engagements to write research objectives:</p><ul><li>understand why people might use a needle and syringe service</li><li>understand how users and services have adapted during Covid-19</li><li>understand why it's difficult to access help to reduce harm</li></ul>
+      </div>
+    </section>
+    <section>
+      <h2>Collect</h2>
+      <div class="txt">
+        <p>I interviewed users, frontline workers, pharmacists and other experts. I did one-to-one interviews, so I could focus on key objectives while taking into account each individual's specific needs and traumatic triggers. Interviews took place on the phone, WhatsApp, or Google Meet. I organised phone credits and helped those who needed to borrow phones or computers. After interviews, I connected people with support workers or their own networks to reflect safely.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Make sense</h2>
+      <div class="txt">
+        <p>I learned about denial, shame and worry and how much motivation it takes to get help, because people fear judgment or getting in trouble.</p><figure class="inq"><blockquote><p>"I'm embarrassed to go in for new needles. I'm scared to run into my key worker."</p></blockquote></figure><p>When people did go to a needle exchange, usually from a friend's recommendation, they felt better because they knew what to expect. But those who hadn't gotten help before were nervous and couldn't find alternative options.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Share</h2>
+      <div class="txt">
+        <p>I started by sharing findings with close collaborators, including designers, developers and a product manager. We came up with ideas for what to do next. I also held a session with staff who work in services and received their feedback on the findings and next steps. Then, I created a presentation for senior stakeholders. I focused on connecting our recommendations to the research as well as the organization's strategy, in order to have our next steps approved. And to share findings more widely, I created a simple and accessible document that was shared across the organization.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Impact</h2>
+      <div class="txt">
+        <p>By showing that fear stops people from getting help, my research helped us focus on the most risky stage in the journey and design for an anxious and worried mindset. We also realized our hypothesis that most people who inject don't have internet access was not true, so we started looking at both in-person and online services. We changed how we describe services and added <a href="https://www.wearewithyou.org.uk/help-and-advice/safer-injecting/">a new section to the website</a>. Then we tested content and a <a href="https://www.wearewithyou.org.uk/needle-syringe-services/">needle and syringe service finder</a>. I contributed to my colleague's <a href="https://medium.com/we-are-with-you/creating-an-accessible-online-space-for-people-who-inject-drugs-975e74a5d61b">blog post</a> about this work.</p>
+      </div>
+    </section>
+  </div>
+  <div class="wrap sec">
+    <div class="lab"><h2 class="lab-h">More work</h2><a href="#work">All work</a></div>
+    <div class="related"><a href="#ask-va"><span class="org">U.S. Department of Veterans Affairs</span><span class="t">Helping Veterans get the answers they need</span></a><a href="#maryland"><span class="org">Maryland Economic Development Corporation</span><span class="t">Making it easier to do business with the State of Maryland</span></a></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="view" data-view="about">
+  <div class="wrap art-head">
+    <h1>About</h1>
+  </div>
+  <div class="wrap">
+    <div class="ab-main">
+      <div class="ab-body">
+        <p>I’ve been at <a href="https://bluetiger.digital">Blue Tiger</a> for the last few years, where I work with government agencies like the U.S. Department of Veterans Affairs and the State of Maryland to make public services easier to use. Alongside client work, I manage a small team of designers and researchers.</p>
+        <p>My strength is seeing the bigger picture: how services connect, how user needs should drive decisions, and how to bring teams together to solve complex problems. I ground my practice in participatory design and trauma-informed care. And I’m really proud of <a href="#testimonials">how other people describe working with me</a>.</p>
+        <p>I used to live and work in the UK. Nowadays, I’m happiest spending time with my little family in Brooklyn, NY.</p>
+      </div>
+      <figure class="ab-photo">
+        <img src="about-photo.jpg" alt="Tyler smiling in a snowy Brooklyn park, wearing a long coat, scarf and knit hat" width="720" height="720">
+        <svg class="ab-ring" viewBox="0 0 100 100" aria-hidden="true"><path d="M52 2.6c25.4.6 45.2 20.4 44.6 47.8-.6 26.2-21.4 46.6-47.6 46-26.8-.6-46.4-21.6-45.8-48C3.8 22.6 24.8 3.4 49.6 4.2c3 .1 6.2.5 9.2 1.2"/></svg>
+      </figure>
+    </div>
+    <figure class="ab-callout">
+      <blockquote>“Even in stressful situations, she gets it done with a smile.”</blockquote>
+      <figcaption><span class="ast" aria-hidden="true"></span><b>Megan Anderson</b> <span>Senior Design Researcher</span></figcaption>
+    </figure>
+  </div>
+  <div class="wrap sec contact">
+    <h2>I’d love to connect.</h2>
+    <p class="reach">Email me at <a href="mailto:tylergindraux@gmail.com">tylergindraux@gmail.com</a> or find me on <a href="https://www.linkedin.com/in/tylergindraux/">LinkedIn</a>.</p>
+  </div>
+</div>
+
+<!-- RÉSUMÉ -->
+<div class="view" data-view="resume">
+  <div class="wrap art-head">
+    <h1>Resume</h1>
+    <p class="dek">Here’s <a href="#testimonials">how people describe working with me</a>.</p>
+    <div class="meta" style="display:flex;gap:12px 28px;flex-wrap:wrap;align-items:center;margin-top:24px"><a href="mailto:tylergindraux@gmail.com">tylergindraux@gmail.com</a><a href="https://www.linkedin.com/in/tylergindraux/">LinkedIn</a></div>
+  </div>
+  <div class="wrap">
+    <div class="lab" style="border-top:0;padding-top:0"><h2 class="lab-h">Experience</h2></div>
+    <ul class="roles" id="roles"></ul>
+    <div class="lab" style="margin-top:clamp(40px,6vw,72px);border-top:0;padding-top:0"><h2 class="lab-h">Education</h2></div>
+    <ul class="roles" id="edu"></ul>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="view" data-view="testimonials">
+  <div class="wrap art-head">
+    <a class="back" href="#about"><span aria-hidden="true">← </span>About</a>
+    <h1>How people describe working with me</h1>
+  </div>
+  <div class="wrap">
+    <div class="tlist" id="allQuotes"></div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div class="c6"><div class="big">Tyler Gindraux<br>Service designer</div></div>
+    <nav class="c3" aria-label="Footer"><ul><li><a href="#work">Work</a></li><li><a href="#writing">Writing</a></li><li><a href="#about">About</a></li><li><a href="#resume">Resume</a></li></ul></nav>
+    <div class="c3"><ul><li><a href="mailto:tylergindraux@gmail.com">tylergindraux@gmail.com</a></li><li><a href="https://www.linkedin.com/in/tylergindraux/">LinkedIn</a></li></ul></div>
+    <div class="small"><span>© 2026 Tyler Gindraux</span></div>
+  </div>
+</footer>
+
+
+
+<script>
+{
+const live = "https://tylergindraux.com";
+const projects = [
+  {id:"maryland", org:"Maryland Economic Development Corporation", t:"Making it easier to do business with the State of Maryland", y:"2026–present", home:true},
+  {id:"ask-va", org:"U.S. Department of Veterans Affairs", t:"Helping Veterans get the answers they need", y:"2023–2025", home:true},
+  {id:"veteran-signin", org:"U.S. Department of Veterans Affairs", t:"Learning how to support Veterans with sign-in", y:"2023–2024", home:true},
+  {id:"online-community", org:"Royal National Institute for Deaf People", t:"Deciding the purpose of an online community", y:"2022", home:true},
+  {id:"insights-library", org:"Royal National Institute for Deaf People", t:"Creating a research library to share insights across an organization", y:"2021–2022", home:false},
+  {id:"help-tool", org:"Royal National Institute for Deaf People", t:"Testing an online tool that helps people find the right help", y:"2021", home:false},
+  {id:"harm-reduction", org:"With You", t:"Discovering the needs of people who inject drugs during Covid-19", y:"2020–2021", home:false}
+];
+const posts = [
+  ["The pressure to use AI for everything, everywhere, all at once","2025-09-24","pressure-to-use-ai-for-everything"],
+  ["Good research reveals a strategy","2025-06-11","good-research-reveals-a-strategy",true],
+  ["Comparing services to inform a product vision","2025-04-11","comparing-services-to-inform-a-product-vision"],
+  ["The need for a trauma-informed approach to research","2023-09-08","trauma-informed-research"],
+  ["Let’s meet again soon","2023-01-05","lets-meet-again-soon"],
+  ["How we remember","2022-08-26","how-we-remember"],
+  ["Considering endings","2022-06-16","considering-endings"],
+  ["Making it easy to learn about users and their needs","2022-05-09","making-it-easy-to-learn-about-users-and-their-needs"],
+  ["What it means to take part","2022-02-17","what-it-means-to-take-part"],
+  ["Doing user research with deaf people or people with hearing loss","2021-10-31","user-research-with-deaf-people-or-people-with-hearing-loss"],
+  ["Designing with care","2021-09-09","designing-with-care"],
+  ["Exploring how we support deaf people who use British Sign Language","2021-08-19","exploring-how-we-support-deaf-people-who-use-bsl"],
+  ["Moving beyond rapport","2020-10-08","moving-beyond-rapport"]
+];
+const quotes = [
+  ["Do everything in your power to keep her around.", "Megan Siddle", "Program Manager", 1],
+  ["The glue that connected design, engineering, and leadership on our team.", "Thomas Michaud", "Senior User Experience Designer", 1],
+  ["One of the most strategically minded researchers and service designers I’ve worked with.", "Charlye Tran", "Senior Product Strategist", 1],
+  ["Tyler’s research skills are some of the most honed and effective I’ve come across.", "Jesse James", "Staff Engineer", 1],
+  ["She brought so much to the table.", "Dev Govindji", "Front-End Engineer"],
+  ["One of the most thoughtful and skilled collaborators I’ve worked with.", "Khoa Nguyen", "Senior Full-Stack Engineer"],
+  ["A tremendous design partner.", "Ariel Martinez", "Product Manager"],
+  ["You really helped me believe this was going to be a success.", "Federal government partner", ""],
+  ["Tyler exemplifies the idea of ‘hitting the ground running’.", "Mike Prusaitis", "Associate Director of Program Management"],
+  ["A truly great leader who made sure we never lost sight of the user or the big picture.", "Hemesh Patel", "Senior Front-End Engineer"],
+  ["A great force behind our team’s learnings, successes, and visions.", "Sofia Kirkman", "User Experience Designer"],
+  ["Unique set of leadership and hands-on user research and design skills.", "Sarah Norman", "Delivery Manager"],
+  ["Even in stressful situations, she gets it done with a smile.", "Megan Anderson", "Senior Design Researcher"],
+  ["Makes you feel comfortable and confident when working together.", "Fay Ryan", "Content Design Lead"],
+  ["Tyler went out of her way to set me up for success.", "Clayton Zook", "User Experience Researcher"],
+  ["Tyler is a best in class user researcher.", "Frankie Garforth", "Strategist"],
+  ["Enabled the key messages to resonate with the right people.", "Steph Keenan", "Product Owner"],
+  ["Kind, thoughtful, empathetic and insightful.", "Jess Newell", "Service Designer"],
+  ["Thank god we had Tyler on our team for those 2 years.", "Federal government client", ""],
+  ["She documented complex business rules in plain language that I’m still referencing to this day.", "Federal government client", ""],
+  ["You’ll become a better person with Tyler on your team. She’ll be the role model you want to follow.", "Federal government client", ""],
+  ["You remind me of Carmy from The Bear. Not in a crashing-out-in-the-walk-in-refrigerator way, but in the way he’s diligent, creative, and a really great chef.", "Federal government client", ""],
+  ["You’ve contributed so much to this work here, and [future government staff] will be lucky to benefit from all your research insights.", "Federal government client", ""],
+  ["Thank you for helping us carve a path through a lot of uncertainty this year!", "Federal government client", ""],
+  ["You’ve been fantastic to work with, and super responsive.", "State government client", ""],
+  ["I wasn’t sure whether a non-technical person could understand [your recommendations], but this is super clear.", "State government client", ""],
+  ["This [service blueprint] is amazing, can I get a copy of this?", "State government client", ""],
+  ["Tyler is truly a gem to work with. Especially with a project as difficult as this turned out to be.", "Partner on a federal government project", ""],
+  ["I’ve never worked with such an amazing designer.", "Partner on a federal government project", ""],
+  ["She is wise, patient and gentle in her approach.", "Partner on a federal government project", ""],
+  ["Her ability to navigate such hard conversations is unrivaled.", "Partner on a federal government project", ""],
+  ["Bringing Tyler on to Ask VA was probably one of the best decisions we’ve ever made.", "Partner on a federal government project", ""]
+];
+const roles = [
+  {when:"October 2022 – present", title:"Staff Researcher and Service Designer", org:"Blue Tiger", link:"Blue Tiger", url:"https://bluetiger.digital",
+   ladder:[["Staff Researcher and Service Designer","June 2026 – present"],["Senior Researcher and Service Designer","October 2022 – June 2026"]],
+   desc:"Blue Tiger partners with government to improve services and solve problems that matter. I lead strategic research and design on various programs at the U.S. Department of Veterans Affairs.",
+   pts:["Leading service design activities, including journey mapping, prototyping, usability testing, in-depth interviews and workshops with over 120 Veterans and 50 staff at VA.",
+        "Prototyping and diagramming in Figma and Mural to address key research insights and make recommendations that shape critical product decisions and roadmaps at VA.",
+        "Redesigning key service touchpoints, leading to measurable improvements. For example, on Ask VA: reduced submission time by removing unnecessary steps, increased accessibility compliance and increased customer satisfaction.",
+        "Regularly facilitating collaboration between partners across 18 departments at VA to gather requirements, drive consensus and encourage critical decision making.",
+        "Building strong client relationships and regularly presenting design and research to senior leadership at VA, including in person in DC.",
+        "Managing a team of designers and researchers through regular 1:1s, mentorship and coordination with contracting leads."]},
+  {when:"February 2021 – July 2022", title:"User Experience (UX) Researcher", org:"Royal National Institute for Deaf People (RNID)", link:"RNID", url:"https://rnid.org.uk",
+   desc:"RNID supports over 18 million people in the UK who are deaf, have hearing loss or tinnitus. As the first user researcher, I embedded research across the organization and its strategies.",
+   pts:["Created and owned a user research roadmap that supported the design and delivery of all products and services at RNID, including an online community for deaf people.",
+        "Facilitated 28 accessible research studies, including in-depth interviews, concept testing, card sorting, tree tests, quantitative surveys and co-design workshops.",
+        "Research findings were adopted as key priorities in RNID’s 2022 Strategic Plan.",
+        "Developed and implemented a strategy to scale our research practice across teams.",
+        "Designed, prototyped and delivered research infrastructure, including a research library to share knowledge across and outside of our organization."]},
+  {when:"August 2020 – February 2021", title:"User Experience (UX) Researcher", org:"With You", link:"With You", url:"https://www.wearewithyou.org.uk/",
+   desc:"With You provides digital and in-person support with drug, alcohol and mental health issues. I led user research on an early-stage priority focused on digital harm reduction services.",
+   pts:["Collaborated closely with frontline staff and clinical experts to understand With You’s needle and syringe and harm reduction service delivery.",
+        "Planned and led research with people who inject drugs to understand trust in our tools and service offerings, to influence strategic priorities.",
+        "Regularly shared research and made recommendations to senior leadership.",
+        "Tested tools with frontline staff that support a more conversational intake process.",
+        "Recruited digitally excluded research participants from across England and Scotland."]},
+  {when:"September 2019 – June 2020", title:"Service Designer", org:"Design Against Crime Research Lab", link:"Design Against Crime Research Lab", url:"https://www.designagainstcrime.com",
+   desc:"The Design Against Crime Research Lab (DACRL) co-creates crime prevention strategies with government, communities and people previously convicted. I led service design and research to lower theft at self-checkout tills.",
+   pts:["Defined and implemented a strategy focused on improving customer experience, to reduce the frustration that leads to common theft at checkout.",
+        "Facilitated observational research studies at partner supermarkets across the UK.",
+        "Led workshops with our client and staff to understand issues and define solutions.",
+        "Delivered research insights and prototyped 6 concepts to test in supermarkets.",
+        "Managed two designers, as well as client relationships and delivery."]},
+  {when:"August 2019 – January 2020", title:"Design Research Intern", org:"STBY", link:"STBY", url:"https://stby.eu",
+   desc:"STBY connects organisations with the experiences of their customers through research. I did ethnography and design research for commercial clients, including Spotify and Google.",
+   pts:["Co-facilitated a workshop to develop and deliver a strategy to Spotify’s Brand Team.",
+        "Planned and ran a diary study focused on a competitor’s product for Google Atlas.",
+        "Designed and led a 20-person conference workshop focused on safer cities.",
+        "Delivered 5 research reports in varying formats for international clients."]}
+];
+const education = [
+  {when:"2017 – 2019", title:"MA Industrial and Product Design", org:"University of the Arts London"},
+  {when:"2012 – 2016", title:"BS Economics, International Development", org:"Tulane University"}
+];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const built = projects.map(p=>p.id);
+const href = p => built.includes(p.id) ? "#"+p.id : live + "/projects/" + p.id;
+const workRow = p => `<li><a href="${href(p)}"><span class="org">${esc(p.org)}</span><span class="t${built.includes(p.id)?"":" out"}">${esc(p.t)}</span><span class="y">${esc(p.y)}</span></a></li>`;
+const fmt = d => new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});
+const postRow = p => `<li><a href="#${p[2]}"><span class="t">${esc(p[0])}</span><span class="d"><time datetime="${p[1]}">${fmt(p[1])}</time></span></a></li>`;
+const quoteFig = q => `<figure class="q" style="margin:0"><blockquote>“${esc(q[0])}”</blockquote><figcaption><span class="dot" aria-hidden="true"></span>${esc(q[1])}${q[2]?` <span>${esc(q[2])}</span>`:""}</figcaption></figure>`;
+const $ = id => document.getElementById(id);
+
+$("homeWork").innerHTML = projects.filter(p=>p.home).map(workRow).join("");
+$("allWork").innerHTML = projects.map(workRow).join("");
+$("homePosts").innerHTML = posts.slice(0,3).map(postRow).join("");
+const featured = quotes.filter(q=>q[3]);
+$("homeQuotes").innerHTML = featured.map(quoteFig).join("");
+
+const order = [0, 1, 20, 12, 31, 23, 27, 2, 9, 5, 3, 24, 19, 15, 21, 8, 25, 11, 6, 13, 26, 29, 10, 14, 4, 16, 7, 17, 30, 18, 22, 28];
+const feat = {0:"feat feat-a",2:"feat feat-d",21:"feat feat-b",29:"feat feat-c",30:"feat feat-e"};
+$("allQuotes").innerHTML = order.map(i=>{const q=quotes[i];const cls=feat[i]||(q[0].length<56?"short":"");return `<figure class="${cls}"><blockquote>“${esc(q[0])}”</blockquote><figcaption>${feat[i]?'<span class="ast" aria-hidden="true"></span>':""}<b>${esc(q[1])}</b>${q[2]?` <span>${esc(q[2])}</span>`:""}</figcaption></figure>`}).join("");
+const linkFirst = (d,t,u) => { const e=esc(d), et=esc(t), i=e.indexOf(et); return i<0?e:e.slice(0,i)+`<a href="${esc(u)}">${et}</a>`+e.slice(i+et.length); };
+$("roles").innerHTML = roles.map(r=>`<li><div class="when">${esc(r.when)}</div><div class="what">${r.ladder?`<ol class="ladder">${r.ladder.map(l=>`<li><h3>${esc(l[0])}</h3><span>${esc(l[1])}</span></li>`).join("")}</ol>`:`<h3>${esc(r.title)}</h3>`}<p>${linkFirst(r.desc,r.link,r.url)}</p><ul class="pts">${r.pts.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div></li>`).join("");
+$("edu").innerHTML = education.map(e=>`<li><div class="when">${esc(e.when)}</div><div class="what"><h3>${esc(e.title)}</h3><div class="org">${esc(e.org)}</div></div></li>`).join("");
+
+let byYear = {};
+posts.forEach(p => { const y = p[1].slice(0,4); (byYear[y] ||= []).push(p); });
+$("allPosts").innerHTML = Object.keys(byYear).sort().reverse().map(y => `<h2 class="year">${y}</h2><ul class="posts">${byYear[y].map(postRow).join("")}</ul>`).join("");
+
+const views = [...document.querySelectorAll(".view")];
+const viewNames = new Set(views.map(v=>v.dataset.view));
+const postSlugs = new Set(posts.map(p=>p[2]));
+const sectionOf = n => projects.some(p=>p.id===n) ? "work" : postSlugs.has(n) ? "writing" : n==="testimonials" ? "about" : n;
+const titleOf = v => { const h=v.querySelector("h1"); return v.dataset.view==="home" ? "Tyler Gindraux, service designer" : (v.dataset.title || (h ? h.textContent.trim() : "")) + " – Tyler Gindraux"; };
+const live$ = document.getElementById("route-status");
+let first = true;
+function route(){
+  const h = location.hash.slice(1);
+  if (h && !viewNames.has(h) && !first) return;
+  const name = viewNames.has(h) ? h : "home";
+  let shown;
+  views.forEach(v=>{ const on=v.dataset.view===name; v.classList.toggle("on", on); v.hidden=!on; if(on) shown=v; });
+  const sec = sectionOf(name);
+  document.querySelectorAll("[data-nav]").forEach(a => a.dataset.nav===sec ? a.setAttribute("aria-current","page") : a.removeAttribute("aria-current"));
+  document.title = titleOf(shown);
+  window.scrollTo(0,0);
+  if (!first) {
+    const h1 = shown.querySelector("h1");
+    if (h1) { h1.setAttribute("tabindex","-1"); h1.focus({preventScroll:true}); }
+    if (live$) live$.textContent = document.title;
+  }
+  first = false;
+}
+window.addEventListener("hashchange", route);
+document.getElementById("skip").addEventListener("click", e => {
+  e.preventDefault();
+  const v = document.querySelector(".view.on");
+  const t = (v && v.querySelector("h1")) || document.getElementById("main");
+  t.setAttribute("tabindex","-1"); t.focus();
+});
+route();
+}
+</script>
 </body>
 </html>
